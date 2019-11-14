@@ -1,0 +1,15 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "ПрофУчет"
+
+block content
+	.wrapper
+		include ../blocks/modules/header/header
+		include ../blocks/modules/top-screen/top-screen
+	include ../blocks/modules/sidedrawer/sidedrawer
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

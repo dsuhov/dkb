@@ -1,0 +1,28 @@
+include ../../components/header-title/header-title
+include ../../components/header-link/header-link
+
+section.top-screen
+  .container
+    .top-screen__info-block
+      .top-screen__aside
+        .top-screen__aside-content
+          .top-screen__aside-top 90% клиентов
+          .top-screen__aside-bottom приходят к нам<br />по рекомендации
+      .top-screen__big-title
+        +header-title('Передайте бухгалтерию<br />на аутсорсинг и работайте спокойно')
+      .top-screen__subtitle
+        h2.NSerif-28-42-reg Помогаем бизнесу вести бухучет<br />и оптимизировать налоги с 2010 года
+      .top-screen__features
+        .top-screen__feature.feature
+          .feature__title 100% защита от штрафов
+          .feature__text финансовая гарантия<br />3 000 000 &#8381;
+        .top-screen__feature.feature
+          .feature__title Безупречный бухучет
+          .feature__text вовремя и без ошибок
+        .top-screen__feature.feature
+          .feature__title Экономия расходов<span>до 70% ежемесячно</span>
+          .feature__text до 70% ежемесячно
+    .top-screen__links-line
+        +header-link-btn('стоимость бухгалтерского обслуживания', 'получить <span>точный </span>расчет', '#')
+        +header-link('документы', 'Cобираете КП для руководителя? Получите полный комплект документов', '#')
+        +header-link('помощь', 'Проблемы с бухгалтером? Подхватим ваш бухучет и исправим ситуацию', '#')

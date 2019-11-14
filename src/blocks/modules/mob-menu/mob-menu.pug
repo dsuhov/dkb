@@ -1,0 +1,56 @@
+include ../../components/tiny-comps/nav-link-top
+include ../../components/soc-links-top/soc-links-top
+
+.mob-menu
+  ul.mob-menu__nav.mobile-nav
+    li.mobile-nav__item
+      +nav-link-top('Отзывы', '')
+    li.mobile-nav__item
+      +nav-link-top('Команда', '')
+    li.mobile-nav__item
+      +nav-link-top('Как сэкономить', '')
+    li.mobile-nav__item
+      +nav-link-top('Услуги', '')
+    li.mobile-nav__item
+      +nav-link-top('Цены', '')
+    li.mobile-nav__item
+      +nav-link-top('Как начать', '')
+  .mob-menu__delimeter
+  .mob-menu__mb-feedback
+    .mb-feedback.mb-feedback--tel
+      .mb-feedback__caption Заказать звонок
+      a(href="tel:+74999385260").mb-feedback__tel +7 499 938-52-60
+    .mb-feedback.mb-feedback--soc
+      .mb-feedback__caption Задать вопросы
+      .mb-feedback__soc-line
+        .mb-feedback__cos-link
+          +soc-links-top('whatsapp', '')
+        .mb-feedback__cos-link
+          +soc-links-top('telegram', '')
+        .mb-feedback__cos-link
+          +soc-links-top('mail', '')
+  .mob-menu__contacts.mb-contacts
+    .mb-contacts__address
+      .mb-contacts__title Контакты
+      .mb-contacts__text
+        span ул. Большая Косинская, д. 27,
+        span Москва
+      .mb-contacts__on-map
+        span.mb-contacts__map-icon
+          +icon('location')
+        span На карте
+    .mb-contacts__feedback
+      .mb-contacts__text
+        span +7 (499) 938-52-60
+        span dkbprof@mail.ru
+    .mb-contacts__worktime
+      .mb-contacts__title Режим работы
+      .mb-contacts__wtime-block
+        .mb-contacts__wtime-left
+          span пн — чт
+          span пт
+          span сб — вс
+        .mb-contacts__wtime-right
+          span 9:00 — 18:00
+          span 9:00 — 17:00
+          span выходной

@@ -1,0 +1,29 @@
+include ../../components/tiny-comps/nav-link-top
+include ../../components/header-feedback/header-feedback
+
+header.header
+  .container
+    .header__line
+      button.header__burger
+        +icon('burger')
+      .header__logo
+        include ../../components/logo/logo-1
+      .header__mob-phone
+        include ../mob-phone/mob-phone
+      nav.header__nav
+        ul.header__nav-list
+          li.header__nav-item
+            +nav-link-top('Отзывы', '')
+          li.header__nav-item
+            +nav-link-top('Команда', '')
+          li.header__nav-item
+            +nav-link-top('Как сэкономить', '')
+          li.header__nav-item
+            +nav-link-top('Услуги', '')
+          li.header__nav-item
+            +nav-link-top('Цены', '')
+          li.header__nav-item
+            +nav-link-top('Как начать', '')
+      .header__feedback
+        +header-feedback-soc
+        +header-feedback-tel

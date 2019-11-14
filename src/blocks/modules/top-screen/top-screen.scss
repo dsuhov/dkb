@@ -1,0 +1,160 @@
+.top-screen {
+  overflow: hidden;
+  padding-top: 43px;
+
+  @include breakpoint(contSize) {
+    padding: 45px 40px 0;
+  }
+
+  @media (max-width: 765px) {
+    padding: 60px 20px 0;
+  }
+  
+  &__info-block {
+    margin-bottom: 74px;
+    position: relative;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__big-title {
+    position: relative;
+    z-index: 10;
+    max-width: 848px;
+    margin-bottom: 30px;
+
+    @media (max-width: 765px) {
+      max-width: 245px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 10;
+    max-width: 576px;
+    margin-bottom: 60px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 765px) {
+      max-width: 300px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__features {
+    display: flex;
+    position: relative;
+    z-index: 10;
+
+    @media (max-width: 765px) {
+      display: block;
+    }
+  }
+
+  &__feature {
+    max-width: 250px;
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+    
+    @include breakpoint(contSize) {
+      max-width: 192px;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    @media (max-width: 765px) {
+      max-width: none;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__links-line {
+    @include row-flex;
+  }
+
+
+
+  &__aside {
+    &-content {
+      transform: rotate(-16.45deg);
+
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 0;
+    top: -46px;
+    right: 0;
+
+    width: 384px;
+    height: 383px;
+    padding-top: 140px;
+    padding-left: 140px;
+
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-style: normal;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    background: url("../img/general/orange-egg.jpg");
+
+    &-top {
+      position: relative;
+      font-weight: 900;
+      margin-bottom: 22px;
+      
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 35px;
+        height: 1px;
+        background-color: #fff;
+      }
+    }
+
+    &-bottom {
+      font-weight: 500;
+      line-height: 18px;
+      font-size: 16px;
+    }
+
+    @include breakpoint(contSize) {
+      top: -6px;
+      right: -80px;
+    }
+
+    @media (max-width: 765px) {
+      top: -50px;
+      right: -140px;
+
+      width: 384px*0.88;
+      height: 383px*0.88;
+      background-size: 100%;
+    }
+  }
+}
+
+@import "feature";

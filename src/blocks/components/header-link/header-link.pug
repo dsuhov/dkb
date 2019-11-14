@@ -1,0 +1,18 @@
+include ../buttons/btn-default/btn-default
+
+mixin header-link(title, descr, url)
+  a(href=""+url).header-link
+    .header-link__header
+      .header-link__title= title
+      svg(class="header-link__arrow tl-arrow" viewBox="0 0 47 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(class="tl-arrow__line" d="M1 7h43" stroke="#FFA001" stroke-width="2")
+        path(class="tl-arrow__pin" d="M39 13l6.72-6.72M45.72 7.72L39 1" stroke="#FFA001" stroke-width="2")
+        path(class="tl-arrow__base" d="M6 7a3 3 0 11-6 0 3 3 0 016 0z" fill="#FFA001")
+    .header-link__text= descr
+
+mixin header-link-btn(title, descr, url)
+  a(href=""+url).header-link.header-link--border
+    .header-link__header
+      .header-link__title= title
+    .header-link__btn
+      +btn-default(descr)

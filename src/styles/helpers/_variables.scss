@@ -1,0 +1,34 @@
+$black: #000000;
+$blue-ribbon: #0461FD;
+$port-gore: #262262;
+$orange-peel: #ffa001;
+$solitude: #eaf4fe;
+
+// BREAKPOINTS
+$mobile-m: 375px;
+$mobile-l: 480px;
+$mobile-xl: 576px;
+$tablet: 768px;
+$laptop: 1024px;
+$contSize: 1122px;
+
+@mixin breakpoint($point) {
+  @if $point == contSize {
+    @media (max-width: $contSize) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (max-width: $laptop) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (max-width: $tablet) { @content ; }
+  }
+  @else if $point == mobile-xl {
+    @media (max-width: $mobile-xl)  { @content ; }
+  }
+  @else if $point == mobile-l {
+    @media (max-width: $mobile-l)  { @content ; }
+  }
+  @else if $point == mobile-m {
+    @media (max-width: $mobile-m)  { @content ; }
+  }
+}

@@ -1,0 +1,33 @@
+.nav-link-top {
+  text-decoration: none;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: $black;
+  position: relative;
+  transition: color 0.3s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: $blue-ribbon;
+    transition: 0.3s;
+    transition-property: background-color, width;
+  }
+}
+
+.nav-link-top.nav-link-top--active, .nav-link-top:hover {
+  color: $blue-ribbon;
+
+  &::after {
+    position: absolute;
+    width: 100%;
+    background-color: $blue-ribbon;
+  }
+}

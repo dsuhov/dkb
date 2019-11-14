@@ -1,0 +1,17 @@
+.NSerif-28-42-reg {
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 42px;
+  color: $black;
+
+  @include breakpoint(contSize) {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @media (max-width: 765px) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

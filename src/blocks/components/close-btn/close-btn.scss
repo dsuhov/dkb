@@ -1,0 +1,17 @@
+.close-btn {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.close-btn:hover {
+  svg {
+    fill: rgba(0, 0, 0, 1);
+  }
+}

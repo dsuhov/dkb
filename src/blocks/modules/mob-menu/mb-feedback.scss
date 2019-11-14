@@ -1,0 +1,61 @@
+.mb-feedback {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
+  &__caption {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__tel {
+    display: inline-block;
+    font-family: "Museo Sans Cyrl", serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-top: 8px;
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue-ribbon;
+    }
+  }
+
+  &__text {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+
+  &__soc-line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    min-width: 144px;
+  }
+
+  &__cos-link {
+    display: inline-block;
+  }
+
+  &.mb-feedback--tel {
+
+  }
+
+  &.mb-feedback--soc {
+
+  }
+}

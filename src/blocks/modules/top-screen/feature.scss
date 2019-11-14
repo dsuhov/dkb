@@ -1,0 +1,50 @@
+.feature {
+  
+  letter-spacing: 0.03em;
+  color: $black;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+
+  @media (max-width: 765px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__title {
+    font-weight: 900;
+    line-height: 26px;
+    
+
+    @media (max-width: 765px) {
+      span {
+        display: inline;
+      }
+
+      &:before {
+        display: inline-block;
+        margin-right: 18px;
+        content: "—";
+        font-family: "Noto Sans", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        color: #000000;
+      }
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: 29px;
+
+    @media (max-width: 765px) {
+      display: none;
+    }
+  }
+}

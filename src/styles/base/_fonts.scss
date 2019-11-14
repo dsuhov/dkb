@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosans-400-normal.woff2") format("woff2"),
+    url("../fonts/notosans-400-normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosans-700-normal.woff2") format("woff2"),
+    url("../fonts/notosans-700-normal.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/notosans-900-normal.woff2") format("woff2"),
+    url("../fonts/notosans-900-normal.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("../fonts/notoserif-400-normal.woff2") format("woff2"),
+    url("../fonts/notoserif-400-normal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../fonts/subset-MuseoSansCyrl-500.woff2") format("woff2"),
+    url("../fonts/subset-MuseoSansCyrl-500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../fonts/subset-MuseoSansCyrl-900.woff2") format("woff2"),
+    url("../fonts/subset-MuseoSansCyrl-900.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

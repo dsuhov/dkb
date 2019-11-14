@@ -1,0 +1,146 @@
+.header-link {
+  box-sizing: border-box;
+  display: block;
+  min-height: 188px;
+  padding: 36px;
+  padding-bottom: 0;
+  border-radius: 30px 4px 34px 4px;
+  transition: 0.2s linear;
+  transition-property: border-radius, background-color;
+  background-color: $blue-ribbon;
+  text-decoration: none;
+
+  @include col;
+  @include size(1);
+
+  @include breakpoint(contSize) {
+    padding: 36px 2px 30px 22px;
+  }
+
+  @media (max-width: 765px) {
+    @include size(3);
+    min-height: 0;
+    padding: 30px 34px 22px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+  }
+
+  &.header-link--border {
+    @media (max-width: 765px) {
+      padding: 36px 34px;
+
+      .header-link__title {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 18px;
+    box-sizing: border-box;
+
+    @include breakpoint(contSize) {
+      margin-right: 8px;
+    }
+
+    @media (max-width: 765px) {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  &__arrow {
+    width: 70px;
+    height: 12px;
+  }
+
+  &__text {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding-right: 20px;
+
+    
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+
+  &__btn {
+    padding-top: 10px;
+
+    span {
+      @include breakpoint(contSize) {
+        display: none;
+      }
+
+      @media (max-width: 765px) {
+        display: inline;
+      }
+    }
+
+    @include breakpoint(contSize) {
+      padding-top: 42px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 765px) {
+      padding-top: 0px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.header-link:hover {
+  background-color: $port-gore;
+  border-radius: 4px;
+
+  .tl-arrow {
+    &__line {
+      transform: translateX(-8px) scaleX(1.6);
+      transition: transform 0.2s linear;
+    }
+
+    &__pin {
+      transform: translateX(17px);
+      transition: transform 0.2s linear;
+    }
+  }
+}
+
+@media (max-width: 765px) {
+  .header-link:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+.tl-arrow {
+  &__base {
+    transform: translateX(-10px);
+  }
+
+  &__pin {
+    transform: translateX(0);
+    transition: transform 0.2s linear;
+  }
+
+  &__line {
+    transform: scaleX(1.2) translateX(-8px);
+    transition: transform 0.2s linear;
+  }
+}

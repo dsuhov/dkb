@@ -1,0 +1,89 @@
+.mb-contacts {
+  text-align: center;
+
+  &__address {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+    color: #000000;
+  }
+
+  &__text, &__worktime {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    color: #000000;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__worktime {
+    
+    // font-family: "Noto Sans", sans-serif;
+    // font-weight: 400;
+    // font-size: 14px;
+    // line-height: 28px;
+    // letter-spacing: 0.04em;
+    // color: #000000;
+  }
+
+  &__wtime-block {
+    text-align: left;
+    display: flex;
+    max-width: 175px;
+    margin: 0 auto;
+  }
+
+  &__wtime-left {
+    margin-right: 13px;
+  }
+
+  &__on-map {
+    cursor: pointer;
+    padding-top: 6px;
+    font-family: "Noto Sans", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 9px;
+    line-height: 13px;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__map-icon {
+    margin-left: 10px;
+    padding-right: 8px;
+
+    .icon-location {
+      width: 9px;
+      height: 14px;
+      fill: #000;
+    }
+  }
+
+  &__feedback {
+    margin-bottom: 38px;
+  }
+
+  &__worktime {
+
+  }
+}

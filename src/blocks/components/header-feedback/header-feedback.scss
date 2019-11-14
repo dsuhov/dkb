@@ -1,0 +1,39 @@
+.header-feedback {
+  &:first-child {
+    margin-right: 44px;
+  }
+
+  &__tel {
+    display: block;
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    text-decoration: none;
+    margin-bottom: 9px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $blue-ribbon;
+    }
+  }
+
+  &__caption {
+    font-family: "Museo Sans Cyrl", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.04em;
+    color: $black;
+    opacity: 0.7;
+  }
+
+  &__cos-line {
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 89px;
+    margin-bottom: 9px;
+  }
+}

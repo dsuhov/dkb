@@ -1,0 +1,46 @@
+.backdrop {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  
+}
+
+.sidedrawer {
+  overflow: auto;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 600;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s;
+
+  min-width: 330px;
+  height: 100vh;
+  background-color: #fff;
+
+  padding: 85px 36px 20px;
+
+  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.15);
+
+  &__close-btn {
+    position: absolute;
+    right: 17px;
+    top: 20px;
+  }
+
+  @media (max-width: 765px) {
+    min-width: 300px;
+  }
+}
+
+
+
+.sidedrawer.sidedrawer--open {
+  transition: left 0.3s;
+  left: 0;
+}

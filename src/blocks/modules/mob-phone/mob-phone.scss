@@ -1,0 +1,40 @@
+.mob-phone {
+  display: block;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  @media (max-width: 765px) {
+    width: 34px;
+    height: 34px;
+    background-color: $solitude;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: none;
+    }
+  }
+  
+  &:hover {
+    color: $blue-ribbon;
+  }
+
+  &__icon {
+    display: none;
+
+    @media (max-width: 765px) {
+      display: block;
+      width: 12px;
+      height: 17px;
+      fill: #000;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.soc-links-top {
+  display: block;
+
+  &.soc-links-top {
+    &--whatsapp {
+      width: 16px;
+      height: 15px;
+    }
+
+    &--telegram {
+      width: 16px;
+      height: 13px;
+    }
+
+    &--mail {
+      width: 17px;
+      height: 12px;
+    }
+
+    svg {
+      width: inherit;
+      height: inherit;
+      transition: fill 0.3s;
+    }
+
+    &:hover svg {
+      fill: $blue-ribbon !important;
+    }
+  }
+}

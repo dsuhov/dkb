@@ -1,0 +1,143 @@
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+
+
+  @include breakpoint(contSize) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 765px) {
+    padding: 0 20px;
+  }
+
+  &__nav {
+    @include breakpoint(contSize) {
+      display: none;
+    }
+  }
+
+  &__line {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-height: 128px;
+
+    @include breakpoint(contSize) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 765px) {
+      min-height: 75px;
+    }
+  }
+
+  &__logo {
+    margin-right: 53px;
+
+    @include breakpoint(contSize) {
+      margin: 0;
+      margin-left: 118px;
+    }
+
+    @media (max-width: 765px) {
+      margin-left: 0;
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+    padding-bottom: 32px;
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+  
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
+
+    svg {
+      width: inherit;
+      height: inherit;
+      stroke: #000;
+      opacity: 1;
+    }
+
+    @include breakpoint(contSize) {
+      display: block;
+    }
+
+    @media (max-width: 765px) {
+      width: 22px;
+    }
+  }
+
+  &__mob-phone {
+    display: none;
+
+    @include breakpoint(contSize) {
+      display: block;
+    }
+  }
+
+  &.header--scrolling {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+    .header__line {
+      min-height: 80px;
+
+      @media (max-width: 765px) {
+        min-height: 56px;
+      }
+    }
+
+    .header-feedback__tel {
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+
+    .header-feedback__caption {
+      display: none;
+    }
+
+    .header__feedback {
+      padding: 0;
+      align-self: center;
+      align-items: center;
+    }
+
+    .header-feedback__cos-line {
+      padding-top: 0;
+      margin-bottom: 0;
+      width: 89px;
+      
+    }
+
+    .header__logo {
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+  }
+}

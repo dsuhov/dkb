@@ -1,0 +1,48 @@
+h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+
+@include reset();
+
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  padding-top: 128px;
+  
+  @media (max-width: 765px) {
+    padding-top: 80px;
+  }
+
+  &.wrapper--scrolling {
+    padding-top: 80px;
+
+    @media (max-width: 765px) {
+      padding-top: 56px;
+    }
+  }
+}
+
+.container {
+  max-width: 1122px;
+  margin: 0 auto;
+
+  @include breakpoint(contSize) {
+    max-width: $tablet;
+  }
+
+  @media (max-width: 765px) {
+    max-width: $mobile-m;
+  }
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}

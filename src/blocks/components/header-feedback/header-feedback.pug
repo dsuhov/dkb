@@ -1,0 +1,17 @@
+include ../soc-links-top/soc-links-top
+
+mixin header-feedback-tel()
+  .header-feedback
+    .header-feedback__tel +7 499 938-52-60
+    .header-feedback__caption Заказать звонок
+
+mixin header-feedback-soc()
+  .header-feedback
+    .header-feedback__cos-line
+      .header-feedback__cos-link
+        +soc-links-top('whatsapp', '')
+      .header-feedback__cos-link
+        +soc-links-top('telegram', '')
+      .header-feedback__cos-link
+        +soc-links-top('mail', '')
+    .header-feedback__caption Задать вопросы
