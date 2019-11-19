@@ -1,0 +1,138 @@
+.form-side {
+  position: relative;
+  width: 100%;
+  height: 1px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+
+  &__itself {
+    box-sizing: border-box;
+    padding: 54px 46px 0;
+    position: absolute;
+    top: -498px;
+    right: 0;
+    width: 372px;
+    min-height: 920px;
+
+    background-color: $blue-ribbon;
+    border-radius: 45px 4px;
+
+    @include breakpoint(contSize) {
+      width: 326px;
+      min-height: 762px;
+      right: 40px;
+      top: -450px;
+      padding: 52px 36px 0;
+    }
+  }
+
+  &__label {
+    box-sizing: border-box;
+    width: 74px;
+    border: 2px solid #fff;
+    border-radius: 4px 0;
+    padding: 2px;
+
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    
+    margin-bottom: 28px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: $orange-peel;
+
+    &:hover {
+      // text-decoration: underline;
+      border-bottom: 2px solid $orange-peel;
+    }
+  }
+
+  &__title-text {
+
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    margin-bottom: 64px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(contSize) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__description-mobile {
+    display: none;
+
+    @include breakpoint(contSize) {
+      display: block;
+    }
+  }
+
+  &__description-desk {
+    @include breakpoint(contSize) {
+      display: none;
+    }
+  }
+
+  &__descr-list {
+    @include breakpoint(contSize) {
+      display: none;
+    }
+  }
+
+  &__descr-item {
+    position: relative;
+    padding-left: 37px;
+
+    &::before {
+      position: absolute;
+      content: "—";
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input-base {
+    margin-bottom: 25px;
+  }
+
+  &__accept-conf {
+    width: 232px;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    width: 232px;
+    padding-top: 40px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+}

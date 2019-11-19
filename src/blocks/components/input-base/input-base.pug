@@ -1,0 +1,29 @@
+mixin input-base(params)
+  .input-base(class=`${params.extraClass}__input-base`)
+    label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label
+    .input-base__input-field
+      input(
+        type="text" 
+        id=`${params.extraClass}-${params.name}` 
+        name=`${params.name}` 
+        placeholder=`${params.placeholder}`
+        required
+      ).input-base__input
+      .input-base__info-icon
+        +icon('valid', 'input-base__valid')
+        +icon('non-valid', 'input-base__non-valid')
+
+mixin input-base-email(params)
+  .input-base(class=`${params.extraClass}__input-base`)
+    label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label
+    .input-base__input-field
+      input(
+        type="email" 
+        id=`${params.extraClass}-${params.name}` 
+        name=`${params.name}` 
+        placeholder=`${params.placeholder}`
+        required
+      ).input-base__input
+      .input-base__info-icon
+        +icon('valid', 'input-base__valid')
+        +icon('non-valid', 'input-base__non-valid')

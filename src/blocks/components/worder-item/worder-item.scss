@@ -1,0 +1,136 @@
+.worder-item {
+
+  
+
+  // IMG_BLOCK
+  &__img-block {
+
+    &.worder-item__img-block--1 {
+      width: 189px;
+
+      margin-bottom: 39px;
+
+      picture {
+        padding-top: 87.83068783068784%;
+      }
+
+      @media (max-width: 765px) {
+        width: 144px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &.worder-item__img-block--2 {
+      width: 105px;
+      padding-top: 14px;
+      margin-bottom: 40px;
+      
+      picture {
+        padding-top: 143.8095238095238%;
+      }
+
+      @media (max-width: 765px) {
+        width: 87px;
+        padding-top: 0;
+        margin-bottom: 32px;
+      }
+    }
+
+    &.worder-item__img-block--3 {
+      width: 125px;
+
+      padding-top: 15px;
+      margin-bottom: 34px;
+      
+      picture {
+        padding-top: 124.8%;
+      }
+
+      @media (max-width: 765px) {
+        width: 98px;
+      }
+    }
+
+    &.worder-item__img-block--4 {
+      width: 178px;
+
+      padding-top: 27px;
+      margin-bottom: 29px;
+      
+      picture {
+        padding-top: 73.03370786516854%;
+      }
+
+      @include breakpoint(contSize) {
+        padding-top: 50px;
+      }
+
+      @media (max-width: 765px) {
+        padding-top: 32px;
+        width: 146px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &.worder-item__img-block--5 {
+      width: 150px;
+
+      margin-bottom: 31px;
+      margin-left: 8px;
+      
+      picture {
+        padding-top: 103.33333333333333%;
+      }
+
+      @include breakpoint(contSize) {
+        padding-top: 17px;
+      }
+
+      @media (max-width: 765px) {
+        width: 123px;
+        margin-left: 0;
+      }
+    }
+  }
+  // IMG_BLOCK END
+
+  &__content-block {
+    max-width: 80%;
+    color: #000000;
+    letter-spacing: 0.03em;
+    font-family: "Noto Sans", sans-serif;
+
+    @include breakpoint(contSize) {
+      max-width: 76%;
+    }
+
+    @media (max-width: 765px) {
+      max-width: 96%;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+

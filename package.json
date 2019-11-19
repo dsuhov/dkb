@@ -65,7 +65,9 @@
         "yargs": "~13.2.4"
     },
     "dependencies": {
+        "imask": "^5.2.1",
         "jquery": "^3.4.1",
+        "jquery-validation": "^1.19.1",
         "scrollmagic": "^2.0.7",
         "smart-grid": "^2.1.2",
         "vanilla-lazyload": "^12.3.0"

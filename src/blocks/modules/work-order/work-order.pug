@@ -1,0 +1,40 @@
+include ../../components/typography/title-section
+include ../../components/worder-item/worder-item
+
+-
+  var itemsContent = [
+    {
+      order: '1',
+      title: 'Гарантируем правильное<br>ведение бухгалтерии',
+      content: 'Вам не придется самим<br>вникать в работу бухгалтеров'
+    },
+    {
+      order: '2',
+      title: 'Правильно и вовремя подсчитываем налоги',
+      content: 'Вы избавлены <br>от штрафов, переплат <br>и доначислений'
+    },
+    {
+      order: '3',
+      title: 'Согласовываем и сдаем отчеты в срок',
+      content: 'У налоговой к вам нет<br>претензий и нет поводов<br>для проверки'
+    },
+    {
+      order: '4',
+      title: 'Проверяем контрагентов<br>и предупреждаем <br>о рисковых операциях',
+      content: 'Вы защищены от<br>блокировки счета '
+    },
+    {
+      order: '5',
+      title: 'Заботимся о законном<br>снижении ваших налогов',
+      content: 'Вы легально и без рисков<br>платите меньше'
+    }
+  ];
+
+section.work-order
+  .container
+    .work-order__title
+      +title-section-40-51('Мы строим работу так,<br>чтобы вы ни минуты не переживали<br>за бухгалтерию и налоги')
+    ul.work-order__items
+      each item in itemsContent
+        li.work-order__item
+          +worder-item(item)

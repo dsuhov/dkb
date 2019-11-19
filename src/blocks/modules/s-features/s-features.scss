@@ -1,0 +1,37 @@
+.s-features {
+  padding-top: 25px;
+
+  @include breakpoint(contSize) {
+    padding-top: 20px;
+  }
+
+  &__content {
+    @include breakpoint(contSize) {
+      padding: 0 40px;
+    }
+  
+    @media (max-width: 765px) {
+      padding: 0 20px;
+    }
+  }
+
+  &__item {
+    @media (max-width: 765px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 162px;
+
+    @include breakpoint(contSize) {
+      max-width: 325px;
+      margin-bottom: 130px;
+    }
+
+    @media (max-width: 765px) {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+}

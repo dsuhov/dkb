@@ -1,0 +1,39 @@
+include ../../components/input-base/input-base
+include ../../components/buttons/btn-default/btn-default
+
+-
+  var inputs = [
+    {
+      extraClass: 'form-side',
+      name: 'phone',
+      placeholder: '+7',
+      label: 'Номер телефона'
+    },
+    {
+      extraClass: 'form-side',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: 'Эл. почта'
+    }
+  ];
+
+.form-side.container
+  .form-side__itself
+    .form-side__label Бесплатно
+    .form-side__title
+      a(href="#").form-side__title-link Экспресс-анализ 
+      span.form-side__title-text состояния вашей бухгалтерии
+    .form-side__description
+      p.form-side__description-mobile Оставьте свои контакты и мы пришлем вам эксперсс-анализ и расчет стоимости<br>бухгалтерского обслуживания 
+      p.form-side__description-desk Оставьте свои контакты, чтобы бесплатно получить:
+      ul.form-side__descr-list
+        li.form-side__descr-item экспресс-анализ
+        li.form-side__descr-item индивидуальное предложение по бухгалтерским услугам, необходимым именно вашей компании
+        li.form-side__descr-item точный расчет стоимости бухгалтерского обслуживания
+    form(action="" id="form-side" method="post" autocomplete="off").form-side__form-content
+      +input-base(inputs[0])
+      +input-base-email(inputs[1])
+      .form-side__btn
+        +btn-default-submit('получить материалы')
+      .form-side__accept-conf
+        include ../../components/accept-conf/accept-conf

@@ -1,0 +1,68 @@
+.input-base {
+
+  
+
+  &__label {
+    font-family: "Museo Sans Cyrl";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    color: #fff;
+    letter-spacing: 0.03em;
+
+    padding: 10px 16px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
+
+    @include placeholder() {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom: 2px solid rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__info-icon {
+    position: absolute;
+    right: 14px;
+    top: 16px;
+
+    svg {
+      display: none;
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__input-field {
+    position: relative;
+
+    &.input-base__input-field--valid {
+      .input-base__valid { display: block; }
+    }
+
+    &.input-base__input-field--non-valid {
+      .input-base__non-valid { display: block; }
+      .input-base__input {
+        border-bottom: 2px solid $error;
+      }
+    }
+  }
+}

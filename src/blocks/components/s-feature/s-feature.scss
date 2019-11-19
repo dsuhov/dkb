@@ -1,0 +1,145 @@
+.s-feature {
+  display: flex;
+
+  &__img-block {
+    box-sizing: border-box;
+  }
+  // images
+  &.s-feature--1 &__img-block {
+    width: 366px;
+
+    picture {
+      padding-top: 71.5846994535519%;
+    }
+  }
+
+  &.s-feature--2 &__img-block {
+    width: 369px;
+
+    picture {
+      padding-top: 112.63736263736264%;
+    }
+
+    margin: 53px 0 0 113px;
+  }
+
+  &.s-feature--3 &__img-block {
+    width: 382px;
+
+    picture {
+      padding-top: 107.06806282722513%;
+    }
+
+    margin: 3px 0 0 80px;
+  }
+
+  &.s-feature--4 &__img-block {
+    width: 362px;
+    margin-left: 102px;
+
+    picture {
+      padding-top: 112.98342541436465%;
+    }
+  }
+  
+  // images end
+
+  // s-feature--1
+  &.s-feature--1 {
+    margin-bottom: 87px;
+  }
+
+
+  &.s-feature--1 &__text-block {
+    padding-top: 156px;
+  }
+
+  // s-feature--2
+  
+
+  &.s-feature--2 &__list {
+    padding: 19px 0 0;
+  }
+
+  // s-feature--3
+  &.s-feature--3 {
+    margin-bottom: 48px;
+  }
+
+  &.s-feature--3 &__text-block {
+    padding-top: 85px;
+  }
+
+  // s-feature--4
+  &.s-feature--4 &__text-block {
+    padding-top: 38px;
+  }
+
+  &.s-feature--4 &__list {
+    padding: 0 0 16px;
+  }
+
+  // ************** //
+
+  &__pic-block {
+    width: 50%;
+
+    &.s-feature__pic-block--reverse {
+      order: 1;
+    }
+  }
+
+  &__text-block {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  &:nth-of-type(odd) &__text-block {
+    padding-left: 4px;
+  }
+
+  &__title {
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+
+  &__description, &__l-item {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__description:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    // padding: 10px 0 10px;
+  }
+
+  &__l-item {
+    position: relative;
+    padding-left: 39px;
+
+    &::before {
+      position: absolute;
+      content: "—";
+      color: $blue-ribbon;
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@import "s-feature-768";
+@import "s-feature-375";

@@ -1,0 +1,19 @@
+mixin worder-item(params)
+  .worder-item
+    div(class='worder-item__img-block'+` worder-item__img-block--${params.order}`)
+      picture.worder-item__picture
+        source(
+          data-srcset=`img/work_order/work-order-${params.order}_desktop_1x.webp, 
+            img/work_order/work-order-${params.order}_desktop_2x.webp 2x`, 
+          type="image/webp"
+        )
+        img(
+          src="img/general/empty.png" 
+          alt=`${params.title}` 
+          data-src=`img/work_order/work-order-${params.order}_desktop_1x.jpg`
+          data-srcset=`img/work_order/work-order-${params.order}_desktop_1x.jpg, 
+            img/work_order/work-order-${params.order}_desktop_2x.jpg 2x`
+        )
+    .worder-item__content-block
+      h4.worder-item__title!= params.title
+      p.worder-item__content!= params.content

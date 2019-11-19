@@ -1,0 +1,146 @@
+@include breakpoint(contSize) {
+  .s-feature {
+    display: flex;
+  
+    &__img-block {
+      box-sizing: border-box;
+    }
+    // images
+    &.s-feature--1 &__img-block {
+      width: 324px;
+  
+      picture {
+        padding-top: 71.5846994535519%;
+      }
+    }
+  
+    &.s-feature--2 &__img-block {
+      width: 324px;
+  
+      picture {
+        padding-top: 112.63736263736264%;
+      }
+  
+      margin: 136px 0 0 16px;
+    }
+  
+    &.s-feature--3 &__img-block {
+      width: 324px;
+  
+      picture {
+        padding-top: 107.06806282722513%;
+      }
+  
+      margin: 76px 0 0 2px;
+    }
+  
+    &.s-feature--4 &__img-block {
+      width: 324px;
+      margin-left: 23px;
+      margin-top: 42px;
+  
+      picture {
+        padding-top: 112.98342541436465%;
+      }
+    }
+    
+    // images end
+  
+    // s-feature--1
+    &.s-feature--1 {
+      margin-bottom: -34px;
+    }
+  
+  
+    &.s-feature--1 &__text-block {
+      padding-top: 51px;
+      padding-left: 20px;
+    }
+  
+    // s-feature--2
+    
+  
+    &.s-feature--2 &__list {
+      padding: 12px 0 0;
+    } 
+
+    &.s-feature--2 &__title {
+      max-width: 310px;
+    }
+  
+    // s-feature--3
+    &.s-feature--3 {
+      margin-bottom: 48px;
+    }
+  
+    &.s-feature--3 &__text-block {
+      padding-top: 10px;
+    }
+  
+    // s-feature--4
+    &.s-feature--4 &__text-block {
+      padding-top: 0;
+    }
+  
+    &.s-feature--4  &__list {
+      padding: 0 0 6px;
+    }
+  
+    // ************** //
+  
+    &__pic-block {
+      width: 50%;
+  
+      &.s-feature__pic-block--reverse {
+        order: 1;
+      }
+    }
+  
+    &__text-block {
+      box-sizing: border-box;
+      width: 50%;
+    }
+  
+    &:nth-of-type(odd) &__text-block {
+      // padding-left: 4px;
+    }
+  
+    &__title {
+      font-family: "Noto Serif", serif;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 33px;
+      color: #000000;
+      margin-bottom: 30px;
+    }
+  
+    &__description, &__l-item {
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 34px;
+      letter-spacing: 0.03em;
+      color: rgba(0, 0, 0, 0.8);
+    }
+  
+    &__list {
+      // padding: 10px 0 10px;
+    }
+  
+    &__l-item {
+      position: relative;
+      padding-left: 39px;
+  
+      &::before {
+        position: absolute;
+        content: "—";
+        color: $blue-ribbon;
+        left: 0;
+      }
+  
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.title-section-40-51  {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 51px;
+  color: #000000;
+
+  @include breakpoint(contSize) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @media (max-width: 765px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

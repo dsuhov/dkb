@@ -23,5 +23,5 @@ $(document).ready(function() {
     $('body').css('overflow', 'auto');
   }
 
-  $('.top-screen__big-title .header-title br, .top-screen__subtitle br').replaceWith(' ');
+  $('.top-screen__subtitle br').replaceWith(' ');
 });
