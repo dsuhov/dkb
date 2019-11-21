@@ -1,0 +1,70 @@
+include ../../components/typography/title-section
+include ../../components/input-base/input-base
+include ../../components/buttons/btn-default/btn-default
+
+-
+  var inputs = [
+    {
+      extraClass: 'popup',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: 'Куда отправить презентацию?'
+    }
+  ];
+
+
+section.popup.popup-prezent
+  .popup__close
+  .container
+    .popup__content
+      .popup__title
+        +title-section-40-51('Игорь, мы отправили презентацию на указанную почту')
+      a(href="#").popup__mail-logo
+        picture
+          source(
+            srcset="img/general/empty.png"
+            data-srcset=`img/popups/gmail-logo.jpg` 
+            media="(max-width: 768px)"
+            type="image/webp"
+          )
+          source(
+            srcset="img/general/empty.png"
+            data-srcset=`img/popups/gmail-logo.jpg` 
+            type="image/webp"
+          )
+          img(src="img/general/empty.png", data-src=`img/popups/gmail-logo.jpg` alt="mail-logo")
+      .popup__subtitle
+        .NSerif-28-42-reg Вы можете войти в нее отсюда
+      .popup__text 
+        | Если письма нет во входящих, проверьте папку 
+        br
+        | «Промоакции» или «Спам»:
+        br 
+        | письмо могло попасть туда по ошибке
+section.popup.popup-feedback
+  .popup__close
+  .container
+    .popup__content
+      .popup__title
+        +title-section-40-51('Игорь, спасибо за заявку!')
+      .popup__subtitle
+        .NSerif-28-42-reg Мы перезвоним вам в ближайшее время
+  .popup__colored
+    .container
+      .popup__descr
+        | А пока вы ждете звонка, 
+        br
+        span посмотрите презентацию о нашей компании 
+        br
+        | и узнайте, как получить скидку от 10 до 50% 
+        br 
+        | на бухгалтерское обслуживание
+      .popup__descr
+        .popup__form
+          form(action="" id="popup" method="post" autocomplete="off").popup__form-content
+            +input-base-email(inputs[0])
+            .popup__btn
+              +btn-default-submit('получить презентацию')
+            .form-side__accept-conf
+              include ../../components/accept-conf/accept-conf
+

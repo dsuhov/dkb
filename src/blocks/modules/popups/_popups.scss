@@ -1,0 +1,139 @@
+.popup {
+    font-family: "Noto Sans", sans-serif;
+    position: relative;
+    &__title {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 25px;
+        padding-top: 145px;
+        @media (max-width: 765px) {
+            margin-bottom: 15px;
+        }
+        .title-section-40-51 {
+            @include breakpoint(contSize) {
+                font-size: 40px;
+                line-height: 1.28;
+            }
+        
+            @media (max-width: 765px) {
+                font-size: 26px;
+                line-height: 1.28;
+            }
+        }
+        
+    }
+    &__subtitle {
+        text-align: center;
+        max-width: 640px;
+        margin: 42px auto 120px;
+        font-size: 28px;
+        line-height: 1.5;
+        @media (max-width: 765px) {
+            margin-bottom: 60px;
+        }
+    }
+    &__mail-logo {
+        display: block;
+        max-width: 150px;
+        margin: 94px auto 0;
+        picture {
+            padding-top: 79%;
+        }
+        
+    }
+    &__text {
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-bottom: 217px; //может убрать
+    }
+    &__close {
+        position: absolute;
+        top: 60px;
+        right: 49px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px;
+            background: #000000;
+            transition: 0.3s;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(135deg);
+        }
+        &:hover {
+            &:before {
+            transform: rotate(135deg);
+            }
+            &:after {
+                transform: rotate(225deg);
+            }
+        }
+    }
+    &__colored {
+        background: #0461FD;
+        padding-top: 114px;
+        padding-bottom: 110px;
+        color: #ffffff;
+        @media (max-width: 765px) {
+            padding-bottom: 75px;
+        }
+    }
+    &__descr {
+        font-family: "Noto Sans", sans-serif;
+        font-size: 17px;
+        line-height: 2;
+        letter-spacing: 0.03em;
+        margin: 0 auto;
+        span {
+            font-weight: bold;
+        }
+        @media (max-width: 765px) {
+            font-size: 14px;
+        }
+        
+    }
+    &__form {
+        margin-top: 65px;
+        &-content {
+            width: 100%;
+            max-width: 332px;
+            margin: 0 auto;
+        }
+    }
+    &__btn {
+        width: 100%;
+        max-width: 332px;
+        padding-top: 35px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+}
+.popup-prezent {
+    .popup {
+        &__subtitle {
+            margin-bottom: 42px;
+        }
+    }
+}
+.popup-feedback {
+    .popup {
+        &__descr {
+            max-width: 479px;
+            text-align: center;
+        }
+    }
+}
