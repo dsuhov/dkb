@@ -1,6 +1,7 @@
 include ../../components/typography/title-section
 include ../../components/input-base/input-base
 include ../../components/buttons/btn-default/btn-default
+include ../../components/soc-links-bottom/soc-links-bottom
 
 -
   var inputs = [
@@ -39,6 +40,12 @@ include ../../components/buttons/btn-default/btn-default
       name: 'email',
       placeholder: 'hello@gmai.com',
       label: 'Куда выслать <br>расчет и материалы?'
+    },
+    {
+      extraClass: 'popup',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: 'Куда выслать <br>КП и материалы?'
     }
   ];
 
@@ -151,7 +158,7 @@ section.popup.popup-call
             data-srcset=`img/popups/popup_girl_mob.png` 
             media="(min-width: 320px)"
           )
-          img(src="img/popups/popup_girl.png", data-src=`img/popups/popup_girl.png` alt="mail-logo")
+          img(src="img/popups/popup_girl.png", data-src=`img/popups/popup_girl.png` alt="raguzina")
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
@@ -196,5 +203,120 @@ section.popup.popup-call.popup01
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
-
+section.popup.popup-call.popup02
+  .popup__colored
+    .popup__close
+    .container.popup__body
+      .popup__content
+        .popup__subtitle
+          .NSerif-28-42-reg Собираете коммерческие предложения по бухгалтерскому обслуживанию для своего руководителя?
+        .popup__descr 
+          span Оставьте свои контакты и получите полный комплект документов, 
+          | необходимых руководителю для принятия решения: 
+        ul.popup__list
+          li.popup__list-item Индивидуальное коммерческое предложение с возможностью сэкономить от 10 до 50% на аутсорсинге бухгалтерии 
+          li.popup__list-item Точный расчет стоимости бухгалтерского сопровождения 
+          li.popup__list-item Краткую презентацию компании 
+          li.popup__list-item Договор на бухгалтерское обслуживание 
+          li.popup__list-item Регламент оказания бухгалтерских услуг
+        .popup__form
+          form(action="" id="popup" method="post" autocomplete="off")
+            .popup__form-line
+              +input-base-phone(inputs[4])
+              +input-base-email(inputs[6])
+            .popup__btn
+              +btn-default-submit('получить комлект документов')
+            .form-side__accept-conf
+              include ../../components/accept-conf/accept-conf
+      .popup__img
+        img(src="img/popups/popup_docs.png", data-src=`img/popups/popup_docs.png` alt="docs")
+section.popup.popup-call.popup03
+  .popup__colored
+    .popup__close
+    .container.popup__body
+      .popup__content
+        .popup__subtitle
+          .NSerif-28-42-reg Бухгалтер бросил вас перед проверкой или в разгар отчетности? Или просто исчез вместе с бухгалтерской базой?
+        .popup__descr
+          span Мы быстро разберемся в ситуации и решим проблемы с вашей бухгалтерией и налогами
+          | Укажите контактные данные и удобное время для звонка. Я позвоню вам, и мы обсудим решение вашей проблемы
+        .popup__form
+          form(action="" id="popup" method="post" autocomplete="off")
+            .popup__form-line
+              +input-base(inputs[2])
+              +input-base-phone(inputs[1])
+            label(class="input-base__label") Выберите время для звонка
+            .popup__form-line  
+              .input-slide-wrap
+                input(type="checkbox" value="none" id="input-slide2" name="check" checked)
+                .input-slide__now
+                  p Сейчас 
+                .input-slide
+                  label(for="input-slide2")
+                .input-slide__date
+                  p Ко времени
+                  .input-base.popup__input-base
+                    .input-base__input-field
+                      input#popup-text.input-base__input(type='text', name='text', placeholder='Например, 1 сентября в 14:00', required='')
+                      .input-base__info-icon
+                        svg.icon-valid.input-base__valid
+                          use(xlink:href='img/sprites/symbol/sprite.svg#valid')
+                        svg.icon-non-valid.input-base__non-valid
+                          use(xlink:href='img/sprites/symbol/sprite.svg#non-valid')
+            .popup__btn
+              +btn-default-submit('позвоните мне')
+            .form-side__accept-conf
+              include ../../components/accept-conf/accept-conf
+      .popup__img
+        picture
+          source(
+            srcset="img/popups/popup_girl.png"
+            data-srcset=`img/popups/popup_girl.png`
+            media="(min-width: 1123px)"
+          )
+          source(
+            srcset="img/popups/popup_girl_pl.png"
+            data-srcset=`img/popups/popup_girl_pl.png`
+            media="(min-width: 768px)"
+          )
+          source(
+            srcset="img/popups/popup_girl_mob.png"
+            data-srcset=`img/popups/popup_girl_mob.png` 
+            media="(min-width: 320px)"
+          )
+          img(src="img/popups/popup_girl.png", data-src=`img/popups/popup_girl.png` alt="raguzina")
+        .popup__img-descr 
+          span Юлия Рагузина 
+          | | генеральный директор «ДКБ ПрофУчет»
+section.popup.popup-feedback.popup-feedback01
+  .popup__close
+  .container
+    .popup__content
+      .popup-feedback__img
+        img(src="img/popups/popup_feedback.png", data-src=`img/popups/popup_feedback.png` alt="feedback")
+        .popup-feedback__img-descr Юлия Рагузина <br>генеральный директор «ДКБ ПрофУчет»
+      .popup__title
+        +title-section-40-51('Спасибо за заявку!')
+      .popup__subtitle
+        .NSerif-28-42-reg Я перезвоню Вам в ближайшее время, чтобы уточнить данные для подготовки точного расчета стоимости бухгалтерского обслуживания
+      .popup__descr
+        span В течение 30 минут после звонка вы получите на почту точный расчет и пакет документов, 
+        | необходимых для выбора бухгалтерской компании:
+      ul.popup__list
+        li.popup__list-item Индивидуальное коммерческое предложение с возможностью сэкономить от 10 до 50% на аутсорсинге бухгалтерии 
+        li.popup__list-item Краткую презентацию нашей компании 
+        li.popup__list-item Договор на бухгалтерское обслуживание 
+        li.popup__list-item Регламент оказания бухгалтерских услуг 
+  .popup__colored
+    .container
+      .popup__descr
+        | А пока вы ждете звонка, 
+        br
+        span присоединяйтесь к нам в соцсетях,
+        br
+        | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
+      .popup-social
+        +soc-links-bottom('fb', '')
+        +soc-links-bottom('vk', '')
+        +soc-links-bottom('instagram', '')
 
