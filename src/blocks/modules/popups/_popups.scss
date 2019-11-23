@@ -86,6 +86,7 @@
         padding-top: 114px;
         padding-bottom: 110px;
         color: #ffffff;
+        overflow: hidden;
         @media (max-width: 765px) {
             padding-bottom: 75px;
         }
@@ -165,7 +166,7 @@
     }
     &__img {
         position: relative;
-        width: 44%;
+        width: 41%;
         picture {
             padding-top: 100%;
         }
@@ -234,8 +235,10 @@
             }
             picture {
                 padding-top: 190%;
+                left: 20%;
                 @include breakpoint(contSize) {
                     padding-top: 118%;
+                    left: 0;
                 }
             }
         }
@@ -307,11 +310,24 @@
         &__label {
             @include breakpoint(contSize) {
                 max-width: 334px;
-                margin: 0 auto;
+                margin: 0 auto 12px;
             }
         }
     }
 }
+.popup01 {
+    .popup__btn {
+        max-width: 409px;
+    }
+    .form-side__accept-conf {
+        max-width: 409px;
+        .accept-conf {
+            text-align: left;
+        }
+    }
+}
+
+
 .input {
     &-slide {
         width: 54px;
@@ -393,4 +409,30 @@
             }
         }
     }
+}
+.popup__list {
+    max-width: 620px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 2;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    @media (max-width: 765px) {
+        font-size: 14px;
+    }
+    &-item {
+        position: relative;
+        padding-left: 37px;
+        &:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            margin-right: 19px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
 }
