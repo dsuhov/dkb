@@ -9,6 +9,24 @@ include ../../components/buttons/btn-default/btn-default
       name: 'email',
       placeholder: 'hello@gmai.com',
       label: 'Куда отправить презентацию?'
+    },
+    {
+      extraClass: 'popup',
+      name: 'phone',
+      placeholder: '+7',
+      label: 'Номер телефона'
+    },
+    {
+      extraClass: 'popup',
+      name: 'text',
+      placeholder: '',
+      label: 'Как вас зовут'
+    },
+    {
+      extraClass: 'popup',
+      name: 'text',
+      placeholder: 'Например, 1 сентября в 14:00',
+      label: ''
     }
   ];
 
@@ -67,4 +85,61 @@ section.popup.popup-feedback
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
-
+section.popup.popup-call
+  .popup__colored
+    .popup__close
+    .container.popup__body
+      .popup__content
+        .popup__subtitle
+          .NSerif-28-42-reg Хотите перейти на бухгалтерское обслуживание в компанию, которую рекомендуют 95% клиентов?
+        .popup__descr
+          span Укажите контактные данные и удобное время для звонка 
+          | Я позвоню вам и отвечу на все вопросы Мы работаем по будням с 09:00 до 18:00 
+        .popup__form
+          form(action="" id="popup" method="post" autocomplete="off")
+            .popup__form-line
+              +input-base(inputs[2])
+              +input-base-phone(inputs[1])
+            label(class="input-base__label") Выберите время для звонка
+            .popup__form-line  
+              .input-slide-wrap
+                input(type="checkbox" value="none" id="input-slide" name="check" checked)
+                .input-slide__now
+                  p Сейчас 
+                .input-slide
+                  label(for="input-slide")
+                .input-slide__date
+                  p Ко времени
+                  .input-base.popup__input-base
+                    .input-base__input-field
+                      input#popup-text.input-base__input(type='text', name='text', placeholder='Например, 1 сентября в 14:00', required='')
+                      .input-base__info-icon
+                        svg.icon-valid.input-base__valid
+                          use(xlink:href='img/sprites/symbol/sprite.svg#valid')
+                        svg.icon-non-valid.input-base__non-valid
+                          use(xlink:href='img/sprites/symbol/sprite.svg#non-valid')
+            .popup__btn
+              +btn-default-submit('Позвоните мне')
+            .form-side__accept-conf
+              include ../../components/accept-conf/accept-conf
+      .popup__img
+        picture
+          source(
+            srcset="img/popups/popup_girl.png"
+            data-srcset=`img/popups/popup_girl.png`
+            media="(min-width: 1123px)"
+          )
+          source(
+            srcset="img/popups/popup_girl_pl.png"
+            data-srcset=`img/popups/popup_girl_pl.png`
+            media="(min-width: 768px)"
+          )
+          source(
+            srcset="img/popups/popup_girl_mob.png"
+            data-srcset=`img/popups/popup_girl_mob.png` 
+            media="(min-width: 320px)"
+          )
+          img(src="img/popups/popup_girl.png", data-src=`img/popups/popup_girl.png` alt="mail-logo")
+        .popup__img-descr 
+          span Юлия Рагузина 
+          | | генеральный директор «ДКБ ПрофУчет»

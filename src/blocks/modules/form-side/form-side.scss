@@ -125,12 +125,14 @@
   }
 
   &__accept-conf {
-    width: 232px;
+    width: 100%;
+    max-width: 232px;
     margin: 0 auto;
   }
 
   &__btn {
-    width: 232px;
+    width: 100%;
+    max-width: 232px;
     padding-top: 40px;
     margin: 0 auto;
     margin-bottom: 16px;
