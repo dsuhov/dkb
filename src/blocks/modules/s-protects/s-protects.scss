@@ -1,0 +1,262 @@
+.s-protects {
+  overflow: hidden;
+  padding-top: 140px;
+  position: relative;
+  z-index: 1000;
+  background-color: #fff;
+
+  &__inner {
+    @include breakpoint(contSize) {
+      padding: 0 40px 0;
+    }
+  
+    @media (max-width: 765px) {
+      padding: 0 20px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 58px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 75px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__tab-block {
+    display: flex;
+
+    @media (max-width: 765px) {
+      display: block;
+      background-color: rgba(229, 229, 229, 0.28);
+      box-sizing: border-box;
+      padding: 30px 33px 15px;
+    }
+  }
+
+  &__tabs-btns {
+    width: 375px;
+    flex-shrink: 0;
+
+    @include breakpoint(contSize) {
+      width: 339px;
+    }
+
+    @media (max-width: 765px) {
+      width: 100%;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__tab-content {
+    flex-grow: 1;
+    overflow: hidden;
+    
+  }
+
+  &__tab-list li {
+    &:not(:last-child) {
+      margin-bottom: 42px;
+
+      @include breakpoint(contSize) {
+        margin-bottom: 43px;
+      }
+
+      @media (max-width: 765px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__tab-btn {
+    position: relative;
+    cursor: pointer;
+    font-family: "Noto Sans";
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-align: left;
+    width: 248px;
+    transition: transform 0.3s;
+
+    &::before {
+      pointer-events: none;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: calc(50% - 7px);
+      width: 9px;
+      height: 14px;
+      background: url('../img/general/protects-angle.svg') no-repeat;
+      transform: translateX(-50px);
+      transition: 0.3s;
+      transition-property: transform, opacity;
+      opacity: 0;
+    }
+
+    @media (max-width: 765px) {
+      display: none;
+    }
+  }
+
+  &__nav-btns {
+    display: none;
+    
+    @media (max-width: 765px) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    
+  }
+
+  li.slick-active &__tab-btn {
+    color: $blue-ribbon;
+    // padding-left: 30px;
+    transform: translateX(30px);
+
+    &::before {
+      transform: translateX(-30px);
+      opacity: 1;
+    }
+
+    @media (max-width: 765px) {
+      color: #000;
+      display: block;
+      transform: none;
+      font-size: 16px;
+      line-height: 24px;
+      width: 230px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-arrow:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.sp-tab-content {
+  position: relative;
+  min-height: 450px;
+
+  @include breakpoint(contSize) {
+    box-sizing: border-box;
+    padding-left: 26px;
+    // min-height: 670px;
+  }
+
+  @media (max-width: 765px) {
+    padding-left: 0;
+  }
+
+  &__tick {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 21px;
+    height: 21px;
+
+    @media (max-width: 765px) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__item {
+    z-index: 10;
+    position: relative;
+    max-width: 600px;
+    padding-left: 48px;
+
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #000000;
+
+    @include breakpoint(contSize) {
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    @media (max-width: 340px) {
+      padding-left: 38px;
+      font-size: 12px;
+      line-height: normal;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include breakpoint(contSize) {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__aside {
+    position: absolute;
+    top: 20px;
+    left: 269px;
+    width: 490px;
+    height: 446px;
+    background: url('../img/general/orange-egg-2.jpg') no-repeat;
+    z-index: 1;
+
+    @include breakpoint(contSize) {
+      position: static;
+      background-size: 100%;
+      width: 450px;
+      height: 446px;
+      margin-top: -150px;
+      margin-left: -100px;
+    }
+  }
+
+  &__aside-text {
+    max-width: 233px;
+    font-family: "Noto Sans";
+    font-weight: 400;
+    display: block;
+    transform: translate(175px, 182px) rotate(-12deg);
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    
+    @include breakpoint(contSize) {
+      
+      transform: translate(165px, 162px) rotate(-12deg);
+    }
+  }
+
+  &__bulb {
+    // transform: rotate(90deg);
+    transform-origin: center;
+    animation: bulbRotate 4s linear infinite;
+  }
+}
+
+@keyframes bulbRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

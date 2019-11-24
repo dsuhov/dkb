@@ -1,0 +1,12 @@
+include ../../components/typography/title-section
+include ../../components/typography/subtitle-section
+
+.s-recommends
+  .container
+    .s-recommends__content
+      .s-recommends__title
+        +title-section-40-51('Клиенты доверяют нашим бухгалтерам <br>и уверены в качестве ведения бухучета')
+      .s-recommends__subtitle
+        +subtitle-section('поэтому регулярно рекомендуют нас своим <br>друзьям и партнерам')
+      .s-recommends__recommends-slider
+        include ../recommends-slider/recommends-slider

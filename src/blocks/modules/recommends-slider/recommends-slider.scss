@@ -1,0 +1,139 @@
+.recommends-slider {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 46px;
+  padding-bottom: 30px;
+  box-shadow: 4px 4px 1px $blue-ribbon;
+  border-radius: 45px 4px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.03em;
+
+  position: relative;
+
+  // &__slider-container {
+  //   margin-bottom: 42px;
+  // }
+
+  &__slide-container {
+    box-sizing: border-box;
+    padding-left: 65px;
+    padding-right: 147px;
+  }
+
+  &__link {
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #000;
+    // vertical-align: middle;
+  }
+
+  &__link-row {
+    padding-top: 88px;
+    padding-bottom: 10px;
+  }
+
+  &__arrow {
+    vertical-align: middle;
+    width: 70px;
+    height: 12px;
+  }
+
+  &__info {
+    flex-shrink: 0;
+    width: 180px;
+    margin-right: 132px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+  }
+
+  &__gazprom {
+    width: 90px;
+    height: 44px;
+  }
+
+  &__slide {
+    display: flex;
+    padding-top: 10px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__position {
+    margin-bottom: 14px;
+  }
+
+  &__position, &__activity {
+    color: rgba(0, 0, 0, 0.35);
+  }
+
+  &__btn-row {
+    position: absolute;
+    left: 65px;
+    bottom: 30px;
+    display: flex;
+  }
+
+  &__text {
+    padding-top: 16px;
+  }
+
+  &__text p {
+    font-size: 17px;
+    line-height: 34px;
+    
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &:first-child {
+      font-weight: 700;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+    &:first-child::before {
+      content: "«";
+      padding-right: 1px;
+      margin-left: -10px;
+    }
+  }
+  
+  &__nav-arrow {
+    flex: 0 0 auto;
+    // width: 42px;
+    // height: 42px;
+    // display: block;
+  }
+
+  &__nav-arrow:first-child {
+    margin-right: 13px;
+  }
+}
+
+.recommends-slider__link:hover {
+
+  .tl-arrow {
+    &__line {
+      transform: translateX(-8px) scaleX(1.6);
+      transition: transform 0.2s linear;
+    }
+
+    &__pin {
+      transform: translateX(17px);
+      transition: transform 0.2s linear;
+    }
+  }
+}

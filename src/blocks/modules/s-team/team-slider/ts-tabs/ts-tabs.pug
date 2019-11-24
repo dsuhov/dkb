@@ -1,0 +1,11 @@
+include ts-hint/ts-hint
+include ts-slider/ts-slider
+include tsTabsData
+
+.ts-tabs
+  each item, i in tsTabsData
+    .ts-tabs__tab(class=`ts-tabs__tab--${i}`)
+      .ts-tabs__hint
+        +ts-hint(item.hint)
+      .ts-tabs__slider
+        +ts-slider(item.sliderData)

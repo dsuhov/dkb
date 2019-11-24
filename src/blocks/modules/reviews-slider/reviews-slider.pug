@@ -1,0 +1,36 @@
+include ../../components/nav-arrow/nav-arrow
+
+-
+  var reviewsSlider_1 = [
+    {
+      name: 'Константин Константинопольский',
+      position: 'директор студии',
+      text: 'Самое ценное у вас — подход к клиенту: не бывает такого, чтобы нас бортанули. Бухгалтер всегда с нами, поддерживает и подсказывает, что и как делать. Дает много формул для решения того или иного вопроса...»'
+    },
+    {
+      name: 'Константин Константинопольский',
+      position: 'директор студии',
+      text: 'Мне удобно с вами общаться, потому что вы с пол-оборота понимаете задачи моего бизнеса. Приятно, что избавляете меня от ошибок в учете и налогах...»'
+    },
+    {
+      name: 'Константин Константинопольский',
+      position: 'директор студии',
+      text: 'Бухгалтера очень внимательные, мне не надо забивать голову деталями и сроками. Когда обращаюсь — специалисты отвечают на все вопросы, дают понятные и грамотные консультации»'
+    }
+  ];
+
+.reviews-slider
+  .reviews-slider__slider-container
+    .reviews-slider__slick
+      for item in reviewsSlider_1
+        .reviews-slider__slide-container
+          .reviews-slider__slide
+            .reviews-slider__info
+              .reviews-slider__logo
+                +icon('gazprom', 'reviews-slider__gazprom')
+              .reviews-slider__name= item.name
+              .reviews-slider__position= item.position
+            p.reviews-slider__text!= item.text
+  .reviews-slider__btn-row
+    +nav-arrow-prev('reviews-slider')
+    +nav-arrow('reviews-slider')

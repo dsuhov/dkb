@@ -1,0 +1,32 @@
+.nav-arrow {
+  cursor: pointer;
+  display: block;
+
+  &__icon {
+    display: block;
+    width: 42px;
+    height: 42px;
+    fill: #000;
+  }
+
+  &.nav-arrow--prev {
+    transform-origin: center;
+    transform: rotate(180deg) translateY(1px);
+  }
+
+  &__corner {
+    transition: transform 0.2s linear;
+  }
+
+  &__circle {
+    transition: fill 0.2s linear;
+  }
+
+  &:hover &__corner {
+    transform: translateX(4px);
+  }
+
+  &:hover &__circle {
+    fill: $blue-ribbon;
+  }
+}

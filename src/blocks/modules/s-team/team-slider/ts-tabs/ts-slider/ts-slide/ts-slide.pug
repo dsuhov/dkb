@@ -1,0 +1,10 @@
+mixin ts-slide(data)
+  .ts-slide
+    .ts-slide__img-block
+      img(
+        src='img/general/empty.png'
+        data-lazy=`${data.imgPath}.jpg`
+      )
+    .ts-slide__info
+      .ts-slide__name!= data.name
+      .ts-slide__experience!= data.experience

@@ -12,6 +12,10 @@
   
       picture {
         padding-top: 71.5846994535519%;
+
+        @media only screen and (min-resolution: 192dpi) {
+          padding-top: 71.42857142857143%;
+        }
       }
     }
   
@@ -21,6 +25,10 @@
   
       picture {
         padding-top: 112.63736263736264%;
+
+        @media only screen and (min-resolution: 192dpi) {
+          padding-top: 95.71865443425077%;
+        }
       }
     }
   
@@ -30,6 +38,10 @@
   
       picture {
         padding-top: 107.06806282722513%;
+
+        @media only screen and (min-resolution: 192dpi) {
+          padding-top: 80.0302571860817%;
+        }
       }
     }
   
@@ -39,6 +51,10 @@
   
       picture {
         padding-top: 112.98342541436465%;
+
+        @media only screen and (min-resolution: 192dpi) {
+          padding-top: 78.52852852852853%;
+        }
       }
     }
     
@@ -47,6 +63,10 @@
     // s-feature--1
     &.s-feature--1 {
       margin-bottom: -0;
+    }
+
+    &__pic-block {
+      margin-bottom: 50px !important;
     }
   
   

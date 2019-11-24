@@ -1,0 +1,41 @@
+.soc-links-bottom {
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  margin: 25px;
+
+  &.soc-links-bottom {
+    &--fb svg {
+      width: 11px;
+      height: 40px;
+    }
+
+    &--vk svg {
+      width: 25px;
+      height: 44px;
+    }
+
+    &--instagram svg {
+      width: 20px;
+      height: 44px;
+    }
+
+    svg {
+      transition: fill 0.3s;
+    }
+
+    &:hover {
+      transform: scale(0.8);
+      svg {
+        opacity: 0.5;
+        fill: $blue-ribbon !important;
+      }
+    }
+  }
+}

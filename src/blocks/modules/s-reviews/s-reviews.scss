@@ -1,0 +1,25 @@
+.s-reviews {
+  padding-top: 140px;
+  padding-bottom: 146px;
+  background: rgba(229, 229, 229, 0.28);
+  z-index: 1000;
+
+  &__content {
+    @include breakpoint(contSize) {
+      padding: 0 40px 0;
+    }
+  
+    @media (max-width: 765px) {
+      padding: 0 20px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+  }
+}
+
