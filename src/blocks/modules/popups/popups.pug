@@ -46,6 +46,12 @@ include ../../components/soc-links-bottom/soc-links-bottom
       name: 'email',
       placeholder: 'hello@gmai.com',
       label: 'Куда выслать <br>КП и материалы?'
+    },
+    {
+      extraClass: 'popup',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: ''
     }
   ];
 
@@ -486,6 +492,58 @@ section.popup.popup-feedback.popup-feedback01.popup__consult
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
+//- Julia
+section.popup.popup-feedback.popup-feedback01.popup-julia
+  .popup__close
+  .container
+    .popup__content
+      .popup__subtitle
+        .NSerif-28-42-reg Юлия Рагузина 
+      .popup__descr генеральный директор «ДКБ ПрофУчет»        
+      ul.popup__list
+        li.popup__list-item Аттестованный главный бухгалтер 
+        li.popup__list-item 19 лет опыта ведения бухгалтерии 
+        li.popup__list-item Член палаты налоговых консультантов России 
+        li.popup__list-item Член Института профессиональных бухгалтеров России 
+      .popup-julia__img
+        img(src="img/popups/popup_cert.jpg", data-src=`img/popups/popup_cert.jpg` alt="raguzina")
+//- exit
+section.popup.popup-exit
+  .popup__close
+  .container
+    .popup__content
+      .popup-exit__title Получите 2 чек-листа.<br>Проверьте работу бухгалтера и оградите компанию от переплат, проверок и штрафов
+      ul.popup-exit__list
+        li.popup-exit__list-item 
+          .popup-exit__img
+            img(src="img/popups/popup_cert1.png", data-src=`img/popups/popup_cert1.png` alt="cert")
+          .popup-exit__text 
+            span 5 признаков недобросовестной работы бухгалтера, 
+            | которые приводят к проверкам и штрафам
+        li.popup-exit__list-item
+          .popup-exit__img
+            img(src="img/popups/popup_cert1.png", data-src=`img/popups/popup_cert1.png` alt="cert")
+          .popup-exit__text 
+            span 6 главных недоработок бухгалтера, 
+            | из-за которых собственник теряет деньги
+      .popup__schedule Получить чек-листы на почту
+      .popup__form
+        form(action="" id="popup-exit" method="post" autocomplete="off").popup__form-content
+          .input-base.popup__input-base
+            .input-base__input-field
+              input(class="input-base__input" type="email" id="popup-email" name="email" placeholder="hello@gmai.com" required="")
+              .popup-exit__arrow
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 36 14', fill='none')
+                  g(opacity='0.6')
+                    path(d='M1 7H33', stroke='#0461FD', stroke-width='2')
+                    path(d='M28 13L34.7202 6.27985', stroke='#0461FD', stroke-width='2')
+                    path(d='M34.7197 7.72021L27.9996 1.00006', stroke='#0461FD', stroke-width='2')
+                    path(d='M6 7C6 8.65685 4.65685 10 3 10C1.34315 10 0 8.65685 0 7C0 5.34315 1.34315 4 3 4C4.65685 4 6 5.34315 6 7Z', fill='#0461FD')
 
-
-
+              .input-base__info-icon
+                svg(class="icon-valid input-base__valid")
+                  use(xlink:href="img/sprites/symbol/sprite.svg#valid")
+                svg(class="icon-non-valid input-base__non-valid")
+                  use(xlink:href="img/sprites/symbol/sprite.svg#non-valid")
+          .form-side__accept-conf
+            include ../../components/accept-conf/accept-conf
