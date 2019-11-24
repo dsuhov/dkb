@@ -1,0 +1,49 @@
+include ../../components/nav-arrow/nav-arrow
+
+-
+  var recommendsSlider_1 = [
+    {
+      name: 'Александр Фишер',
+      position: 'Генеральный директор<br>ООО «МСМ»',
+      text: [
+        'Мы считаем большой удачей, <br>что в свое время обратились именно к вам',
+        'Выражаем вам искреннюю благодарность за квалифицированное оказание бухгалтерских и юридических услуг, за оперативные и квалифицированные действия сотрудников, а также за внимательность и корректное отношение.',
+        'Мы считаем большой удачей, что в свое время обратились именно к вам, и верим в сохранение добрых отношений...»'
+      ],
+      activity: 'Сфера деятельности:<br>услуги по утилизации отходов'
+    },
+    {
+      name: 'Александр Фишер',
+      position: 'Генеральный директор<br>ООО «МСМ»',
+      text: [
+        'Мы считаем большой удачей, <br>что в свое время обратились именно к вам',
+        'Выражаем вам искреннюю благодарность за квалифицированное оказание бухгалтерских и юридических услуг, за оперативные и квалифицированные действия сотрудников, а также за внимательность и корректное отношение.'
+      ],
+      activity: 'Сфера деятельности:<br>услуги по утилизации отходов'
+    }
+  ];
+
+.recommends-slider
+  .recommends-slider__slider-container
+    .recommends-slider__slick
+      for item in recommendsSlider_1
+        .recommends-slider__slide-container
+          .recommends-slider__slide
+            .recommends-slider__info
+              .recommends-slider__logo
+                +icon('gazprom', 'recommends-slider__gazprom')
+              .recommends-slider__name= item.name
+              .recommends-slider__position!= item.position
+              .recommends-slider__activity!= item.activity
+            .recommends-slider__text
+              each par in item.text
+                p!= par
+              .recommends-slider__link-row
+                a(href="#").recommends-slider__link оригинал отзыва
+                  svg(class="recommends-slider__arrow tl-arrow" viewBox="0 0 47 14" xmlns="http://www.w3.org/2000/svg")
+                    path(class="tl-arrow__line" d="M1 7h43" stroke="#000" stroke-width="2")
+                    path(class="tl-arrow__pin" d="M39 13l6.72-6.72M45.72 7.72L39 1" stroke="#000" stroke-width="2")
+                    path(class="tl-arrow__base" d="M6 7a3 3 0 11-6 0 3 3 0 016 0z" fill="#000")
+  .recommends-slider__btn-row
+    +nav-arrow-prev('recommends-slider')
+    +nav-arrow('recommends-slider')

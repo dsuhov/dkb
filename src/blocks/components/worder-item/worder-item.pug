@@ -13,7 +13,7 @@ mixin worder-item(params)
           data-src=`img/work_order/work-order-${params.order}_desktop_1x.jpg`
           data-srcset=`img/work_order/work-order-${params.order}_desktop_1x.jpg, 
             img/work_order/work-order-${params.order}_desktop_2x.jpg 2x`
-        )
+        ).lazyImg
     .worder-item__content-block
       h4.worder-item__title!= params.title
       p.worder-item__content!= params.content

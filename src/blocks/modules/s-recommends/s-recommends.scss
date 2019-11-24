@@ -1,0 +1,26 @@
+.s-recommends {
+  padding-top: 140px;
+  position: relative;
+  padding-bottom: 146px;
+  background: #f8f8f8;
+  z-index: 100;
+
+  &__content {
+    @include breakpoint(contSize) {
+      padding: 0 40px 0;
+    }
+  
+    @media (max-width: 765px) {
+      padding: 0 20px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+  }
+}
+

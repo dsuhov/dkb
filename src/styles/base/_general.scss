@@ -59,3 +59,15 @@ picture {
     width: 100%;
   }
 }
+
+.fadeOutUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.3s;
+  transition-property: opacity, transform;
+
+  &.fadeOutUp--done {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

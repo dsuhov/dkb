@@ -6,7 +6,7 @@ import IMask from 'imask';
 
 document.addEventListener("DOMContentLoaded", () => {
   var lazyLoadInstance = new LazyLoad({
-    elements_selector: "img"
+    elements_selector: ".lazyImg"
   });
 
   const phoneInputs = document.querySelectorAll('input[name="phone"]');

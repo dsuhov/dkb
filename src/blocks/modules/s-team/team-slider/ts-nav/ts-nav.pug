@@ -1,0 +1,17 @@
+-
+  const tsnavItems = [
+    { position: 'Главный <br>бухгалтер', experience: 'Опыт более 15 лет' },
+    { position: 'Главный <br>бухгалтер', experience: 'Опыт более 15 лет' },
+    { position: 'Главный <br>бухгалтер', experience: 'Опыт более 15 лет' },
+    { position: 'Главный <br>бухгалтер', experience: 'Опыт более 15 лет' },
+    { position: 'Главный <br>бухгалтер', experience: 'Опыт более 15 лет' }
+  ];
+
+.ts-nav
+  .ts-nav__buttons
+    each item, i in tsnavItems
+      .ts-nav__button(data-button=`${i}`)
+        span.ts-nav__position!= item.position
+        span.ts-nav__experience!= item.experience
+  .ts-nav__line
+    .ts-nav__pointer-line

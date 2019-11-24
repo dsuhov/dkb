@@ -1,0 +1,8 @@
+mixin sp-tab-content(prop)
+  .sp-tab-content
+    each paragraph in prop.paragraphs
+      p.sp-tab-content__item!= paragraph
+        +icon('check', 'sp-tab-content__tick')
+    if prop.aside.length !== 0
+      .sp-tab-content__aside
+        span.sp-tab-content__aside-text!= prop.aside

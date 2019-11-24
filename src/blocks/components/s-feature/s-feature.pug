@@ -14,7 +14,7 @@ mixin s-feature(content)
             data-srcset=`img/s-features/s-features-${content.number}_desktop_1x.webp` 
             type="image/webp"
           )
-          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title")
+          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title").lazyImg
     .s-feature__text-block
       h4.s-feature__title!= content.title
       each desc in content.description
@@ -36,7 +36,7 @@ mixin s-feature-list(content)
             data-srcset=`img/s-features/s-features-${content.number}_desktop_1x.webp` 
             type="image/webp"
           )
-          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title")
+          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title").lazyImg
     .s-feature__text-block
       h4.s-feature__title!= content.title
       p.s-feature__description!= content.description
@@ -60,7 +60,7 @@ mixin s-feature-list-2(content)
             data-srcset=`img/s-features/s-features-${content.number}_desktop_1x.webp` 
             type="image/webp"
           )
-          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title")
+          img(src="img/general/empty.png", data-src=`img/s-features/s-features-${content.number}_desktop_1x.jpg` alt="content.title").lazyImg
     .s-feature__text-block
       h4.s-feature__title!= content.title
       p.s-feature__description!= content.description

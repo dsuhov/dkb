@@ -1,0 +1,14 @@
+.ts-slider {
+
+  &__nav-arrows {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__nav-arrow.nav-arrow--prev {
+    margin-right: 12px;
+  }
+}
+
+@import "ts-slide/ts-slide";

@@ -1,0 +1,72 @@
+.reviews-slider {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 46px;
+  padding-bottom: 30px;
+  box-shadow: 4px 4px 1px $blue-ribbon;
+  border-radius: 45px 4px;
+
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.03em;
+
+  &__slider-container {
+    margin-bottom: 42px;
+  }
+
+  &__slide-container {
+    box-sizing: border-box;
+    padding-left: 65px;
+    padding-right: 147px;
+  }
+
+  &__info {
+    margin-right: 123px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+  }
+
+  &__gazprom {
+    width: 90px;
+    height: 44px;
+  }
+
+  &__slide {
+    display: flex;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__position {
+    color: rgba(0, 0, 0, 0.35);
+  }
+
+  &__btn-row {
+    margin-left: 65px;
+    display: flex;
+  }
+
+  &__text {
+    font-size: 17px;
+    line-height: 34px;
+    padding-top: 30px;
+
+    &::before {
+      content: "«";
+      padding-right: 1px;
+      margin-left: -10px;
+    }
+  }
+  
+
+  &__nav-arrow:first-child {
+    margin-right: 13px;
+  }
+}

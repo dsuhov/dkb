@@ -13,6 +13,35 @@ mixin input-base(params)
         +icon('valid', 'input-base__valid')
         +icon('non-valid', 'input-base__non-valid')
 
+mixin input-base-phone(params)
+  .input-base(class=`${params.extraClass}__input-base`)
+    label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label
+    .input-base__input-field
+      input(
+        type="phone" 
+        id=`${params.extraClass}-${params.name}` 
+        name=`${params.name}` 
+        placeholder=`${params.placeholder}`
+        required
+      ).input-base__input
+      .input-base__info-icon
+        +icon('valid', 'input-base__valid')
+        +icon('non-valid', 'input-base__non-valid')
+
+mixin input-base-nolabel(params)
+  .input-base(class=`${params.extraClass}__input-base`)
+    .input-base__input-field
+      input(
+        type="text" 
+        id=`${params.extraClass}-${params.name}` 
+        name=`${params.name}` 
+        placeholder=`${params.placeholder}`
+        required
+      ).input-base__input
+      .input-base__info-icon
+        +icon('valid', 'input-base__valid')
+        +icon('non-valid', 'input-base__non-valid')
+
 mixin input-base-email(params)
   .input-base(class=`${params.extraClass}__input-base`)
     label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label

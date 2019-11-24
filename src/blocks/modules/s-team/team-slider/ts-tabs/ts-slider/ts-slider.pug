@@ -1,0 +1,12 @@
+include ts-slide/ts-slide
+include ../../../../../components/nav-arrow/nav-arrow
+
+mixin ts-slider(data)
+  .ts-slider
+    .ts-slider__nav-arrows
+      +nav-arrow-prev('ts-slider')
+      +nav-arrow('ts-slider')
+    .ts-slider__js-slider
+      each item in data
+        .ts-slider__slide
+          +ts-slide(item)

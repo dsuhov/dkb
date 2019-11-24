@@ -1,0 +1,12 @@
+include ../../components/typography/title-section
+include ../../components/typography/subtitle-section
+
+.s-team
+  .container
+    .s-team__headers
+      .s-team__title
+        +title-section-40-51('Команда')
+      .s-team__subtitle
+        +subtitle-section('квалифицированных специалистов <br>по цене ниже зарплаты 1 штатного  бухгалтера')
+    .s-team__slider-block
+      include team-slider/team-slider

@@ -1,0 +1,14 @@
+.team-slider {
+  font-family: "Noto Sans", sans-serif;
+
+  &__nav {
+    margin-bottom: 70px;
+  }
+
+  &__tabs {
+
+  }
+}
+
+@import "ts-nav/ts-nav";
+@import "ts-tabs/ts-tabs";
