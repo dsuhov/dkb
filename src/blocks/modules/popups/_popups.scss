@@ -201,7 +201,39 @@
         display: flex;
         justify-content: center;
     }
-
+    &__notice {
+        display: block;
+        max-width: 538px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #000000;
+        margin-bottom: 61px;
+        text-decoration: none;
+        @media (
+            max-width: 765px) {
+            margin-bottom: 42px;
+        }
+        span {
+            border-bottom: 2px solid #FFA001;
+        }
+    }
+    &__schedule {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 2;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #0461FD;
+        margin-bottom: 18px;
+        @media (max-width: 765px) {
+            margin-bottom: 10px;
+        }
+    }
 }
 .popup-prezent {
     .popup {
@@ -395,11 +427,51 @@
         }
     }
 }
+.popup-compare {
+    padding-bottom: 174px;
+    .popup {
+        &__subtitle {
+            padding-top: 145px;
+            margin-top: 0;
+            margin-bottom: 85px;
+        }
+        &__descr {
+            text-align: left;
+            max-width: 550px;
+            span {
+                display: inline-block;
+                margin-top: 70px;
+                margin-bottom: 15px;
+            }
+        }
+        &__list {
+            max-width: 550px;
+            margin-bottom: 60px;
+        }
+        &__btn {
+            max-width: 550px;
+        }
+    }
+    .btn-default {
+        color: #000;
+        background: #FFA001;
+        border-radius: 22px 2px 26px;
+        &:hover {
+            background: #ffa001;
+            color: #fff;
+            border-radius: 2px;
+        }
+    }
+}
 .popup-feedback01 {
     .popup {
         &__title {
             @include breakpoint(contSize) {
                 padding-top: 31px;
+            }
+            @media (max-width: 765px) {
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
         &__content {
@@ -435,8 +507,44 @@
             }
         }
     }
-
 }
+.popup-feedback03 {
+    .popup {
+        &__content {
+            padding-top: 0;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__title {
+            padding-top: 10px;
+        }
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+
+    }
+}
+.popup-expressanaliz {
+    .popup {
+        &__descr {
+            text-align: left;
+        }
+        &__notice {
+            text-align: left;
+        }
+    }
+}
+.popup__consult {
+    .popup {
+        &__btn {
+            padding-top: 0;
+        }
+    }
+}
+
 
 .input {
     &-slide {
