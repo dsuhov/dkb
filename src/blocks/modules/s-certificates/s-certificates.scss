@@ -1,5 +1,21 @@
 .s-certificates {
   padding-top: 140px;
+  background-color: #fff;
+  z-index: 200;
+  position: relative;
 
-  
+  &__nav-block {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__slide a {
+    display: block;
+    width: 142px;
+  }
+
+  &__nav-arrow.nav-arrow--prev {
+    margin-right: 12px;
+  }
 }

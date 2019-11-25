@@ -1,0 +1,39 @@
+.notice-1 {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 145px;
+  background-color: #fff;
+  z-index: 100;
+
+  &__content {
+    min-height: 269px;
+    display: flex;
+    align-items: center;
+    background: url('../img/general/notice-1_desktop.svg') no-repeat;
+
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #000;
+
+    b {
+      font-weight: 700;
+    }
+    
+    & > * {
+      box-sizing: border-box;
+      width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__lside {
+    padding-left: 68px;
+  }
+
+  &__rside {
+    padding-left: 128px;
+  }
+}

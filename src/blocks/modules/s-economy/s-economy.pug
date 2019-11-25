@@ -1,0 +1,32 @@
+include ../../components/typography/title-section
+include ../../components/typography/subtitle-section
+include value
+
+-
+  var economyData = [
+    {numberVal: '900 000', dataval: '900000', comment: 'Расходы на зарплату и начисления <br>для штатного бухгалтера'},
+    {numberVal: '50 000', dataval: '50000', comment: 'Оплата больничных и <br>отпускных для бухгалтера'},
+    {numberVal: '360 000', dataval: '360000', comment: 'Аренда помещения для бухгалтера<br>(примерно 3 м<sup>2</sup>) '},
+    {numberVal: '20 000', dataval: '20000', comment: 'Покупка компьютера '},
+    {numberVal: '85 000', dataval: '85000', comment: 'Оплата за 1С и правовые <br>программы'},
+    {numberVal: '15 000', dataval: '15000', comment: 'Затраты на семинары для <br>бухгалтера'},
+  ];
+
+section.s-economy
+  .container
+    .s-economy__title
+      +title-section-40-51('Вы экономите до 70% на расходах <br>и миллионы на отсутствии <br>лишних выплат с «ДКБ ПрофУчет» ')
+    .s-economy__subtitle
+      +subtitle-section('Сколько<span>*</span><br>и за счет чего вы экономите')
+    .s-economy__note *Среднее значение по Москве за год за одного сотрудника
+    .s-economy__main
+      .s-economy__values-block
+        .s-economy__values-col
+          each item, i in economyData
+            +value(item, i)
+        .s-economy__counter-block
+          .s-economy__counter
+            .s-economy__counter-title В год вы экономите
+            .s-economy__counter-value
+              span.s-economy__counter-number 900 000
+              span  ₽

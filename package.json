@@ -65,6 +65,7 @@
         "yargs": "~13.2.4"
     },
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "imask": "^5.2.1",
         "jquery": "^3.4.1",
         "jquery-validation": "^1.19.1",
