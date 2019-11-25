@@ -1,0 +1,9 @@
+mixin area-odd(aData)
+  a(href="#").s-areas__block
+    .s-areas__btitle!= aData.title
+    .s-areas__bcontent!= aData.content
+
+mixin area-even(aData)
+  a(href="#").s-areas__block.s-areas__block--rradius
+    .s-areas__btitle!= aData.title
+    .s-areas__bcontent!= aData.content

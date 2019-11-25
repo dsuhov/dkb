@@ -2,14 +2,11 @@ import controller from "./initController";
 import { Scene } from "scrollmagic";
 import $ from "jquery";
 
-// import fancybox from '@fancyapps/fancybox';
-
 const formoverlay = $('.s-form-1__overlay');
 let contentHeight = $('.s-form-1__content').height();
 const form1Els = $('.s-form-1 .fadeOutUp');
 let triggered = false;
 
-window.jQuery = $;
 export default function() {
   const form1Reveal = new Scene({
     duration: '80%',
@@ -24,7 +21,6 @@ export default function() {
     formoverlay.css('opacity', `${1 - event.progress}`);
   });
   
-  // console.log($.fancybox);
   
   // fix and unfix
   new Scene({

@@ -1,0 +1,86 @@
+.s-economy {
+
+  &__title {
+    margin-bottom: 77px;
+  }
+
+  &__subtitle {
+    margin-bottom: 21px;
+  }
+
+  &__note {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: rgba(0, 0, 0, 0.35);
+  }
+
+  &__main {
+    font-family: "Noto Sans", sans-serif;
+
+  }
+
+  &__values-block {
+    padding-top: 57px;
+    display: flex;
+  }
+
+  &__values-col {
+    max-width: 380px;
+    flex: 0 0 auto;
+  }
+
+  &__counter-block {
+    // position: relative;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  &__value {
+    letter-spacing: 0.03em;
+    color: #000;
+
+    &:first-child .s-economy__plus {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__val-number {
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 38px;
+  }
+
+  &__val-comment {
+    font-size: 17px;
+    line-height: 29px;
+  }
+
+  &__counter {
+    position: relative;
+    color: $blue-ribbon;
+    font-weight: 900;
+    text-align: center;
+    top: -80px;
+  }
+
+  &__counter-title {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  &__counter-value {
+    font-size: 120px;
+    line-height: 154px;
+  }
+}

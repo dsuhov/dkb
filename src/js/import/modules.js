@@ -11,3 +11,4 @@ import "%modules%/s-form-1/s-form-1";
 import "%modules%/s-team/team-slider/ts-nav/ts-nav";
 import "%modules%/s-team/team-slider/ts-tabs/ts-tabs";
 import "%modules%/popups/popups";
+import "%modules%/s-certificates/s-certificates";

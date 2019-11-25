@@ -1,0 +1,7 @@
+mixin value(valueData, order)
+  .s-economy__value(id=`economy-val-${order}`)
+    .s-economy__val-number
+      span.s-economy__plus + 
+      span(data-value=`${valueData.dataval}`).s-economy__data= valueData.numberVal
+      span  ₽
+    .s-economy__val-comment!= valueData.comment

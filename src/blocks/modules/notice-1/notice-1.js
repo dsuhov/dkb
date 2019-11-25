@@ -1,4 +1,4 @@
-modules.define('s-team', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('notice-1', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
