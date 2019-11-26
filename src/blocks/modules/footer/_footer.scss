@@ -1,0 +1,21 @@
+.footer {
+    font-family: "Noto Sans", sans-serif;
+    background: rgba(229, 229, 229, 0.3);
+    padding: 20px 51px;
+    color: rgba(0, 0, 0, 0.35);
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 180%;
+            /* or 25px */
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: rgba(0, 0, 0, 0.35);
+        }
+    }
+
+}
