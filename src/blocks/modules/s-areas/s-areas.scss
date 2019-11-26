@@ -38,6 +38,10 @@
     &:hover {
       background-color: $port-gore;
       border-radius: 2px;
+
+      .s-areas__bcontent {
+        opacity: 1;
+      }
     }
   }
 
@@ -51,5 +55,7 @@
   &__bcontent {
     letter-spacing: 0.05em;
     font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
   }
 }

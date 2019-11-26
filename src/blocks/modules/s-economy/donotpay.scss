@@ -1,0 +1,38 @@
+.donotpay {
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 94px;
+  }
+
+  &__items {
+    @include row-flex();
+  }
+
+  &__item {
+    color: #000;
+    margin-bottom: 42px;
+
+    @include col();
+    @include size(1);
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    max-width: 327px;
+
+    span {
+      color: $blue-ribbon;
+    }
+  }
+}

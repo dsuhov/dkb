@@ -1,4 +1,5 @@
 .s-economy {
+  padding-top: 140px;
 
   &__title {
     margin-bottom: 77px;
@@ -83,4 +84,10 @@
     font-size: 120px;
     line-height: 154px;
   }
+
+  &__donotpay {
+    padding-top: 67px;
+  }
 }
+
+@import "donotpay";

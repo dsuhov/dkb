@@ -38,7 +38,7 @@ export default function() {
     }, {
       duration: 500, 
       easing : "linear",
-      start: function(...argus) {
+      start: function() {
         counterAction(newPlus, elem);
       }
     })

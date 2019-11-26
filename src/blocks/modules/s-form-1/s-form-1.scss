@@ -6,6 +6,7 @@
   overflow: hidden;
 
   &__overlay {
+    pointer-events: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -13,7 +14,6 @@
     left: 0;
     background-color: #000;
     opacity: 1;
-    pointer-events: none;
     z-index: 100;
   }
 
@@ -41,7 +41,7 @@
       top: 0;
       max-width: 1122px;
       z-index: 1;
-      pointer-events: none;
+      // pointer-events: none;
     }
   }
 
@@ -74,6 +74,7 @@
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: $orange-peel;
+    color: #fff;
     
     &:hover {
       color: $orange-peel;

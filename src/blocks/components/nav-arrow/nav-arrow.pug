@@ -13,3 +13,11 @@ mixin nav-arrow-prev(extraClass)
       g(class="nav-arrow__corner")
         path(fill-rule="evenodd" clip-rule="evenodd" d="M27.5487 21.3772L20.6439 28.3422L19.2358 26.9219L26.1406 19.9568L27.5487 21.3772Z")
         path(fill-rule="evenodd" clip-rule="evenodd" d="M20.6437 14.4857L27.5484 21.4507L26.1404 22.8711L19.2356 15.906L20.6437 14.4857Z")
+
+mixin nav-arrow-toggle(extraClass)
+  button(class=`${extraClass}__nav-arrow`).nav-arrow.nav-arrow--toggle
+    svg(class="nav-arrow__icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg")
+      path(class="nav-arrow__circle" fill-rule="evenodd" clip-rule="evenodd" d="M21.8839 3.00539C11.7462 3.00539 3.48353 11.3025 3.48353 21.5925C3.48353 31.8826 11.7462 40.1797 21.8839 40.1797C32.0215 40.1797 40.2842 31.8826 40.2842 21.5925C40.2842 11.3025 32.0215 3.00539 21.8839 3.00539ZM21.8839 0.00538828C10.0648 0.00538724 0.483531 9.67028 0.48353 21.5925C0.483529 33.5148 10.0648 43.1797 21.8839 43.1797C33.7029 43.1797 43.2842 33.5148 43.2842 21.5925C43.2842 9.67028 33.7029 0.00538932 21.8839 0.00538828Z")
+      g
+        path(fill-rule="evenodd" clip-rule="evenodd" d="M27.5487 21.3772L20.6439 28.3422L19.2358 26.9219L26.1406 19.9568L27.5487 21.3772Z")
+        path(fill-rule="evenodd" clip-rule="evenodd" d="M20.6437 14.4857L27.5484 21.4507L26.1404 22.8711L19.2356 15.906L20.6437 14.4857Z")

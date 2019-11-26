@@ -1,0 +1,74 @@
+.s-services {
+  padding-top: 98px;
+  font-family: "Noto Sans", sans-serif;
+  color: #000;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin-bottom: 120px;
+  }
+
+  &__ex-services-title {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 50px;
+  }
+
+  &__services {
+    margin-bottom: 40px;
+  }
+
+  &__extra-services {
+    @include row-flex();
+    margin-bottom: 78px;
+  }
+
+  &__ex-service {
+    @include col();
+    @include size(1);
+    margin-bottom: 62px;
+  }
+
+  &__icon {
+    width: 83px;
+    height: 83px;
+    margin-bottom: 30px;
+  }
+
+  &__ex-service-text {
+    max-width: 285px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+  }
+
+  &__calc-price-link {
+    display: block;
+    width: 384px;
+    margin: 0 auto;
+    padding: 22px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #000;
+    background: $orange-peel;
+    border-radius: 22px 2px 26px;
+    text-decoration: none;
+    transition: border-radius 0.3s linear;
+
+    &:hover {
+      border-radius: 2px;
+    }
+  }
+}
+
+@import "service";

@@ -1,0 +1,51 @@
+.service {
+  font-family: "Noto Sans", sans-serif;
+  color: #000;
+
+  display: flex;
+
+  padding: 47px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+
+  &:first-child {
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+  }
+
+  &__name {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 36px;
+    min-width: 220px;
+    margin-right: 156px;
+  }
+
+  &__description {
+    display: none;
+    
+  }
+
+  &__list {
+    
+    width: 563px;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 36px;
+
+    &::before {
+      position: absolute;
+      content: "—";
+      left: 0;
+      color: $blue-ribbon;
+    }
+  }
+
+  &__toggle-btn {
+    margin-left: auto;
+  }
+}
