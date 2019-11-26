@@ -1,0 +1,45 @@
+include ../../components/typography/title-section
+include ../../components/soc-links-top/soc-links-top
+
+section.s-contacts
+	.container
+		.s-contacts__title 
+			| Приезжайте к нам в офис, чтобы обсудить условия бухгалтерского сопровождения и
+			a(href="#") получить личную консультацию 
+			| Юлии Рагузиной
+		.s-contacts__body 
+			.s-contacts__info
+				.s-contacts__logo
+					img(src="img/general/logo-light.svg", alt="logo")
+				.s-contacts__block
+					.s-contacts__header ОО «ДКБ ПрофУчет»
+					.s-contacts__text Безупречное бухгалтерское сопровождение вашего бизнеса
+			.s-contacts__more
+				.s-contacts__block
+					.s-contacts__header Контакты
+					.s-contacts__text ул. Большая Косинская, д. 27, Москва
+					.s-contacts__onmap 
+						+soc-links-top('location', '')
+						| на карте
+				.s-contacts__block
+					.s-contacts__text +7 (499) 938-52-60 
+					.s-contacts__text dkbprof@mail.ru
+					.header-feedback
+						.header-feedback__cos-line
+							.header-feedback__cos-link
+								+soc-links-top('whatsapp', '')
+							.header-feedback__cos-link
+								+soc-links-top('telegram', '')
+				.s-contacts__block.s-contacts__schedule
+					.s-contacts__header Режим работы
+					.s-contacts__text
+						span пн — чт
+						| 9:00 — 18:00
+					.s-contacts__text
+						span 	пт 
+						| 9:00 — 17:00
+					.s-contacts__text
+						span 	сб — вс
+						| выходной
+
+					
