@@ -1,0 +1,38 @@
+.s-outsourcing {
+    padding-top: 140px;
+    .popup__title {
+        margin: 0 0 30px 0;
+        text-align: left;
+    }
+    .s-team__subtitle {
+        max-width: 495px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 33%;
+        margin-bottom: 69px;
+        display: flex;
+        align-items: center;
+        &-pic {
+            width: 59px;
+            margin-right: 30px;
+        }
+        &-text {
+            font-family: "Noto Sans", sans-serif;
+            max-width: 231px;
+            font-size: 17px;
+            line-height: 200%;
+            /* or 34px */ 
+            letter-spacing: 0.03em;
+            color: #000000;
+        }
+    }
+    .notice-1__rside {
+        max-width: 538px;
+    }
+}
