@@ -13,6 +13,17 @@ mixin input-base(params)
         +icon('valid', 'input-base__valid')
         +icon('non-valid', 'input-base__non-valid')
 
+mixin input-base-novalid(params)
+  .input-base(class=`${params.extraClass}__input-base`)
+    label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label
+    input(
+      type="number" 
+      id=`${params.extraClass}-${params.name}` 
+      name=`${params.name}` 
+      placeholder=`${params.placeholder}`
+      value=`${params.val}`
+    ).input-base__input
+
 mixin input-base-phone(params)
   .input-base(class=`${params.extraClass}__input-base`)
     label(for=`${params.extraClass}-${params.name}`).input-base__label!= params.label

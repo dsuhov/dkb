@@ -10,7 +10,9 @@ gulp.task("favicons", () => {
         .pipe(favicons({
             icons: {
                 appleIcon: true,
-                favicons: true,
+                favicons: {
+                    background: false,
+                },
                 online: false,
                 appleStartup: false,
                 android: false,

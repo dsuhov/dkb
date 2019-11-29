@@ -1,0 +1,20 @@
+.dkb-select {
+
+  &__select-field:first-child {
+    margin-bottom: 28px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: "Museo Sans Cyrl";
+    font-weight: 900;
+  }
+}
+
+.jq-selectbox .placeholder {
+  color: rgba($color: #fff, $alpha: 0.4);
+}

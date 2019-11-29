@@ -46,11 +46,17 @@ include ../../components/soc-links-bottom/soc-links-bottom
       name: 'email',
       placeholder: 'hello@gmai.com',
       label: 'Куда выслать <br>КП и материалы?'
+    },
+    {
+      extraClass: 'popup',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: ''
     }
   ];
 
 
-section.popup.popup-prezent(style="display: none;")
+section.popup.popup-prezent
   .popup__close
   .container
     .popup__content
@@ -59,17 +65,17 @@ section.popup.popup-prezent(style="display: none;")
       a(href="#").popup__mail-logo
         picture
           source(
-            srcset="img/general/empty.png"
+            srcset="img/popups/gmail-logo.jpg"
             data-srcset=`img/popups/gmail-logo.jpg` 
             media="(max-width: 768px)"
             type="image/webp"
           )
           source(
-            srcset="img/general/empty.png"
+            srcset="img/popups/gmail-logo.jpg"
             data-srcset=`img/popups/gmail-logo.jpg` 
             type="image/webp"
           )
-          img(src="img/general/empty.png", data-src=`img/popups/gmail-logo.jpg` alt="mail-logo")
+          img(src="img/popups/gmail-logo.jpg", data-src=`img/popups/gmail-logo.jpg` alt="mail-logo")
       .popup__subtitle
         .NSerif-28-42-reg Вы можете войти в нее отсюда
       .popup__text 
@@ -78,7 +84,7 @@ section.popup.popup-prezent(style="display: none;")
         | «Промоакции» или «Спам»:
         br 
         | письмо могло попасть туда по ошибке
-section.popup.popup-feedback(style="display: none;")
+section.popup.popup-feedback
   .popup__close
   .container
     .popup__content
@@ -104,7 +110,7 @@ section.popup.popup-feedback(style="display: none;")
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
-section.popup.popup-call(style="display: none;")
+section.popup.popup-call
   .popup__colored
     .popup__close
     .container.popup__body
@@ -162,7 +168,7 @@ section.popup.popup-call(style="display: none;")
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
-section.popup.popup-call.popup01(style="display: none;")
+section.popup.popup-call.popup01
   .popup__colored
     .popup__close
     .container.popup__body
@@ -203,7 +209,7 @@ section.popup.popup-call.popup01(style="display: none;")
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
-section.popup.popup-call.popup02(style="display: none;")
+section.popup.popup-call.popup02
   .popup__colored
     .popup__close
     .container.popup__body
@@ -230,7 +236,7 @@ section.popup.popup-call.popup02(style="display: none;")
               include ../../components/accept-conf/accept-conf
       .popup__img
         img(src="img/popups/popup_docs.png", data-src=`img/popups/popup_docs.png` alt="docs")
-section.popup.popup-call.popup03(style="display: none;")
+section.popup.popup-call.popup03
   .popup__colored
     .popup__close
     .container.popup__body
@@ -289,7 +295,7 @@ section.popup.popup-call.popup03(style="display: none;")
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
 //- Pop-up_comparePrice
-section.popup.popup-feedback.popup-compare(style="display: none;")
+section.popup.popup-feedback.popup-compare
   .popup__close
   .container
     .popup__content
@@ -308,7 +314,7 @@ section.popup.popup-feedback.popup-compare(style="display: none;")
       .popup__btn
         +btn-default-submit('получить личную консультацию гендиректора')
 //- feedback01 = feedback price
-section.popup.popup-feedback.popup-feedback01(style="display: none;")
+section.popup.popup-feedback.popup-feedback01
   .popup__close
   .container
     .popup__content
@@ -340,7 +346,7 @@ section.popup.popup-feedback.popup-feedback01(style="display: none;")
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- feedback02
-section.popup.popup-feedback.popup-feedback01(style="display: none;")
+section.popup.popup-feedback.popup-feedback01
   .popup__close
   .container
     .popup__content
@@ -369,7 +375,7 @@ section.popup.popup-feedback.popup-feedback01(style="display: none;")
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Feedback_expressanaliz
-section.popup.popup-feedback.popup-feedback01(style="display: none;")
+section.popup.popup-feedback.popup-feedback01
   .popup__close
   .container
     .popup__content
@@ -400,7 +406,7 @@ section.popup.popup-feedback.popup-feedback01(style="display: none;")
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Feedback03
-section.popup.popup-feedback.popup-feedback01.popup-feedback03(style="display: none;")
+section.popup.popup-feedback.popup-feedback01.popup-feedback03
   .popup__close
   .container
     .popup__content
@@ -421,7 +427,7 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03(style="display: n
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Feedback03-2
-section.popup.popup-feedback.popup-feedback01.popup-feedback03(style="display: none;")
+section.popup.popup-feedback.popup-feedback01.popup-feedback03
   .popup__close
   .container
     .popup__content
@@ -442,7 +448,7 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03(style="display: n
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Pop-up_expressanaliz
-section.popup.popup-feedback.popup-feedback01.popup-expressanaliz(style="display: none;" id="popup-express-analitycs")
+section.popup.popup-feedback.popup-feedback01.popup-expressanaliz
   .popup__close
   .container
     .popup__content
@@ -459,7 +465,7 @@ section.popup.popup-feedback.popup-feedback01.popup-expressanaliz(style="display
       a(href="").popup__notice
         span Получить экспресс-анализ своей бухгалтерии 
 //- feedback_ consult
-section.popup.popup-feedback.popup-feedback01.popup__consult(style="display: none;")
+section.popup.popup-feedback.popup-feedback01.popup__consult
   .popup__close
   .container
     .popup__content
@@ -486,6 +492,58 @@ section.popup.popup-feedback.popup-feedback01.popup__consult(style="display: non
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
+//- Julia
+section.popup.popup-feedback.popup-feedback01.popup-julia
+  .popup__close
+  .container
+    .popup__content
+      .popup__subtitle
+        .NSerif-28-42-reg Юлия Рагузина 
+      .popup__descr генеральный директор «ДКБ ПрофУчет»        
+      ul.popup__list
+        li.popup__list-item Аттестованный главный бухгалтер 
+        li.popup__list-item 19 лет опыта ведения бухгалтерии 
+        li.popup__list-item Член палаты налоговых консультантов России 
+        li.popup__list-item Член Института профессиональных бухгалтеров России 
+      .popup-julia__img
+        img(src="img/popups/popup_cert.jpg", data-src=`img/popups/popup_cert.jpg` alt="raguzina")
+//- exit
+section.popup.popup-exit
+  .popup__close
+  .container
+    .popup__content
+      .popup-exit__title Получите 2 чек-листа.<br>Проверьте работу бухгалтера и оградите компанию от переплат, проверок и штрафов
+      ul.popup-exit__list
+        li.popup-exit__list-item 
+          .popup-exit__img
+            img(src="img/popups/popup_cert1.png", data-src=`img/popups/popup_cert1.png` alt="cert")
+          .popup-exit__text 
+            span 5 признаков недобросовестной работы бухгалтера, 
+            | которые приводят к проверкам и штрафам
+        li.popup-exit__list-item
+          .popup-exit__img
+            img(src="img/popups/popup_cert1.png", data-src=`img/popups/popup_cert1.png` alt="cert")
+          .popup-exit__text 
+            span 6 главных недоработок бухгалтера, 
+            | из-за которых собственник теряет деньги
+      .popup__schedule Получить чек-листы на почту
+      .popup__form
+        form(action="" id="popup-exit" method="post" autocomplete="off").popup__form-content
+          .input-base.popup__input-base
+            .input-base__input-field
+              input(class="input-base__input" type="email" id="popup-email" name="email" placeholder="hello@gmai.com" required="")
+              .popup-exit__arrow
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 36 14', fill='none')
+                  g(opacity='0.6')
+                    path(d='M1 7H33', stroke='#0461FD', stroke-width='2')
+                    path(d='M28 13L34.7202 6.27985', stroke='#0461FD', stroke-width='2')
+                    path(d='M34.7197 7.72021L27.9996 1.00006', stroke='#0461FD', stroke-width='2')
+                    path(d='M6 7C6 8.65685 4.65685 10 3 10C1.34315 10 0 8.65685 0 7C0 5.34315 1.34315 4 3 4C4.65685 4 6 5.34315 6 7Z', fill='#0461FD')
 
-
-
+              .input-base__info-icon
+                svg(class="icon-valid input-base__valid")
+                  use(xlink:href="img/sprites/symbol/sprite.svg#valid")
+                svg(class="icon-non-valid input-base__non-valid")
+                  use(xlink:href="img/sprites/symbol/sprite.svg#non-valid")
+          .form-side__accept-conf
+            include ../../components/accept-conf/accept-conf

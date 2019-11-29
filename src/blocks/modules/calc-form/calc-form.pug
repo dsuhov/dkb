@@ -1,0 +1,105 @@
+include ../../components/typography/subtitle-section
+include ../../components/input-base/input-base
+include ../../components/buttons/btn-default/btn-default
+
+- 
+  var inputsData = [
+    {
+      extraClass: 'calc-form',
+      name: 'empl_quantity',
+      placeholder: '0',
+      label: 'Количество штатных сотрудников',
+      val: '0'
+    },
+    {
+      extraClass: 'calc-form',
+      name: 'ops_quantity',
+      placeholder: '0',
+      label: 'Количество операций в месяц',
+      val: '0'
+    },
+  ]
+
+- 
+  var calcFormInputs = [
+    {
+      extraClass: 'calc-form',
+      name: 'phone',
+      placeholder: '+7',
+      label: 'Номер телефона <br>для уточнения данных'
+    },
+    {
+      extraClass: 'calc-form',
+      name: 'email',
+      placeholder: 'hello@gmai.com',
+      label: 'На какую почту <br>выслать расчет и материалы?'
+    }
+  ];
+
+section.calc-form
+  .sb-overlay
+  .calc-form__sliding
+    .container
+      .calc-form__subtitle
+        +subtitle-section('Рассчитайте стоимость бухгалтерского <br>сопровождения вашего бизнеса')
+      .calc-form__main-block
+        form(action="" method="post").calc-form__form
+          .calc-form__calculator
+            .calc-form__organizational-form.organizational-form
+              .organizational-form__title Организационная форма
+              .organizational-form__fields
+                .organizational-form__check-field
+                  input(type="radio" id="organizational_form-1" name="organizational_form" value="ИП").organizational-form__input
+                  label(for="organizational_form-1").organizational-form__label ИП
+                .organizational-form__check-field
+                  input(type="radio" id="organizational_form-2" name="organizational_form" value="ООО").organizational-form__input
+                  label(for="organizational_form-2").organizational-form__label ООО
+                .organizational-form__check-field
+                  input(type="radio" id="organizational_form-3" name="organizational_form" value="АО").organizational-form__input
+                  label(for="organizational_form-3").organizational-form__label АО
+                .organizational-form__check-field
+                  input(type="radio" id="organizational_form-4" name="organizational_form" value="Другое").organizational-form__input
+                  label(for="organizational_form-4").organizational-form__label Другое
+            .calc-form__select-block
+              .calc-form__select-field.dkb-select__select-field
+                label(for="taxation-system" class="dkb-select__label") Система налогообложения
+                select#taxation-system(name="taxation_system[]")
+                  option(value="ОСН (НДС)") ОСН (НДС)
+                  option(value="УСН 6% (доход)") УСН 6% (доход)
+                  option(value="УСН 15% (доход/расход)") УСН 15% (доход/расход)
+                  option(value="Патент") Патент
+                  option(value="Смешанная система") Смешанная система
+                  option(value="Другое") Другое
+              .calc-form__select-field.dkb-select__select-field
+                label(for="field_of_activity" class="dkb-select__label") Сфера деятельности
+                select#field_of_activity(name="field_of_activity[]")
+                  option
+                  option(value="Производство") Производство
+                  option(value="Торговля") Торговля
+                  option(value="Услуги") Услуги
+                  option(value="Строительство") Строительство
+                  option(value="Медицина") Медицина
+                  option(value="Другое") Другое
+            .calc-form__inputs
+              each item in inputsData
+                +input-base-novalid(item)
+            .calc-form__result
+              .calc-form__result-title Ориентировочная стоимость <br>вашего бухгалтерского обслуживания
+              .calc-form__result-value
+                span#calc-form__resuli-number 5000
+                span  ₽ 
+                span.calc-form__result-text в месяц
+          .calc-form__userdata
+            p.calc-form__paragraph <b>Для расчета точной суммы нужно учесть более 15 параметров.</b> Оставьте свои контакты, чтобы получить бесплатно: 
+            ul.calc-form__list
+              li.calc-form__litem точный расчет стоимости оптимального для вас пакета бухгалтерских услуг
+              li.calc-form__litem 3 возможности сэкономить от 10 до 50% <br>на бухгалтерском обслуживании
+              li.calc-form__litem пакет документов для принятия решения <br>о внедрении аутсорсинга бухгалтерии
+            .calc-form__beedback
+              +input-base-phone(calcFormInputs[0])
+              +input-base-email(calcFormInputs[1])
+            .calc-form__final-block
+              .calc-form__submit
+                +btn-default-submit('получить расчет и материалы')
+              .calc-form__accept-conf
+                include ../../components/accept-conf/accept-conf-2

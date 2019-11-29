@@ -13,3 +13,4 @@ import "%modules%/s-team/team-slider/ts-tabs/ts-tabs";
 import "%modules%/s-certificates/s-certificates";
 import "%modules%/s-services/s-services";
 import "%modules%/s-benefits/s-benefits";
+import "%modules%/calc-form/calc-form";

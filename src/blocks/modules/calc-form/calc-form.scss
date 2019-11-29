@@ -1,0 +1,203 @@
+.calc-form {
+  position: relative;
+  background-color: $blue-ribbon;
+  min-height: 1005px;
+
+  &__subtitle * {
+    color: #fff !important;
+  }
+
+  &__sliding {
+    box-sizing: border-box;
+    padding-top: 120px;
+    padding-bottom: 116px;
+    min-height: 1005px;
+
+    &.calc-form__sliding--fixed {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__main-block {
+    padding-top: 56px;
+    font-family: "Noto Sans", sans-serif;
+    color: #fff;
+  }
+
+  &__form {
+    @include row-flex();
+  }
+
+  &__calculator {
+    @include col();
+    @include size(1);
+  }
+
+  &__userdata {
+    @include col();
+    @include size(2);
+    padding-left: 64px;
+  }
+
+  &__select-block {
+    margin-bottom: 33px;
+  }
+
+  &__organizational-form {
+    width: 355px;
+    margin-bottom: 42px;
+  }
+
+  &__select-field {
+    width: 330px;
+  }
+
+  &__inputs {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+
+    input[type='number'] {
+      -moz-appearance:textfield;
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    margin-bottom: 41px;
+  }
+
+  &__input-base {
+    width: 155px;
+  }
+
+  &__result-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    margin-bottom: 7px;
+  }
+
+  &__result-value {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 51px;
+    letter-spacing: 0.035em;
+  }
+  &__result-text {
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    max-width: 430px;
+    margin-bottom: 14px;
+
+    b { font-weight: 700; }
+  }
+
+  &__list {
+    margin-bottom: 27px;
+    padding-left: 1px;
+  }
+
+  &__litem {
+    position: relative;
+    padding-left: 34px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+
+    &::before {
+      position: absolute;
+      content: "—";
+      left: 0;
+    }
+  }
+
+  &__beedback {
+    width: 100%;
+    display: flex;
+  }
+
+  &__beedback &__input-base {
+    width: 330px;
+    margin-bottom: 54px;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__submit {
+    width: 328px;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@import "dkb-select";
+
+.organizational-form {
+  
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: "Museo Sans Cyrl";
+    font-weight: 900;
+  }
+
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+
+    background-color: rgba($color: #fff, $alpha: 0.3);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 30px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__label {
+    background-color: #fff;
+    color: $blue-ribbon;
+  }
+}
