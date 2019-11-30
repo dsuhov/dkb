@@ -1,0 +1,43 @@
+include ../../components/typography/title-section
+include ../../components/soc-links-top/soc-links-top
+
+section.s-contacts
+  .container
+    p.s-contacts__last-title Приезжайте к нам в офис, чтобы обсудить <br>условия бухгалтерского сопровождения <br>и <a href="#" class="s-contacts__title-link">получить личную консультацию</a> <br>Юлии Рагузиной
+    .s-contacts__contacts-block
+      .s-contacts__little-about
+        .s-contacts__logo
+          +icon('logo-pale', 's-contacts__logo-svg')
+        .s-contacts__la-right
+          .s-contacts__bold-title-lh25  ООО «ДКБ ПрофУчет»
+          .s-contacts__text Безупречное бухгалтерское сопровождение вашего бизнеса
+      .s-contacts__contacts-data
+        .s-contacts__address
+          .s-contacts__bold-title Контакты
+          .s-contacts__text ул. Большая Косинская, <br>д. 27, Москва
+          .s-contacts__on-map
+            span.s-contacts__map-icon
+              +icon('location')
+            span На карте
+        .s-contacts__tel-mail-soc
+          .s-contacts__text
+            span +7 (499) 938-52-60
+            span dkbprof@mail.ru
+          .s-contacts__soc-line
+            .s-contacts__cos-link
+              +soc-links-top('whatsapp', '')
+            .s-contacts__cos-link
+              +soc-links-top('telegram', '')
+            .s-contacts__cos-link
+              +soc-links-top('mail', '')
+        .s-contacts__worktime
+          .s-contacts__bold-title Режим работы
+          .mb-contacts__wtime-block
+            .mb-contacts__wtime-left
+              span пн — чт
+              span пт
+              span сб — вс
+            .mb-contacts__wtime-right
+              span 9:00 — 18:00
+              span 9:00 — 17:00
+              span выходной

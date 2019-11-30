@@ -34,7 +34,7 @@
     font-weight: 900;
     transition: color 0.3s linear;
 
-    &.benefits-tab-block__tab-btn--active {
+    &.benefits-tab-block__tab-btn--active, &:hover {
       color: #000;
     }
   }
@@ -117,6 +117,7 @@
   }
 
   &__case-mb-title-line {
+    cursor: pointer;
     position: relative;
     padding-left: 68px;
     margin-bottom: 10px;
@@ -132,6 +133,26 @@
 
   &__case-bb-result {
     margin-bottom: 10px;
+  }
+
+  &__case-tb-list {
+
+  }
+
+  &__case-tb-item {
+    position: relative;
+    padding-left: 37px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+
+    &::before {
+      position: absolute;
+      content: "—";
+      left: 0;
+      color: $blue-ribbon;
+    }
   }
 
   &__corner {
@@ -187,6 +208,13 @@
   &__list {
     padding-left: 24px;
     display: none;
+
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 34px;
+      margin-bottom: 22px;
+    }
   }
 
   &__item {
@@ -241,6 +269,7 @@
 
 }
 
-#tab-block-tab-content--2 {
+#tab-block-tab-content--2,
+#tab-block2-tab-content--2 {
   display: none;
 }

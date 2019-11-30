@@ -1,0 +1,122 @@
+.s-problems {
+  background: rgba(229, 229, 229, 0.3);
+
+  &__main-block {
+    position: relative;
+    padding-top: 415px;
+    padding-bottom: 570px;
+  }
+
+  &__center {
+    font-family: "Noto Serif";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    color: #000;
+
+    &-title {
+      margin-bottom: 5px;
+    }
+    
+    &-text {
+      font-family: "Noto Sans";
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 34px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: $blue-ribbon;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  &__arc {
+    position: absolute;
+  }
+
+  &__heading {
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &__item--1 {
+    width: 373px;
+    top: 110px;
+    left: 120px;
+  }
+
+  &__arc-1 {
+    width: 81px;
+    height: 97px;
+    bottom: -121px;
+    left: 107px;
+  }
+
+  &__item--2 {
+    width: 400px;
+    top: 110px;
+    right: 34px;
+  }
+
+  &__arc-2 {
+    width: 72px;
+    height: 78px;
+    bottom: -88px;
+    left: 122px;
+  }
+
+  &__item--3 {
+    width: 386px;
+    bottom: 212px;
+    left: -10px;
+  }
+
+  &__arc-3 {
+    width: 130px;
+    height: 124px;
+    top: -162px;
+    left: 186px;
+  }
+
+  &__item--4 {
+    width: 386px;
+    bottom: 152px;
+    left: 385px;
+  }
+
+  &__arc-4 {
+    width: 2px;
+    height: 89px;
+    top: -122px;
+    left: 164px;
+  }
+
+  &__item--5 {
+    width: 386px;
+    bottom: 202px;
+    left: 785px;
+  }
+
+  &__arc-5 {
+    width: 95px;
+    height: 117px;
+    top: -155px;
+    left: 34px;
+  }
+}

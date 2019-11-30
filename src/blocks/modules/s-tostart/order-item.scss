@@ -1,0 +1,29 @@
+.order-item {
+  position: relative;
+  font-family: "Noto Sans";
+  margin-bottom: 68px;
+
+  &__number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 74px;
+    width: auto;
+  }
+
+  &__text {
+    padding-left: 88px;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #000;
+
+  }
+}
+
+
+
+
+

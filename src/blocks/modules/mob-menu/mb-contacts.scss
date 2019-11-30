@@ -47,6 +47,18 @@
 
   &__wtime-left {
     margin-right: 13px;
+    
+    span {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  &__wtime-right {
+    span {
+      display: block;
+      white-space: nowrap;
+    }
   }
 
   &__on-map {

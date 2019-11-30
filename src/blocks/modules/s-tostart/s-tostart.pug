@@ -1,0 +1,26 @@
+include ../../components/typography/subtitle-section
+include ../../components/typography/title-section
+include tostartData
+
+section.s-tostart
+  .container
+    .s-tostart__title
+      +title-section-40-51('Переход на аутсорсинг')
+    .s-tostart__subtitle
+      +subtitle-section('Мы «подхватим» бухгалтерию вашей <br>компании за 5 дней')
+    ul.s-tostart__order
+      each item in tostartData
+        li.s-tostart__order-item.order-item
+          img(src="", data-src=`img/general/${item.number}.png` alt="item.number").order-item__number(class="lazyImg order-item__number--"+item.number)
+          .order-item__text!= item.text
+    .s-tostart__notice
+      .notice-2__content
+        p.notice-2__lside <b>Неважно, где вы находитесь</b> <br>в другом районе Москвы или в области
+        p.notice-2__rside Оригиналы документов доставляют наши <br>курьеры. Копии и электронные документы <br>передаем по email или через мессенджеры. <br>При необходимости приезжаем к вам в офис
+    .s-tostart__bottom-block
+      +icon('voskl', 's-tostart__voskl')
+      .s-tostart__undervoskl Все будет ок, даже если ваш бухгалтер бросил вас  <br>перед проверкой или в разгар отчетности
+      a(href="#").s-tostart__link рассчитать стоимость обслуживания
+      .s-tostart__bottom-title
+        +title-section-40-51('Думаете, что со штатным бухгалтером удобнее работать и ему можно больше доверять, потому что он «свой» <br>и сидит под боком?')
+      p.s-tostart__bottom-text К сожалению, ответственность штатного бухгалтера не регламентирована. <br>Если он работает недобросовестно, <b>страдает в первую очередь ваш бизнес</b>
