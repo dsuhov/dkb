@@ -3,7 +3,7 @@ import "../../../js/external/jquery.formstyler.min";
 import SlidingBlock from '../../../js/slidingBlock';
 
 $(document).ready(function() {
-
+  
   setTimeout(function() {
     $('#taxation-system').styler({
       selectSmartPositioning: false,
@@ -15,59 +15,103 @@ $(document).ready(function() {
       selectPlaceholder: "Выбрать",
       selectVisibleOptions: 10
     });
-  }, 100)
+  }, 100);
+
+  [...document.querySelectorAll('.dkb-select__select-field')].forEach(element => {
+    element.addEventListener('transitionend', (evt) => {
+      if (evt.propertyName === 'opacity') {
+        $(element).removeClass('fadeOutUp fadeOutUp--done');
+      }
+    })
+  });
   
   new SlidingBlock('#calc-form');
-
+  
   function rateCalculation() {
     const form = $('.calc-form__form');
     const resultEl = form.find('#calc-form__resuli-number');
-    const baseRate = 7500;
+    const baseRate = 10000;
+
+    const taxSystemField = $('#taxation-system');
     const opsQuantity = $('#calc-form-ops_quantity');
+    const actField = $('#field_of_activity');
     const emplQuantity = $('#calc-form-empl_quantity');
-    let result = baseRate;
 
-    setResult(result);
+    $('#taxation-system, #field_of_activity, #calc-form-ops_quantity, #calc-form-empl_quantity').change(function(evt) {
+      const actFieldVal = actField.val();
+      const selects = calcSelects(taxSystemField.val(), actField.val() ? actField.val() : 'default');
+      const coeffOps = opsQuantity.val() ? operationsЬultiplier(parseInt(opsQuantity.val()), selects) : 0 ;
+      const coeffEmployee = emplQuantity.val() ? parseInt(emplQuantity.val()) * 500 : 0;
+      
+      setResult(selects + coeffOps + coeffEmployee);
+    });
 
-    function operationsЬultiplier(value) {
-      switch (value) {
-        // case(value <= 50): return value;
-        // case(value >= 51 && value <= 100): return value + (value * 0.3);
-        case(value >= 101 && value <= 150): return result + (result * 0.5);
-        // case(value >= 151 && value <= 200): return value + (value * 0.3);
-        // case(value > 200): return value + (value * 0.3);
-        default: return result;
+    function calcSelects(system, area) {
+      const taxSystemData = taxSystem(system);
+
+      if (area === 'default') {
+        return taxSystemData[0][1];
+      } else if (area === 'Торговля') {
+        return  taxSystemData[1][1];
+      } else {
+        return  taxSystemData[2][1];
       }
     }
 
-    function setResult(result) {
-      resultEl.text(result);
-    }
-
-    opsQuantity.keyup(function() {
-
-      if (parseInt($(this).val()) > 0 && emplQuantity.val() > 0) {
-        result = baseRate + 3750 + 5000;
-      } else if (parseInt($(this).val())) {
-        result = baseRate + 3750;
+    function taxSystem(system) {
+      switch (system) {
+        case ('ОСН (НДС)'): return [
+          [['default'], 10000],
+          [['Торговля'], 12000],
+          [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 15000],
+        ];
+        case ('УСН 6% (доход)'): return [
+          [['default'], 7500],
+          [['Торговля'], 9500],
+          [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 12500],
+        ];
+        case ('УСН 15% (доход/расход)'): return [
+          [['default'], 8500],
+          [['Торговля'], 10500],
+          [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 12500],
+        ];
+        case ('Патент)'): return [
+          [['default'], 9000],
+          [['Торговля'], 9000],
+          [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 9000],
+        ];
+        case ('Другое'): return [
+          [['default'], 10000],
+          [['Торговля'], 12000],
+          [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 15000],
+        ];
+        default: throw new Error('Система налогооблажения барахлит');
       }
-
-      setResult(result);
-    });
-
-    emplQuantity.keyup(function() {
-
-      if ($(this).val() > 0 && opsQuantity.val() > 0) {
-        result = baseRate + 3750 + 5000;
-      } else if (parseInt($(this).val())) {
-        result = baseRate + 5000;
-      }
-
-      setResult(result);
-    });
+    };
+    // events
 
     
-  }
+    function operationsЬultiplier(ops, sum) {
+    console.log(ops, sum);
+    
+      switch (true) {
+        case (ops <= 50): return 0;
+        case (ops >= 51 && ops <= 100): return (sum * 0.3);
+        case (ops >= 101 && ops <= 150): return (sum * 0.5);
+        case (ops >= 151 && ops <= 200): return (sum * 0.6);
+        case (ops > 200): return (ops * 45);
+        default: return 0;
+      }
+    }
+    
+    function setResult(result) {
+      resultEl.text(result);
+      $('#calculated_value').val(result);
+    }
+  
+      
+      setResult(baseRate);
+    };
 
-  rateCalculation();
+    rateCalculation();
 });

@@ -68,7 +68,6 @@ section.calc-form#calc-form
                   option(value="УСН 6% (доход)") УСН 6% (доход)
                   option(value="УСН 15% (доход/расход)") УСН 15% (доход/расход)
                   option(value="Патент") Патент
-                  option(value="Смешанная система") Смешанная система
                   option(value="Другое") Другое
               .calc-form__select-field.dkb-select__select-field.fadeOutUp
                 label(for="field_of_activity" class="dkb-select__label") Сфера деятельности
@@ -100,6 +99,7 @@ section.calc-form#calc-form
               +input-base-email(calcFormInputs[1])
             .calc-form__final-block.fadeOutUp
               .calc-form__submit
+                input(type="hidden" name="value" id="calculated_value")
                 +btn-default-submit('получить расчет и материалы')
               .calc-form__accept-conf
                 include ../../components/accept-conf/accept-conf-2

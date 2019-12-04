@@ -44,15 +44,15 @@ export default function() {
         },
         done: () => {
           if (scenes.length === 0 && newPlus == 15000) {
-            setPinScene('.s-economy__values-block');
             
+            setTimeout(() => {
+              setPinScene('.s-economy__values-block');
+            }, 1000);
           }
         }
       })
   
       scenes.shift().destroy();
-  
-      
     }
   
     function counterAction(newPlusVal, element) {
