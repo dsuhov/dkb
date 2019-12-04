@@ -18,10 +18,10 @@
   }
 
   &__content {
-    // height: 1020px;
+    height: 1053px;
 
     @include breakpoint(contSize) {
-      padding: 0 40px;
+      padding: 0 123px;
     }
   
     @media (max-width: 765px) {
@@ -29,20 +29,23 @@
     }
   }
 
-  &__form-sliding {
+  &__sliding {
     position: relative;
-    // box-sizing: border-box;
     width: 100%;
-    // transform: translateY(-100%);
-    // z-index: 1000;
+  }
 
-    &.s-form-1__form-sliding--fixed {
-      position: fixed;
+  &__sliding.s-form-1__sliding--fixed {
+    position: fixed;
       top: 0;
       max-width: 1122px;
       z-index: 1;
-      // pointer-events: none;
-    }
+  }
+
+  &__sliding.s-form-2__sliding--fixed {
+    position: fixed;
+      top: 0;
+      max-width: 1122px;
+      z-index: 1;
   }
 
   &__aside-pic {
@@ -51,6 +54,10 @@
     bottom: 0;
     bottom: -4px;
     right: -80px;
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
   }
 
   &__img-block {
@@ -68,6 +75,15 @@
 
   &__subtitle {
     margin-bottom: 35px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 62px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 25px;
+      br {display: none;}
+    }
   }
 
   &__link {
@@ -103,11 +119,21 @@
     line-height: 34px;
     letter-spacing: 0.03em;
     margin-bottom: 75px;
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+      letter-spacing: 0.03em;
+      margin-bottom: 46px;
+    }
   }
 
   &__list-item {
     position: relative;
     padding-left: 37px;
+    @media (max-width: 765px) {
+      padding-left: 34px;
+    }
 
     &::before {
       position: absolute;
@@ -120,12 +146,22 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    @media (max-width: 765px) {
+      // br {display: none;}
+    }
   }
 
   &__form {
     max-width: 637px;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint(contSize) {
+      display: block;
+      max-width: 324px;
+      margin: 0 auto;
+    }
   }
 
   &__input {
@@ -134,15 +170,33 @@
     input {
       padding: 12px 16px;
     }
+
+    @include breakpoint(contSize) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 
   &__button {
     width: 317px;
+
+    @include breakpoint(contSize) {
+      width: 100%;
+    }
+
+    @media (max-width: 765px) {
+      width: 255px;
+      margin: 0 auto;
+    }
   }
 
   &__accept-conf {
     padding-top: 10px;
-  }
 
-  
+    @media (max-width: 765px) {
+      .accept-conf-2 {
+        text-align: center;
+      }
+    }
+  }
 }

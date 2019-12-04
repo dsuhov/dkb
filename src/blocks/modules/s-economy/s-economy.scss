@@ -1,12 +1,45 @@
 .s-economy {
   padding-top: 140px;
 
+  @include breakpoint(contSize) {
+    padding-top: 110px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 50px;
+  }
+
+  &__inner {
+    @include breakpoint(contSize) {
+      padding: 0 40px;
+    }
+    @media (max-width: 765px) {
+      padding: 0 20px;
+    }
+  }
+
   &__title {
     margin-bottom: 77px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 53px;
+    }
+
+    @media (max-width: 765px) {
+      br { display: none; }
+    }
   }
 
   &__subtitle {
     margin-bottom: 21px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 11px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 7px;
+    }
   }
 
   &__note {
@@ -16,6 +49,10 @@
     line-height: 24px;
     letter-spacing: 0.05em;
     color: rgba(0, 0, 0, 0.35);
+
+    @media (max-width: 765px) {
+      max-width: 260px;
+    }
   }
 
   &__main {
@@ -26,11 +63,28 @@
   &__values-block {
     padding-top: 57px;
     display: flex;
+
+    @include breakpoint(contSize) {
+      display: block;
+      padding-top: 43px;
+    }
   }
 
   &__values-col {
     max-width: 380px;
     flex: 0 0 auto;
+
+    @include breakpoint(contSize) {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 765px) {
+      display: block;
+      margin-bottom: 50px;
+    }
   }
 
   &__counter-block {
@@ -39,6 +93,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+
+    @include breakpoint(contSize) {
+      display: block;
+      
+    }
   }
 
   &__value {
@@ -52,17 +111,42 @@
     &:not(:last-child) {
       margin-bottom: 40px;
     }
+
+    @include breakpoint(contSize) {
+      max-width: 50%;
+      width: 50%;
+    }
+
+    @media (max-width: 765px) {
+      max-width: 100%;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
   }
 
   &__val-number {
     font-weight: 900;
     font-size: 29px;
     line-height: 38px;
+
+    @include breakpoint(contSize) {
+      letter-spacing: 0.05em;
+    }
   }
 
   &__val-comment {
     font-size: 17px;
     line-height: 29px;
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+      br { display: none; }
+      // width: 100%;
+    }
   }
 
   &__counter {
@@ -71,6 +155,16 @@
     font-weight: 900;
     text-align: center;
     top: -80px;
+
+    &.s-economy__counter--fixed {
+      position: fixed;
+      top: 0 !important;
+    }
+
+    @include breakpoint(contSize) {
+      position: static;
+      top: initial;
+    }
   }
 
   &__counter-title {
@@ -78,15 +172,33 @@
     line-height: 45px;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
+
+    @media (max-width: 765px) {
+      font-size: 29px;
+      line-height: 38px;
+    }
   }
 
   &__counter-value {
     font-size: 120px;
     line-height: 154px;
+
+    @media (max-width: 765px) {
+      font-size: 60px;
+      line-height: 77px;
+    }
   }
 
   &__donotpay {
     padding-top: 67px;
+
+    @include breakpoint(contSize) {
+      padding-top: 90px;
+    }
+
+    @media (max-width: 765px) {
+      padding-top: 50px;
+    }
   }
 }
 

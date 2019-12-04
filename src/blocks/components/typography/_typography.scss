@@ -26,4 +26,14 @@
   &.subtitle-section-white {
     color: #fff;
   }
+
+  @include breakpoint(contSize) {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @media (max-width: 765px) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }

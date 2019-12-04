@@ -11,20 +11,50 @@
   color: #000;
   letter-spacing: 0.03em;
 
+  @include breakpoint(contSize) {
+    padding-top: 54px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 34px;
+  }
+
   &__slider-container {
     margin-bottom: 42px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 130px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 70px;
+    }
   }
 
   &__slide-container {
     box-sizing: border-box;
     padding-left: 65px;
     padding-right: 147px;
+
+    @include breakpoint(contSize) {
+      padding-right: 65px;
+    }
+
+    @media (max-width: 765px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
   }
 
   &__info {
     margin-right: 123px;
     font-size: 14px;
     line-height: 25px;
+
+    @media (max-width: 765px) {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
   }
 
   &__logo {
@@ -38,10 +68,18 @@
 
   &__slide {
     display: flex;
+
+    @include breakpoint(contSize) {
+      display: block;
+    }
   }
 
   &__name {
     font-weight: 700;
+    letter-spacing: 0;
+    @include breakpoint(contSize) {
+      max-width: 250px;
+    }
   }
 
   &__position {
@@ -51,6 +89,10 @@
   &__btn-row {
     margin-left: 65px;
     display: flex;
+
+    @media (max-width: 765px) {
+      margin-left: 30px;
+    }
   }
 
   &__text {
@@ -62,6 +104,15 @@
       content: "«";
       padding-right: 1px;
       margin-left: -10px;
+    }
+
+    @include breakpoint(contSize) {
+      padding-top: 60px;
+    }
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
     }
   }
   

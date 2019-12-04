@@ -38,6 +38,7 @@
   }
 
   &__logo {
+    cursor: pointer;
     margin-right: 53px;
 
     @include breakpoint(contSize) {

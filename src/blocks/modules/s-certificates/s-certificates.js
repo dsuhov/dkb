@@ -2,8 +2,6 @@ import $ from "jquery";
 import slick from "slick-carousel";
 import tippy, {followCursor} from 'tippy.js';
 
-window.jQuery = $;
-require("@fancyapps/fancybox");
 
 $(document).ready(function() {
     
@@ -12,7 +10,23 @@ $(document).ready(function() {
         slidesToShow: 7,
         slidesToScroll: 3,
         prevArrow: '.s-certificates__nav-arrow.nav-arrow--prev',
-        nextArrow: '.s-certificates__nav-arrow.nav-arrow--next'
+        nextArrow: '.s-certificates__nav-arrow.nav-arrow--next',
+        responsive: [
+            {
+                breakpoint: 1122,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                  }
+            },
+            {
+                breakpoint: 765,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                  }
+            }
+        ]
     });
 
     tippy('.s-certificates__slide-content', {

@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
   }, 100)
   
-  new SlidingBlock('.calc-form');
+  new SlidingBlock('#calc-form');
 
   function rateCalculation() {
     const form = $('.calc-form__form');

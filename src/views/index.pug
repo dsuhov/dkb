@@ -6,31 +6,38 @@ block variables
 
 block content
 	.wrapper
-		include ../blocks/modules/header/header
-		include ../blocks/modules/top-screen/top-screen
-		include ../blocks/modules/work-order/work-order
-		include ../blocks/modules/form-side/form-side
-		include ../blocks/modules/s-features/s-features
-		include ../blocks/modules/s-reviews/s-reviews
-		include ../blocks/modules/s-protects/s-protects
-		include ../blocks/modules/s-recommends/s-recommends
-		include ../blocks/modules/s-team/s-team
-		include ../blocks/modules/s-certificates/s-certificates
-		include ../blocks/modules/s-areas/s-areas
-		include ../blocks/modules/notice-1/notice-1
-		include ../blocks/modules/s-form-1/s-form-1
-		include ../blocks/modules/s-economy/s-economy
-		include ../blocks/modules/s-services/s-services
-		include ../blocks/modules/s-benefits/s-benefits
-		include ../blocks/modules/calc-form/calc-form
-		include ../blocks/modules/s-tostart/s-tostart
-		include ../blocks/modules/s-problems/s-problems
-		include ../blocks/modules/s-benefits/s-benefits-2
-		include ../blocks/modules/s-contacts/s-contacts
+		#home
+			include ../blocks/modules/header/header
+			include ../blocks/modules/top-screen/top-screen
+			include ../blocks/modules/work-order/work-order
+			include ../blocks/modules/form-side/form-side
+			include ../blocks/modules/s-features/s-features
+		#reviews
+			include ../blocks/modules/s-reviews/s-reviews
+			include ../blocks/modules/s-protects/s-protects
+			include ../blocks/modules/s-recommends/s-recommends
+		#team
+			include ../blocks/modules/s-team/s-team
+			include ../blocks/modules/s-certificates/s-certificates
+			include ../blocks/modules/s-areas/s-areas
+			include ../blocks/modules/notice-1/notice-1
+			include ../blocks/modules/s-form-1/s-form-1
+		#how-to-econom
+			include ../blocks/modules/s-economy/s-economy
+		#services
+			include ../blocks/modules/s-services/s-services
+			include ../blocks/modules/s-benefits/s-benefits
+		#prices
+			include ../blocks/modules/calc-form/calc-form
+		#how-to-start
+			include ../blocks/modules/s-tostart/s-tostart
+			include ../blocks/modules/s-problems/s-problems
+			include ../blocks/modules/s-benefits/s-benefits-2
+			include ../blocks/modules/s-form-1/s-form-2
+			include ../blocks/modules/s-contacts/s-contacts
 		include ../blocks/modules/footer/footer
-	div.dummy(style="height: 1000px; background-color: #eee")
+		include ../blocks/modules/popups/popups
 	include ../blocks/modules/sidedrawer/sidedrawer
-	//- include ../blocks/modules/popups/popups
 
 block scripts
 	script(src="js/main.js")

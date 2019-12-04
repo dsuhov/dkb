@@ -4,10 +4,20 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
+
+    @media (max-width: 765px) {
+      display: none;
+    }
   }
 
   &__nav-arrow.nav-arrow--prev {
     margin-right: 12px;
+  }
+
+  &__slide {
+    @media (max-width: 765px) {
+      margin-bottom: 26px;
+    }
   }
 }
 

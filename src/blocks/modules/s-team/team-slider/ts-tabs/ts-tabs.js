@@ -33,10 +33,28 @@ $(document).ready(function() {
     const sliderInstance = container.slick({
       infinite: true,
       slidesToShow: 4,
-      slidesToScroll: 1,
+      slidesToScroll: 4,
       lazyLoad: 'ondemand',
       prevArrow: prev,
-      nextArrow: next
+      nextArrow: next,
+
+      responsive: [
+        {
+          breakpoint: 1122,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 765,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            rows: 2
+          }
+        }
+      ]
     });
 
     return sliderInstance;

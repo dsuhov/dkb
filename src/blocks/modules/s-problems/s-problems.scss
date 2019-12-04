@@ -5,6 +5,21 @@
     position: relative;
     padding-top: 415px;
     padding-bottom: 570px;
+
+    @include breakpoint(contSize) {
+      padding-top: 110px;
+      padding-bottom: 110px;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: static;
+    }
+
+    @media (max-width: 765px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
   }
 
   &__center {
@@ -28,15 +43,60 @@
       letter-spacing: 0.01em;
       color: $blue-ribbon;
     }
+
+    @include breakpoint(contSize) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 765px) {
+      font-size: 18px;
+      line-height: 27px;
+
+      &-text {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__list {
+    @include breakpoint(contSize) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 765px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      max-height: 800px;
+    }
   }
 
   &__item {
     position: absolute;
     font-family: "Noto Sans", sans-serif;
+
+    @include breakpoint(contSize) {
+      position: static;
+      width: 324px;
+      br { display: none; }
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 765px) {
+      width: auto;
+      max-width: 158px;
+      margin-bottom: 45px;
+    }
   }
 
   &__arc {
     position: absolute;
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
   }
 
   &__heading {
@@ -45,6 +105,12 @@
     line-height: 25px;
     letter-spacing: 0.03em;
     margin-bottom: 22px;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -53,6 +119,17 @@
     line-height: 34px;
     letter-spacing: 0.03em;
     color: rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  &__item--1, &__item--2, &__item--3 {
+    @media (max-width: 765px) {
+      margin-right: 16px;
+    }
   }
 
   &__item--1 {
@@ -98,6 +175,10 @@
     width: 386px;
     bottom: 152px;
     left: 385px;
+
+    @media (max-width: 765px) {
+      padding-top: 66px;
+    }
   }
 
   &__arc-4 {

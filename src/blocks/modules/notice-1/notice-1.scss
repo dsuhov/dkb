@@ -5,11 +5,23 @@
   background-color: #fff;
   z-index: 100;
 
+  @include breakpoint(contSize) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 765px) {
+    padding-left: 0;
+    padding-right: 0;
+    // width: 100%;
+  }
+
   &__content {
     min-height: 269px;
     display: flex;
     align-items: center;
     background: url('../img/general/notice-1_desktop.svg') no-repeat;
+    background-size: 100% auto;
 
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
@@ -27,13 +39,62 @@
       width: 50%;
       flex: 0 0 50%;
     }
+
+    @include breakpoint(contSize) {
+      max-width: 687px;
+      margin: 0 auto;
+      display: block;
+      background: url('../img/general/notice-1_mobile.svg') no-repeat;
+      min-height: 548px;
+      background-size: 100% auto;
+    }
+    
+    @media (max-width: 765px) {
+      max-width: 334px;
+      font-size: 14px;
+      line-height: 28px;
+      background: url('../img/general/notice-1_mobile-x.svg') no-repeat;
+      background-size: 100% auto;
+      b {
+        font-weight: 400;
+      }
+    }
   }
 
   &__lside {
     padding-left: 68px;
+
+    @include breakpoint(contSize) {
+      padding: 0;
+      br {display: none;}
+      width: 550px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 50px;
+      margin-bottom: 220px;
+    }
+
+    @media (max-width: 765px) {
+      width: auto;
+      max-width: 267px;
+      margin-bottom: 160px;
+    }
   }
 
   &__rside {
     padding-left: 128px;
+
+    @include breakpoint(contSize) {
+      padding: 0;
+      br {display: none;}
+      width: 550px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: 765px) {
+      width: auto;
+      max-width: 267px;
+    }
   }
 }

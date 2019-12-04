@@ -110,7 +110,7 @@ section.popup.popup-feedback
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
-section.popup.popup-call
+section.popup.popup-call#popup-call
   .popup__colored
     .popup__close
     .container.popup__body
@@ -168,7 +168,7 @@ section.popup.popup-call
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
-section.popup.popup-call.popup01
+section.popup.popup-call.popup01#popup01
   .popup__colored
     .popup__close
     .container.popup__body
@@ -209,7 +209,7 @@ section.popup.popup-call.popup01
         .popup__img-descr 
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
-section.popup.popup-call.popup02
+section.popup.popup-call.popup02#popup02
   .popup__colored
     .popup__close
     .container.popup__body
@@ -236,7 +236,7 @@ section.popup.popup-call.popup02
               include ../../components/accept-conf/accept-conf
       .popup__img
         img(src="img/popups/popup_docs.png", data-src=`img/popups/popup_docs.png` alt="docs")
-section.popup.popup-call.popup03
+section.popup.popup-call.popup03#popup03
   .popup__colored
     .popup__close
     .container.popup__body
@@ -295,7 +295,7 @@ section.popup.popup-call.popup03
           span Юлия Рагузина 
           | | генеральный директор «ДКБ ПрофУчет»
 //- Pop-up_comparePrice
-section.popup.popup-feedback.popup-compare
+section.popup.popup-feedback.popup-compare#popup-compare
   .popup__close
   .container
     .popup__content
@@ -311,7 +311,7 @@ section.popup.popup-feedback.popup-compare
         li.popup__list-item список услуг, которые включены в стоимость;
         li.popup__list-item объем и качество сервиса <br>(бесплатные или платные бухгалтерские и правовые программы, количество консультаций, оперативность реакции на запросы, скорость подготовки документов...)
       .popup__descr Посмотрите, что входит в базовый пакет обслуживания в нашей компании или получите точный расчет стоимости бухгалтерского сопровождения для вашего бизнеса
-      .popup__btn
+      .popup__btn(id="popup-compare-back")
         +btn-default-submit('получить личную консультацию гендиректора')
 //- feedback01 = feedback price
 section.popup.popup-feedback.popup-feedback01
@@ -448,21 +448,21 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Pop-up_expressanaliz
-section.popup.popup-feedback.popup-feedback01.popup-expressanaliz
+section.popup.popup-feedback.popup-feedback01.popup-expressanaliz#popup-express-analitycs
   .popup__close
   .container
     .popup__content
       .popup-feedback__img
         img(src="img/popups/popup_feedback.png", data-src=`img/popups/popup_feedback.png` alt="feedback")
       .popup__subtitle
-        .NSerif-28-42-reg Новым клиентам мы дарим экспресс-анализ бухгалтерии, благодаря которому вы поймете:
+        .NSerif-28-42-reg Новым клиентам мы дарим <br>экспресс-анализ бухгалтерии, <br>благодаря которому вы поймете:
       ul.popup__list
         li.popup__list-item соответствует ли бухгалтерская и налоговая отчетность, которую вам предоставляет бухгалтер, реальному состоянию дел в компании 
         li.popup__list-item не платит ли бухгалтер больше налогов, чем это необходимо 
         li.popup__list-item правильно ли посчитаны финансовые показатели 
         li.popup__list-item есть ли ошибки и проблемные места в учете и отчетности
       .popup__descr В результате вы работаете без кассовых разрывов, вовремя рассчитываетесь с поставщиками и можете планировать свою деятельность
-      a(href="").popup__notice
+      a(href="" id="back-to-ea").popup__notice
         span Получить экспресс-анализ своей бухгалтерии 
 //- feedback_ consult
 section.popup.popup-feedback.popup-feedback01.popup__consult

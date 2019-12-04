@@ -4,12 +4,75 @@
   position: relative;
   z-index: 500;
 
+  @include breakpoint(contSize) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 85px;
+  }
+
+  &__headers {
+    @include breakpoint(contSize) {
+      padding: 0 40px;
+    }
+    @media (max-width: 765px) {
+      padding: 0 20px;
+    }
+  }
+
   &__title {
     margin-bottom: 30px;
+
+    .title-section-40-51 {
+      font-size: 58px;
+      line-height: 70px;
+
+      @include breakpoint(contSize) {
+        font-size: 44px;
+        line-height: 53px;
+      }
+
+      @media (max-width: 765px) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    @include breakpoint(contSize) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: 765px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 78px;
+
+    @media (max-width: 765px) {
+      max-width: 225px;
+      margin-bottom: 43px;
+      br {display: none;}
+    }
+  }
+
+  &__slider-block {
+    @include breakpoint(contSize) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: 765px) {
+      padding: 0 20px;
+    }
+  }
+
+  &__br {
+    display: none;
+
+    @media (max-width: 765px) {
+      display: inline !important;
+    }
   }
 }
 

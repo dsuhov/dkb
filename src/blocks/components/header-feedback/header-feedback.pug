@@ -2,8 +2,8 @@ include ../soc-links-top/soc-links-top
 
 mixin header-feedback-tel()
   .header-feedback
-    .header-feedback__tel +7 499 938-52-60
-    .header-feedback__caption Заказать звонок
+    a(href="tel:+74999385260").header-feedback__tel +7 499 938-52-60
+    .header-feedback__caption.header-feedback__caption--tel(data-popup="#popup-call") Заказать звонок
 
 mixin header-feedback-soc()
   .header-feedback

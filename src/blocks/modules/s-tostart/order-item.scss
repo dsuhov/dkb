@@ -3,12 +3,22 @@
   font-family: "Noto Sans";
   margin-bottom: 68px;
 
+  @media (max-width: 765px) {
+    margin-bottom: 25px;
+  }
+
   &__number {
     position: absolute;
     left: 0;
     top: 0;
     height: 74px;
     width: auto;
+
+    @media (max-width: 765px) {
+      height: 63px;
+      left: 5px;
+      top: -1px;
+    }
   }
 
   &__text {
@@ -20,6 +30,11 @@
     letter-spacing: 0.03em;
     color: #000;
 
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+      padding-left: 85px;
+    }
   }
 }
 

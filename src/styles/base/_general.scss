@@ -80,11 +80,15 @@ picture {
 .fadeOutUp {
   opacity: 0;
   transform: translateY(30px);
-  transition: 0.3s;
+  transition: 0.8s;
   transition-property: opacity, transform;
 
   &.fadeOutUp--done {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.fancybox-content {
+  padding: 0 !important;
 }

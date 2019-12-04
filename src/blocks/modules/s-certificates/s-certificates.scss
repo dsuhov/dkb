@@ -1,8 +1,25 @@
 .s-certificates {
-  padding-top: 140px;
+  padding-top: 150px;
   background-color: #fff;
   z-index: 200;
   position: relative;
+
+  @include breakpoint(contSize) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 765px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+
+  &__title {
+    @media (max-width: 765px) {
+      br {display: none;}
+    }
+  }
 
   &__nav-block {
     display: flex;
@@ -13,6 +30,10 @@
   &__slide a {
     display: block;
     width: 142px;
+
+    @media (max-width: 765px) {
+      width: 102px;
+    }
   }
 
   &__nav-arrow.nav-arrow--prev {

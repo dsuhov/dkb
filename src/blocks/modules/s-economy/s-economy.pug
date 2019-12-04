@@ -14,21 +14,22 @@ include value
 
 section.s-economy
   .container
-    .s-economy__title
-      +title-section-40-51('Вы экономите до 70% на расходах <br>и миллионы на отсутствии <br>лишних выплат с «ДКБ ПрофУчет» ')
-    .s-economy__subtitle
-      +subtitle-section('Сколько<span>*</span><br>и за счет чего вы экономите')
-    .s-economy__note *Среднее значение по Москве за год за одного сотрудника
-    .s-economy__main
-      .s-economy__values-block
-        .s-economy__values-col
-          each item, i in economyData
-            +value(item, i)
-        .s-economy__counter-block
-          .s-economy__counter
-            .s-economy__counter-title В год вы экономите
-            .s-economy__counter-value
-              span.s-economy__counter-number 900 000
-              span  ₽
-      .s-economy__donotpay
-        include donotpay
+    .s-economy__inner
+      .s-economy__title
+        +title-section-40-51('Вы экономите до 70% на расходах <br>и миллионы на отсутствии <br>лишних выплат с «ДКБ ПрофУчет» ')
+      .s-economy__subtitle
+        +subtitle-section('Сколько<span>*</span><br>и за счет чего вы экономите')
+      .s-economy__note *Среднее значение по Москве за год за одного сотрудника
+      .s-economy__main
+        .s-economy__values-block
+          .s-economy__values-col
+            each item, i in economyData
+              +value(item, i)
+          .s-economy__counter-block
+            .s-economy__counter
+              .s-economy__counter-title В год вы экономите
+              .s-economy__counter-value
+                span.s-economy__counter-number 900 000
+                span  ₽
+        .s-economy__donotpay
+          include donotpay

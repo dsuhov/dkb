@@ -3,40 +3,120 @@
   font-family: "Noto Sans", sans-serif;
   color: #000;
 
+  @include breakpoint(contSize) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 22px;
+  }
+
+  &__inner {
+    @include breakpoint(contSize) {
+      padding: 0 40px;
+    }
+    @media (max-width: 765px) {
+      padding: 0 20px;
+    }
+  }
+
   &__title {
     margin-bottom: 24px;
+
+    @media (max-width: 765px) {
+      .title-section-40-51 { text-align: left; }
+    }
   }
 
   &__subtitle {
     margin-bottom: 120px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 50px;
+      
+      .subtitle-section {
+        br {display: none;}
+      }
+    }
   }
 
   &__ex-services-title {
     font-weight: 900;
     font-size: 28px;
     line-height: 36px;
-    margin-bottom: 50px;
+    margin-bottom: 77px;
+
+    @media (max-width: 765px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 44px;
+    }
   }
 
   &__services {
     margin-bottom: 40px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 45px;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 32px;
+    }
   }
 
   &__extra-services {
     @include row-flex();
     margin-bottom: 78px;
+
+    @include breakpoint(contSize) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 44px;
+    }
+
+    @media (max-width: 765px) {
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
   }
 
   &__ex-service {
     @include col();
     @include size(1);
     margin-bottom: 62px;
+
+    @include breakpoint(contSize) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 50%;
+    }
+
+    @media (max-width: 765px) {
+      width: auto;
+      max-width: 157px;
+      margin-bottom: 35px;
+
+      &:nth-child(3) {
+        order: 1;
+      }
+    }
   }
 
   &__icon {
     width: 83px;
     height: 83px;
     margin-bottom: 30px;
+
+    @media (max-width: 765px) {
+      width: 73px;
+      height: 73px;
+      margin-bottom: 16px;
+    }
   }
 
   &__ex-service-text {
@@ -46,6 +126,12 @@
     font-size: 17px;
     line-height: 29px;
     letter-spacing: 0.03em;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+      line-height: 20px;
+      br {display: none;}
+    }
   }
 
   &__calc-price-link {
@@ -67,6 +153,17 @@
 
     &:hover {
       border-radius: 2px;
+    }
+
+    @include breakpoint(contSize) {
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 765px) {
+      font-size: 10px;
+      line-height: 15px;
+      width: 100%;
+      padding: 20px 0;
     }
   }
 }

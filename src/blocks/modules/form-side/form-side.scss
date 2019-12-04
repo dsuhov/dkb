@@ -77,17 +77,16 @@
 
   &__title-link {
     text-decoration: none;
-    color: $orange-peel;
+    color: #fff;
+    border-bottom: 2px solid $orange-peel;
 
     &:hover {
-      // text-decoration: underline;
-      border-bottom: 2px solid $orange-peel;
+      color: $orange-peel;
+      
     }
   }
 
-  &__title-text {
 
-  }
 
   &__description {
     font-size: 14px;

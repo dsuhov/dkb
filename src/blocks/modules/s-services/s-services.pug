@@ -15,28 +15,29 @@ mixin service(data)
 
 .s-services
   .container
-    .s-services__title
-      +title-section-40-51('Полное бухгалтерское <br>сопровождение бизнеса')
-    .s-services__subtitle
-      +subtitle-section('избавляет вас от проблем с бухгалтерским, <br>налоговым и кадровым учетом. Наши бухгалтеры <br>возьмут весь учет и отчетность на себя')
-    .s-services__services
-      each data in serviceData
-        +service(data)
-    h4.s-services__ex-services-title Комплекс дополнительных услуг
-    .s-services__extra-services
-      .s-services__ex-service
-        +icon('ex-service-5', 's-services__icon')
-        p.s-services__ex-service-text Помощь в регистрации, реорганизации и ликвидации компаний
-      .s-services__ex-service
-        +icon('ex-service-1', 's-services__icon')
-        p.s-services__ex-service-text Организация системы финансового планирования для руководителей
-      .s-services__ex-service
-        +icon('ex-service-2', 's-services__icon')
-        p.s-services__ex-service-text Формирование управленческой отчетности на основе бухгалтерской информации 
-      .s-services__ex-service
-        +icon('ex-service-3', 's-services__icon')
-        p.s-services__ex-service-text Оформление онлайн-касс <br>и торговых патентов
-      .s-services__ex-service
-        +icon('ex-service-4', 's-services__icon')
-        p.s-services__ex-service-text Составление и мониторинг договоров
-    a(href="#").s-services__calc-price-link рассчитать стоимость обслуживания
+    .s-services__inner
+      .s-services__title
+        +title-section-40-51('Полное бухгалтерское <br>сопровождение бизнеса')
+      .s-services__subtitle
+        +subtitle-section('избавляет вас от проблем с бухгалтерским, <br>налоговым и кадровым учетом. Наши бухгалтеры <br>возьмут весь учет и отчетность на себя')
+      .s-services__services
+        each data in serviceData
+          +service(data)
+      h4.s-services__ex-services-title Комплекс дополнительных услуг
+      .s-services__extra-services
+        .s-services__ex-service
+          +icon('ex-service-1', 's-services__icon')
+          p.s-services__ex-service-text Помощь в регистрации, реорганизации и ликвидации компаний
+        .s-services__ex-service
+          +icon('ex-service-2', 's-services__icon')
+          p.s-services__ex-service-text Организация системы финансового планирования для руководителей
+        .s-services__ex-service
+          +icon('ex-service-3', 's-services__icon')
+          p.s-services__ex-service-text Формирование управленческой отчетности на основе бухгалтерской информации 
+        .s-services__ex-service
+          +icon('ex-service-4', 's-services__icon')
+          p.s-services__ex-service-text Оформление онлайн-касс <br>и торговых патентов
+        .s-services__ex-service
+          +icon('ex-service-5', 's-services__icon')
+          p.s-services__ex-service-text Составление и мониторинг договоров
+      a(href="#").s-services__calc-price-link рассчитать стоимость обслуживания

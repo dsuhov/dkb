@@ -4,6 +4,7 @@ import "./scrollActions/scrollActionsMain";
 import LazyLoad from "vanilla-lazyload";
 import IMask from 'imask';
 
+
 document.addEventListener("DOMContentLoaded", () => {
   var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazyImg"

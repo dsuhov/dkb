@@ -36,16 +36,16 @@ include ../../components/buttons/btn-default/btn-default
     }
   ];
 
-section.calc-form
+section.calc-form#calc-form
   .sb-overlay
   .calc-form__sliding
     .container
-      .calc-form__subtitle
+      .calc-form__subtitle.fadeOutUp
         +subtitle-section('Рассчитайте стоимость бухгалтерского <br>сопровождения вашего бизнеса')
       .calc-form__main-block
         form(action="" method="post").calc-form__form
           .calc-form__calculator
-            .calc-form__organizational-form.organizational-form
+            .calc-form__organizational-form.organizational-form.fadeOutUp
               .organizational-form__title Организационная форма
               .organizational-form__fields
                 .organizational-form__check-field
@@ -61,7 +61,7 @@ section.calc-form
                   input(type="radio" id="organizational_form-4" name="organizational_form" value="Другое").organizational-form__input
                   label(for="organizational_form-4").organizational-form__label Другое
             .calc-form__select-block
-              .calc-form__select-field.dkb-select__select-field
+              .calc-form__select-field.dkb-select__select-field.fadeOutUp
                 label(for="taxation-system" class="dkb-select__label") Система налогообложения
                 select#taxation-system(name="taxation_system[]")
                   option(value="ОСН (НДС)") ОСН (НДС)
@@ -70,7 +70,7 @@ section.calc-form
                   option(value="Патент") Патент
                   option(value="Смешанная система") Смешанная система
                   option(value="Другое") Другое
-              .calc-form__select-field.dkb-select__select-field
+              .calc-form__select-field.dkb-select__select-field.fadeOutUp
                 label(for="field_of_activity" class="dkb-select__label") Сфера деятельности
                 select#field_of_activity(name="field_of_activity[]")
                   option
@@ -80,25 +80,25 @@ section.calc-form
                   option(value="Строительство") Строительство
                   option(value="Медицина") Медицина
                   option(value="Другое") Другое
-            .calc-form__inputs
+            .calc-form__inputs.fadeOutUp
               each item in inputsData
                 +input-base-novalid(item)
-            .calc-form__result
+            .calc-form__result.fadeOutUp
               .calc-form__result-title Ориентировочная стоимость <br>вашего бухгалтерского обслуживания
               .calc-form__result-value
                 span#calc-form__resuli-number 5000
                 span  ₽ 
                 span.calc-form__result-text в месяц
           .calc-form__userdata
-            p.calc-form__paragraph <b>Для расчета точной суммы нужно учесть более 15 параметров.</b> Оставьте свои контакты, чтобы получить бесплатно: 
-            ul.calc-form__list
+            p.calc-form__paragraph.fadeOutUp <b>Для расчета точной суммы нужно учесть более 15 параметров.</b> Оставьте свои контакты, чтобы получить бесплатно: 
+            ul.calc-form__list.fadeOutUp
               li.calc-form__litem точный расчет стоимости оптимального для вас пакета бухгалтерских услуг
               li.calc-form__litem 3 возможности сэкономить от 10 до 50% <br>на бухгалтерском обслуживании
               li.calc-form__litem пакет документов для принятия решения <br>о внедрении аутсорсинга бухгалтерии
-            .calc-form__beedback
+            .calc-form__beedback.fadeOutUp
               +input-base-phone(calcFormInputs[0])
               +input-base-email(calcFormInputs[1])
-            .calc-form__final-block
+            .calc-form__final-block.fadeOutUp
               .calc-form__submit
                 +btn-default-submit('получить расчет и материалы')
               .calc-form__accept-conf

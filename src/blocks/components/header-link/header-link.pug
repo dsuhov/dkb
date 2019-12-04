@@ -1,7 +1,7 @@
 include ../buttons/btn-default/btn-default
 
 mixin header-link(title, descr, url)
-  a(href=""+url).header-link
+  a(href="javascript:;" data-popup=""+url).header-link
     .header-link__header
       .header-link__title= title
       svg(class="header-link__arrow tl-arrow" viewBox="0 0 47 14" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -11,7 +11,7 @@ mixin header-link(title, descr, url)
     .header-link__text= descr
 
 mixin header-link-btn(title, descr, url)
-  a(href=""+url).header-link.header-link--border
+  a(href="javascript:;" data-popup=""+url).header-link.header-link--border
     .header-link__header
       .header-link__title= title
     .header-link__btn

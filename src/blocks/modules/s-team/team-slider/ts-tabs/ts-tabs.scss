@@ -1,5 +1,10 @@
 .ts-tabs {
 
+  &__hint {
+    @include breakpoint(contSize) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @import "ts-hint/ts-hint";

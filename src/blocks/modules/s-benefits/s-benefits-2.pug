@@ -1,10 +1,14 @@
 include ../../components/typography/subtitle-section
+include ../../components/nav-arrow/nav-arrow
 
 .s-benefits#s-benefits-2
   .container
     .s-benefits__subtitle
-      +subtitle-section('Посмотрите для примера кейсы наших клиентов')
+      +subtitle-section('Посмотрите, какую пользу получают компании <br>благодаря нашему комплексному подходу')
     .s-benefits__tab-block.benefits-tab-block
+      .benefits-tab-block__nav-arrows
+        +nav-arrow-prev('benefits-tab-block')
+        +nav-arrow('benefits-tab-block')
       .benefits-tab-block__top-line
         .benefits-tab-block__tab-btn.benefits-tab-block__tab-btn--active#benefits2-tab-btn-1 Как приведение в порядок бухгалтерского <br>учета позволило вернуть 708 718 рублей
         .benefits-tab-block__tab-btn#benefits2-tab-btn-2 Как с помощью корректного <br>учета планировать выручку и затраты
@@ -32,19 +36,20 @@ include ../../components/typography/subtitle-section
               .benefits-tab-block__case-mb-title Как решали задачу
                 +icon('corner', 'benefits-tab-block__corner')
               .benefits-tab-block__case-mb-unfold Развернуть
-            //- ul.benefits-tab-block__list
-            //-   li.benefits-tab-block__item
-            //-     .benefits-tab-block__item-count 1.
-            //-     p.benefits-tab-block__item-text Изначально предложили вести финансово-управленческий учет в программе «ПланФакт». Этот вариант клиенту не подошел — для анализа требовалось слишком много времени.
-            //-   li.benefits-tab-block__item
-            //-     .benefits-tab-block__item-count 2.
-            //-     p.benefits-tab-block__item-text Предложили структурировать платежи по календарю, установить два платежных дня в неделю. 
-            //-   li.benefits-tab-block__item
-            //-     .benefits-tab-block__item-count 3.
-            //-     p.benefits-tab-block__item-text Обеспечили полный контроль дебиторской задолженности <br>со стороны сотрудников. 
-            //-   li.benefits-tab-block__item
-            //-     .benefits-tab-block__item-count 4.
-            //-     p.benefits-tab-block__item-text Организовали еженедельный расчет по НДС и предоставление информация по недостающим закрывающим документам со стороны бухгалтерии.
+            ul.benefits-tab-block__list
+              p Бухгалтерский учет операций по договору комиссии имеет ряд особенностей, которые необходимо учитывать при настройке системы. Во время анализа мы выяснили, что: 
+              li.benefits-tab-block__item
+                .benefits-tab-block__item-count 1.
+                p.benefits-tab-block__item-text Изначально предложили вести финансово-управленческий учет в программе «ПланФакт». Этот вариант клиенту не подошел — для анализа требовалось слишком много времени.
+              li.benefits-tab-block__item
+                .benefits-tab-block__item-count 2.
+                p.benefits-tab-block__item-text Предложили структурировать платежи по календарю, установить два платежных дня в неделю. 
+              li.benefits-tab-block__item
+                .benefits-tab-block__item-count 3.
+                p.benefits-tab-block__item-text Обеспечили полный контроль дебиторской задолженности <br>со стороны сотрудников. 
+              li.benefits-tab-block__item
+                .benefits-tab-block__item-count 4.
+                p.benefits-tab-block__item-text Организовали еженедельный расчет по НДС и предоставление информация по недостающим закрывающим документам со стороны бухгалтерии.
           .benefits-tab-block__case-bottom-block
             .benefits-tab-block__case-bb-result Результат
             ul.benefits-tab-block__case-bb-list
@@ -74,7 +79,6 @@ include ../../components/typography/subtitle-section
                 li.benefits-tab-block__case-tb-item товары по договорам комиссии не учитывались; 
                 li.benefits-tab-block__case-tb-item неправильно списывалась себестоимость, а это важный фактор при расчете налога
               p Бухгалтерская фирма, которая обслуживала компанию до этого, не смогла решить поставленные задачи. 
-          .benefits-tab-block__case-middle-block
           .benefits-tab-block__case-middle-block
             .benefits-tab-block__case-mb-title-line
               .benefits-tab-block__case-mb-title Как решали задачу

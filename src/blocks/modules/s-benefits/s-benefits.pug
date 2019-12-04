@@ -1,10 +1,14 @@
 include ../../components/typography/subtitle-section
+include ../../components/nav-arrow/nav-arrow
 
 .s-benefits#s-benefits-1
   .container
     .s-benefits__subtitle
       +subtitle-section('Посмотрите, какую пользу получают компании <br>благодаря нашему комплексному подходу')
     .s-benefits__tab-block.benefits-tab-block
+      .benefits-tab-block__nav-arrows
+        +nav-arrow-prev('benefits-tab-block')
+        +nav-arrow('benefits-tab-block')
       .benefits-tab-block__top-line
         .benefits-tab-block__tab-btn.benefits-tab-block__tab-btn--active#benefits-tab-btn-1 Создание простой системы управления <br>финансами для ООО
         .benefits-tab-block__tab-btn#benefits-tab-btn-2 Организация «с нуля» деятельности <br>комиссионного магазина в Москве (ИП)

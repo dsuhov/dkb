@@ -5,6 +5,18 @@
 
   &__subtitle * {
     color: #fff !important;
+
+    @include breakpoint(contSize) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    @media (max-width: 765px) {
+      .subtitle-section {
+        text-align: left;
+      }
+    }
   }
 
   &__sliding {
@@ -12,12 +24,23 @@
     padding-top: 120px;
     padding-bottom: 116px;
     min-height: 1005px;
+    
 
     &.calc-form__sliding--fixed {
       width: 100%;
       position: fixed;
       top: 0;
       z-index: 1;
+    }
+
+    @include breakpoint(contSize) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @media (max-width: 765px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 150px;
     }
   }
 
@@ -29,25 +52,54 @@
 
   &__form {
     @include row-flex();
+
+    @include breakpoint(contSize) {
+      margin-left: 0;
+      margin-right: 0;
+      display: block;
+    }
   }
 
   &__calculator {
     @include col();
     @include size(1);
+
+    @include breakpoint(contSize) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 765px) {
+      margin-bottom: 48px;
+    }
   }
 
   &__userdata {
     @include col();
     @include size(2);
     padding-left: 64px;
+
+    @include breakpoint(contSize) {
+      padding-left: 0;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__select-block {
     margin-bottom: 33px;
+    
   }
 
   &__organizational-form {
     width: 355px;
+    
     margin-bottom: 42px;
   }
 
@@ -74,6 +126,12 @@
 
   &__input-base {
     width: 155px;
+  }
+
+  &__result {
+    @media (max-width: 765px) {
+      align-self: flex-start;
+    }
   }
 
   &__result-title {
@@ -104,11 +162,22 @@
     margin-bottom: 14px;
 
     b { font-weight: 700; }
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 22px;
+    }
   }
 
   &__list {
     margin-bottom: 27px;
     padding-left: 1px;
+
+    @media (max-width: 765px) {
+      padding-left: 0;
+      margin-bottom: 60px;
+    }
   }
 
   &__litem {
@@ -127,11 +196,22 @@
       content: "—";
       left: 0;
     }
+
+    @media (max-width: 765px) {
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 6px;
+      br { display: none; }
+    }
   }
 
   &__beedback {
     width: 100%;
     display: flex;
+
+    @media (max-width: 765px) {
+      display: block;
+    }
   }
 
   &__beedback &__input-base {
@@ -141,11 +221,39 @@
     &:first-child {
       margin-right: 20px;
     }
+
+    @media (max-width: 765px) {
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 56px;
+      }
+    }
   }
 
   &__submit {
     width: 328px;
     margin-bottom: 15px;
+
+    @media (max-width: 765px) {
+      width: 270px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__accept-conf {
+    width: 222px;
+    margin: 0 auto;
+    
+    & > * {
+      text-align: center;
+    }
   }
 }
 

@@ -4,6 +4,16 @@
   background: rgba(229, 229, 229, 0.28);
   z-index: 1000;
 
+  @include breakpoint(contSize) {
+    padding-top: 114px;
+    padding-bottom: 115px;
+  }
+
+  @media (max-width: 765px) {
+    padding-top: 54px;
+    padding-bottom: 74px;
+  }
+
   &__content {
     @include breakpoint(contSize) {
       padding: 0 40px 0;
@@ -16,10 +26,30 @@
 
   &__title {
     margin-bottom: 32px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 765px) {
+      br { display: none; }
+    }
+  }
+
+  &__title-br {
+    display: none;
+
+    @media (max-width: 765px) {
+      display: inline !important;
+    }
   }
 
   &__subtitle {
     margin-bottom: 80px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 60px;
+    }
   }
 }
 

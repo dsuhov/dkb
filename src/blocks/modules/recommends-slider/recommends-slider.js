@@ -12,7 +12,6 @@ $(document).ready(function() {
         // dots: true,
         // appendDots: '.s-protects__tabs-btns',
         // dotsClass: 's-protects__tab-list',
-        adaptiveHeight: true,
         // customPaging: function(slider, i) {
         //     return $(`<button type="button" class="s-protects__tab-btn" />`).text(protectsTemplate[i]);
         // },
