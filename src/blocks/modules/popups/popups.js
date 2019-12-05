@@ -22,6 +22,7 @@ $('[data-popup]').click(function(e) {
   currentPopup = popupEl;
 
   $('body').css('overflow', 'hidden');
+  $('.btn-up').hide();
   openPopup(popupEl);
 });
 
@@ -29,6 +30,7 @@ $('.popup__close').click(function() {
   currentPopup.removeAttr('style');
   currentPopup = null;
   $('body').css('overflow', 'auto');
+  $('.btn-up').removeAttr('style');
 });
 
 function openPopup(element) {
@@ -36,12 +38,9 @@ function openPopup(element) {
 }
 
 $('#back-to-ea, #popup-compare-back').click(function(e) {
-  // console.log(e);
-  
+
   e.preventDefault();
   currentPopup.removeAttr('style');
   currentPopup = null;
   $('body').css('overflow', 'auto');
-
-  // $('#form-side').get().scrollIntoView(true);
 });

@@ -1,3 +1,7 @@
+.slick-track {
+  margin-left: 0 !important;
+}
+
 .ts-nav {
   // background-color: lawngreen;
 
@@ -9,6 +13,7 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 42px;
 
     @include breakpoint(contSize) {
       margin-bottom: 42px;

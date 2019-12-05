@@ -15,3 +15,5 @@ import "%modules%/s-certificates/s-certificates";
 import "%modules%/s-services/s-services";
 import "%modules%/s-benefits/s-benefits";
 import "%modules%/calc-form/calc-form";
+import "%modules%/btn-up/btn-up";
+import "%modules%/personal-data/personal-data";

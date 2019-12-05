@@ -1,8 +1,33 @@
 import $ from "jquery";
 import "../../../js/external/jquery.formstyler.min";
 import SlidingBlock from '../../../js/slidingBlock';
+import validate from "jquery-validation";
 
 $(document).ready(function() {
+  
+
+  $('#calc-form__form').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+      phone: {
+        required: true,
+        checkPhone: /\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/
+      }
+    },
+    errorClass: "input-base__input-field--non-valid",
+    validClass: 'input-base__input-field--valid',
+    errorPlacement: () => null,
+    highlight: (element, errorClass, validClass) => {
+      $(element).parent().addClass(errorClass).removeClass(validClass);
+      $(element).parent().addClass(errorClass);
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).parent().removeClass(errorClass).addClass(validClass);
+    }
+  });
   
   setTimeout(function() {
     $('#taxation-system').styler({
@@ -38,10 +63,12 @@ $(document).ready(function() {
     const emplQuantity = $('#calc-form-empl_quantity');
 
     $('#taxation-system, #field_of_activity, #calc-form-ops_quantity, #calc-form-empl_quantity').change(function(evt) {
+      console.log(taxSystemField.val());
       const actFieldVal = actField.val();
       const selects = calcSelects(taxSystemField.val(), actField.val() ? actField.val() : 'default');
       const coeffOps = opsQuantity.val() ? operationsЬultiplier(parseInt(opsQuantity.val()), selects) : 0 ;
       const coeffEmployee = emplQuantity.val() ? parseInt(emplQuantity.val()) * 500 : 0;
+      
       
       setResult(selects + coeffOps + coeffEmployee);
     });
@@ -75,7 +102,7 @@ $(document).ready(function() {
           [['Торговля'], 10500],
           [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 12500],
         ];
-        case ('Патент)'): return [
+        case ('Патент'): return [
           [['default'], 9000],
           [['Торговля'], 9000],
           [['Производство', 'Строительство', 'Медицина', 'Общепит', 'Другое'], 9000],

@@ -11,6 +11,12 @@
       width: auto;
       max-width: 165px;
     }
+
+    @media (max-width: 370px) {
+      width: auto;
+      max-width: 165px;
+      padding: 0 1px;
+    }
   }
 
   &__info {

@@ -21,12 +21,8 @@ $(document).ready(function() {
     currSliderInstance = setSlider(currTab.find('.ts-slider__js-slider'));
   });
 
-
-
   function setSlider(container) {
     
-    
-
     const prev = container.closest('.ts-slider').find('.ts-slider__nav-arrow.nav-arrow--prev');
     const next = container.closest('.ts-slider').find('.ts-slider__nav-arrow.nav-arrow--next');
 

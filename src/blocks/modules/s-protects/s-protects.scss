@@ -126,7 +126,7 @@
     
   }
 
-  li.slick-active &__tab-btn {
+  li.slick-active &__tab-btn, &__tab-btn:hover  {
     color: $blue-ribbon;
     // padding-left: 30px;
     transform: translateX(30px);

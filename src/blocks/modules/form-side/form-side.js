@@ -6,10 +6,10 @@ $().ready(function() {
 
     const result = params.test(value);
     return result; 
-  })
+  });
   
 
-  $('#form-side').validate({
+  $('.form-side__form-content').validate({
     rules: {
       email: {
         required: true,
