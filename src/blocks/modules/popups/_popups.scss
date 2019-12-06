@@ -3,6 +3,7 @@
     font-family: "Noto Sans", sans-serif;
     position: relative;
     box-sizing: border-box;
+    background-color: #fff;
 
     &__title {
         text-align: center;
@@ -773,4 +774,35 @@
         }
     }
 
+}
+
+.soc-links-bottom {
+    background-color: #fff;
+}
+
+#popup-feedback1 {
+    padding: 50px 0;
+
+    .popup__input-base {
+        margin-right: 0;
+        min-width: 100%;
+    }
+}
+
+#popup-prezent {
+    .popup__content {
+        padding-top: 100px;
+    }
+}
+
+#popup-feedback01 {
+    .popup__notice {
+        cursor: pointer;
+    }
+}
+
+#popup-compare {
+    .popup__content {
+        padding: 0 20px;
+    }
 }

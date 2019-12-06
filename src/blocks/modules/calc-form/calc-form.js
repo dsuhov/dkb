@@ -1,47 +1,52 @@
 import $ from "jquery";
 import "../../../js/external/jquery.formstyler.min";
 import SlidingBlock from '../../../js/slidingBlock';
-import validate from "jquery-validation";
+// import validate from "jquery-validation";
+import validate from "../../../js/validate";
 
 $(document).ready(function() {
+  validate('#calc-form__form');
   
+  if (window.matchMedia('(min-width: 400px)').matches) {
+    // $('#optionsmalldev').css('color', 'rgba(255, 255, 255, 0.4)');
+    
+    setTimeout(function() {
+      $('#taxation-system').styler({
+        selectSmartPositioning: false,
+        selectVisibleOptions: 10
+      });
+    
+      $('#field_of_activity').styler({
+        selectSmartPositioning: false,
+        selectPlaceholder: "Выбрать",
+        selectVisibleOptions: 10
+      });
+    }, 100);
+  }
 
-  $('#calc-form__form').validate({
-    rules: {
-      email: {
-        required: true,
-        email: true
-      },
-      phone: {
-        required: true,
-        checkPhone: /\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/
-      }
-    },
-    errorClass: "input-base__input-field--non-valid",
-    validClass: 'input-base__input-field--valid',
-    errorPlacement: () => null,
-    highlight: (element, errorClass, validClass) => {
-      $(element).parent().addClass(errorClass).removeClass(validClass);
-      $(element).parent().addClass(errorClass);
-    },
-    unhighlight: function(element, errorClass, validClass) {
-      $(element).parent().removeClass(errorClass).addClass(validClass);
-    }
-  });
+  // $('#calc-form__form').validate({
+  //   rules: {
+  //     email: {
+  //       required: true,
+  //       email: true
+  //     },
+  //     phone: {
+  //       required: true,
+  //       checkPhone: /\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}/
+  //     }
+  //   },
+  //   errorClass: "input-base__input-field--non-valid",
+  //   validClass: 'input-base__input-field--valid',
+  //   errorPlacement: () => null,
+  //   highlight: (element, errorClass, validClass) => {
+  //     $(element).parent().addClass(errorClass).removeClass(validClass);
+  //     $(element).parent().addClass(errorClass);
+  //   },
+  //   unhighlight: function(element, errorClass, validClass) {
+  //     $(element).parent().removeClass(errorClass).addClass(validClass);
+  //   }
+  // });
   
-  setTimeout(function() {
-    $('#taxation-system').styler({
-      selectSmartPositioning: false,
-      selectVisibleOptions: 10
-    });
-  
-    $('#field_of_activity').styler({
-      selectSmartPositioning: false,
-      selectPlaceholder: "Выбрать",
-      selectVisibleOptions: 10
-    });
-  }, 100);
-
   [...document.querySelectorAll('.dkb-select__select-field')].forEach(element => {
     element.addEventListener('transitionend', (evt) => {
       if (evt.propertyName === 'opacity') {

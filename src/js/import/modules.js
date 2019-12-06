@@ -17,3 +17,4 @@ import "%modules%/s-benefits/s-benefits";
 import "%modules%/calc-form/calc-form";
 import "%modules%/btn-up/btn-up";
 import "%modules%/personal-data/personal-data";
+import "%modules%/calc-form/side-hint";

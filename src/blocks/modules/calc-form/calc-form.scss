@@ -257,6 +257,13 @@
     }
     
   }
+
+  &__side-hint {
+    // position: fixed;
+    // top: 50px;
+    // right: 47px;
+    // z-index: 10000;
+  }
 }
 
 
@@ -269,6 +276,7 @@
 
 
 @import "dkb-select";
+@import "side-hint";
 
 .organizational-form {
   

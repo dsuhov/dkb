@@ -83,6 +83,7 @@
 	padding: 10px 15px;
 	// box-sizing: padding-box;
 }
+
 .jq-selectbox {
 	position: relative;
 	// z-index: 100000 !important;
@@ -146,7 +147,7 @@
 }
 .jq-selectbox__dropdown ul {
 	position: relative;
-	overflow: auto;
+	overflow: hidden;
 	overflow-x: hidden;
 	list-style: none;
 	-webkit-overflow-scrolling: touch;

@@ -37,13 +37,15 @@ include ../../components/buttons/btn-default/btn-default
   ];
 
 section.calc-form#calc-form
+  .calc-form__side-hint
+    include side-hint
   .sb-overlay
   .calc-form__sliding
     .container
       .calc-form__subtitle.fadeOutUp
         +subtitle-section('Рассчитайте стоимость бухгалтерского <br>сопровождения вашего бизнеса')
       .calc-form__main-block
-        form(action="sendmail/send.php" method="post" autocomplete="off").calc-form__form#calc-form__form
+        form(action="sendmail/send.php" method="post" autocomplete="off" data-afterpopup="#feedbackprice").calc-form__form#calc-form__form
           .calc-form__calculator
             .calc-form__organizational-form.organizational-form.fadeOutUp
               .organizational-form__title Организационная форма

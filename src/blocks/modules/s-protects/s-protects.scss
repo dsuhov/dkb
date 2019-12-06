@@ -236,6 +236,13 @@
       margin-top: -150px;
       margin-left: -100px;
     }
+
+    @media (max-width: 765px) {
+      display: none;
+      background: none;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &__aside-text {
@@ -250,24 +257,28 @@
     color: #fff;
     
     @include breakpoint(contSize) {
-      
       transform: translate(165px, 162px) rotate(-12deg);
+    }
+
+    @media (max-width: 765px) {
+      color: #333;
+      transform: translate(0, 0) rotate(0);
     }
   }
 
-  &__bulb {
-    // transform: rotate(90deg);
-    transform-origin: center;
-    animation: bulbRotate 4s linear infinite;
-  }
+  // &__bulb {
+  //   // transform: rotate(90deg);
+  //   transform-origin: center;
+  //   animation: bulbRotate 4s linear infinite;
+  // }
 }
 
-@keyframes bulbRotate {
-  from {
-    transform: rotate(0deg);
-  }
+// @keyframes bulbRotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

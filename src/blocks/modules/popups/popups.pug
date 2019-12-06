@@ -56,40 +56,40 @@ include ../../components/soc-links-bottom/soc-links-bottom
   ];
 
 
-section.popup.popup-prezent
+section.popup.popup-prezent#popup-prezent
   .popup__close
   .container
     .popup__content
       .popup__title
-        +title-section-40-51('Игорь, мы отправили презентацию на указанную почту')
-      a(href="#").popup__mail-logo
-        picture
-          source(
-            srcset="img/popups/gmail-logo.jpg"
-            data-srcset=`img/popups/gmail-logo.jpg` 
-            media="(max-width: 768px)"
-            type="image/webp"
-          )
-          source(
-            srcset="img/popups/gmail-logo.jpg"
-            data-srcset=`img/popups/gmail-logo.jpg` 
-            type="image/webp"
-          )
-          img(src="img/popups/gmail-logo.jpg", data-src=`img/popups/gmail-logo.jpg` alt="mail-logo")
-      .popup__subtitle
-        .NSerif-28-42-reg Вы можете войти в нее отсюда
+        +title-section-40-51('Мы отправили презентацию на указанную почту')
+      //- a(href="#").popup__mail-logo
+      //-   picture
+      //-     source(
+      //-       srcset="img/popups/gmail-logo.jpg"
+      //-       data-srcset=`img/popups/gmail-logo.jpg` 
+      //-       media="(max-width: 768px)"
+      //-       type="image/webp"
+      //-     )
+      //-     source(
+      //-       srcset="img/popups/gmail-logo.jpg"
+      //-       data-srcset=`img/popups/gmail-logo.jpg` 
+      //-       type="image/webp"
+      //-     )
+      //-     img(src="img/popups/gmail-logo.jpg", data-src=`img/popups/gmail-logo.jpg` alt="mail-logo")
+      //- .popup__subtitle
+      //-   .NSerif-28-42-reg Вы можете войти в нее отсюда
       .popup__text 
         | Если письма нет во входящих, проверьте папку 
         br
         | «Промоакции» или «Спам»:
         br 
         | письмо могло попасть туда по ошибке
-section.popup.popup-feedback
+section.popup.popup-feedback#popup-feedback1
   .popup__close
   .container
     .popup__content
       .popup__title
-        +title-section-40-51('Игорь, спасибо за заявку!')
+        +title-section-40-51('Спасибо за заявку!')
       .popup__subtitle
         .NSerif-28-42-reg Мы перезвоним вам в ближайшее время
   .popup__colored
@@ -104,7 +104,7 @@ section.popup.popup-feedback
         | на бухгалтерское обслуживание
       .popup__descr
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off").popup__form-content
+          form(action="sendmail/send.php" id="popup-feedback1_form" method="post" autocomplete="off" data-afterpopup="#popup-prezent").popup__form-content
             +input-base-email(inputs[0])
             .popup__btn
               +btn-default-submit('получить презентацию')
@@ -121,7 +121,7 @@ section.popup.popup-call#popup-call
           span Укажите контактные данные и удобное время для звонка 
           | Я позвоню вам и отвечу на все вопросы Мы работаем по будням с 09:00 до 18:00 
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off")
+          form(action="sendmail/send.php" id="popup__call_fb_form" method="post" autocomplete="off" data-afterpopup="#popup-feedback1")
             .popup__form-line
               +input-base(inputs[2])
               +input-base-phone(inputs[1])
@@ -180,7 +180,7 @@ section.popup.popup-call.popup01#popup01
           li.popup__list-item Индивидуальное коммерческое предложение с возможностью сэкономить от 10 до 50% на бухгалтерском обслуживании 
           li.popup__list-item Пакет документов для принятия решения о внедрении аутсорсинга бухгалтерии — договор, регламент оказания услуг, презентацию
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off")
+          form(action="sendmail/send.php" id="popup_call_01" method="post" autocomplete="off" data-afterpopup="#feedbackprice")
             .popup__form-line
               +input-base-phone(inputs[4])
               +input-base-email(inputs[5])
@@ -226,7 +226,7 @@ section.popup.popup-call.popup02#popup02
           li.popup__list-item Договор на бухгалтерское обслуживание 
           li.popup__list-item Регламент оказания бухгалтерских услуг
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off")
+          form(action="sendmail/send.php" id="popup02_form" method="post" autocomplete="off" data-afterpopup="#popup-feedback01")
             .popup__form-line
               +input-base-phone(inputs[4])
               +input-base-email(inputs[6])
@@ -247,7 +247,7 @@ section.popup.popup-call.popup03#popup03
           span Мы быстро разберемся в ситуации и решим проблемы с вашей бухгалтерией и налогами
           | Укажите контактные данные и удобное время для звонка. Я позвоню вам, и мы обсудим решение вашей проблемы
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off")
+          form(action="sendmail/send.php" id="popup03_form" method="post" autocomplete="off" data-afterpopup="#popup-feedback03")
             .popup__form-line
               +input-base(inputs[2])
               +input-base-phone(inputs[1])
@@ -314,7 +314,7 @@ section.popup.popup-feedback.popup-compare#popup-compare
       .popup__btn(id="popup-compare-back")
         +btn-default-submit('получить личную консультацию гендиректора')
 //- feedback01 = feedback price
-section.popup.popup-feedback.popup-feedback01
+section.popup.popup-feedback.popup-feedback01#feedbackprice
   .popup__close
   .container
     .popup__content
@@ -346,7 +346,7 @@ section.popup.popup-feedback.popup-feedback01
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- feedback02
-section.popup.popup-feedback.popup-feedback01
+section.popup.popup-feedback.popup-feedback01#popup-feedback01
   .popup__close
   .container
     .popup__content
@@ -375,7 +375,7 @@ section.popup.popup-feedback.popup-feedback01
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Feedback_expressanaliz
-section.popup.popup-feedback.popup-feedback01
+section.popup.popup-feedback.popup-feedback01#feebback_expressanaliz
   .popup__close
   .container
     .popup__content
@@ -427,7 +427,7 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03
         +soc-links-bottom('vk', '')
         +soc-links-bottom('instagram', '')
 //- Feedback03-2
-section.popup.popup-feedback.popup-feedback01.popup-feedback03
+section.popup.popup-feedback.popup-feedback01.popup-feedback03#popup-feedback03
   .popup__close
   .container
     .popup__content
@@ -465,7 +465,7 @@ section.popup.popup-feedback.popup-feedback01.popup-expressanaliz#popup-express-
       a(href="" id="back-to-ea").popup__notice
         span Получить экспресс-анализ своей бухгалтерии 
 //- feedback_ consult
-section.popup.popup-feedback.popup-feedback01.popup__consult
+section.popup.popup-feedback.popup-feedback01.popup__consult#popup__consult
   .popup__close
   .container
     .popup__content
@@ -486,14 +486,14 @@ section.popup.popup-feedback.popup-feedback01.popup__consult
         | чи узнайте, как получить скидку от 10 до 50% на бухгалтерское обслуживание
       .popup__descr
         .popup__form
-          form(action="" id="popup" method="post" autocomplete="off").popup__form-content
+          form(action="sendmail/send.php" id="popup__consult_form" method="post" data-afterpopup="#popup-prezent" autocomplete="off").popup__form-content
             +input-base-email(inputs[0])
             .popup__btn
               +btn-default-submit('получить презентацию')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
 //- Julia
-section.popup.popup-feedback.popup-feedback01.popup-julia
+section.popup.popup-feedback.popup-feedback01.popup-julia#popup-julia
   .popup__close
   .container
     .popup__content
@@ -528,7 +528,7 @@ section.popup.popup-exit
             | из-за которых собственник теряет деньги
       .popup__schedule Получить чек-листы на почту
       .popup__form
-        form(action="" id="popup-exit" method="post" autocomplete="off").popup__form-content
+        form(action="sendmail/send.php" id="popup-exit" method="post" autocomplete="off").popup__form-content
           .input-base.popup__input-base
             .input-base__input-field
               input(class="input-base__input" type="email" id="popup-email" name="email" placeholder="hello@gmai.com" required="")

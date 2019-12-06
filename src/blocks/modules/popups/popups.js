@@ -1,7 +1,18 @@
 import $ from "jquery";
 import magnificPopup from "magnific-popup";
+import validate from "../../../js/validate";
 
-let currentPopup = null;
+$(document).ready(function() {
+  validate('#popup__consult_form');
+  validate('#popup__call_fb_form');
+  validate('#popup-feedback1_form');
+  validate('#popup-feedback1');
+  validate('#popup_call_01');
+  validate('#popup02_form');
+  validate('#popup03_form');
+});
+
+window.currentPopup = null;
 
 const styles = {
   position: 'fixed',
@@ -14,21 +25,36 @@ const styles = {
   overflow: 'auto'
 };
 
+$('#popup-feedback01 .popup__notice').click(function() {
+  window.currentPopup.removeAttr('style');
+  window.currentPopup = null;
+  $('body').css('overflow', 'auto');
+  $('.btn-up').removeAttr('style');
+  
+  const popupEl = $("#popup02");
+  window.currentPopup = popupEl;
+  
+  $('body').css('overflow', 'hidden');
+  $('.btn-up').hide();
+  
+  openPopup(popupEl);
+});
+
 $('[data-popup]').click(function(e) {
   e.preventDefault();
-
+  
   const popupId = $(this).data('popup');
   const popupEl = $(popupId);
-  currentPopup = popupEl;
-
+  window.currentPopup = popupEl;
+  
   $('body').css('overflow', 'hidden');
   $('.btn-up').hide();
   openPopup(popupEl);
 });
 
 $('.popup__close').click(function() {
-  currentPopup.removeAttr('style');
-  currentPopup = null;
+  window.currentPopup.removeAttr('style');
+  window.currentPopup = null;
   $('body').css('overflow', 'auto');
   $('.btn-up').removeAttr('style');
 });
@@ -38,9 +64,19 @@ function openPopup(element) {
 }
 
 $('#back-to-ea, #popup-compare-back').click(function(e) {
-
+  
   e.preventDefault();
-  currentPopup.removeAttr('style');
-  currentPopup = null;
+  window.currentPopup.removeAttr('style');
+  window.currentPopup = null;
   $('body').css('overflow', 'auto');
+  
+  if ($(this).attr('id') === 'popup-compare-back') {
+    const scroll_el = $('#s-form-1');
+    
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({
+        scrollTop: $(scroll_el).offset().top
+      }, 800);
+    }
+  }
 });

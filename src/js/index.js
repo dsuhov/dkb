@@ -3,6 +3,7 @@ import "./import/components";
 import "./scrollActions/scrollActionsMain";
 import LazyLoad from "vanilla-lazyload";
 import IMask from 'imask';
+import "./postRquest";
 
 
 document.addEventListener("DOMContentLoaded", () => {

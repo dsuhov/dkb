@@ -158,3 +158,54 @@
 }
 
 @import "feature";
+
+
+@media (max-width: 765px) {
+  #taxation-system, #field_of_activity {
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 13px 15px 13px 16px;
+    letter-spacing: 0.03em;
+	  color: #fff;
+    position: relative;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    option {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 34px;
+      padding: 10px 15px;
+      color: $blue-ribbon;
+    }
+  }
+
+  #field_of_activity option:disabled {
+    // color: rgba(255, 255, 255, 0.5);
+  }
+
+  .calc-form__select-field {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 60px;
+      right: 16px;
+      width: 14px;
+      height: 8px;
+      background: url('../img/general/tr-arrow.svg') no-repeat;
+    }
+  }
+}
