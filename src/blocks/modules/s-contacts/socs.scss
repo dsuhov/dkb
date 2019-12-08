@@ -1,0 +1,54 @@
+.socs {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+
+  &__line {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+
+  &__link {
+
+    &.socs__link {
+      display: block;
+      color: #000;
+      text-decoration: none;
+
+      &--fb {
+        svg {
+          width: 11px;
+          height: 20px;
+          fill: #000 !important;
+        }
+      }
+      &--vk {
+        svg {
+          width: 23px;
+          height: 15px;
+          fill: #000 !important;
+        }
+      }
+      &--inst {
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: #000 !important;
+        }
+      }
+      &--youtube {
+        svg {
+          width: 24px;
+          height: 17px;
+          fill: #000 !important;
+        }
+      }
+    }
+  }
+}

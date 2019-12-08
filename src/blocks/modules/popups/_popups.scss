@@ -639,8 +639,8 @@
         &-field {
             &:hover {
                 .popup-exit__arrow{
-                    width: 46px;
-                    right: 0;
+                    // width: 46px;
+                    // right: 0;
                 }
             }
         }
@@ -777,7 +777,41 @@
 }
 
 .soc-links-bottom {
+    display: block;
+    width: 64px;
+    height: 64px;
     background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.soc-links-bottom--fb {
+    svg {
+        width: 11px;
+        height: 21px;
+    }
+}
+
+.soc-links-bottom--vk  {
+    svg {
+        width: 23px;
+        height: 14px;
+    }
+}
+
+.soc-links-bottom--instagram {
+    svg {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 #popup-feedback1 {

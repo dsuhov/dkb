@@ -1,6 +1,8 @@
 import $ from "jquery";
 import magnificPopup from "magnific-popup";
 import validate from "../../../js/validate";
+import ouibounce from "ouibounce";
+import req from "../../../js/postRquest";
 
 $(document).ready(function() {
   validate('#popup__consult_form');
@@ -10,6 +12,7 @@ $(document).ready(function() {
   validate('#popup_call_01');
   validate('#popup02_form');
   validate('#popup03_form');
+  // exitpopup();
 });
 
 window.currentPopup = null;
@@ -53,10 +56,12 @@ $('[data-popup]').click(function(e) {
 });
 
 $('.popup__close').click(function() {
-  window.currentPopup.removeAttr('style');
-  window.currentPopup = null;
-  $('body').css('overflow', 'auto');
-  $('.btn-up').removeAttr('style');
+  if ($(this).closest('section.popup').attr('id') !== 'popup-exit-s') {
+    window.currentPopup.removeAttr('style');
+    window.currentPopup = null;
+    $('body').css('overflow', 'auto');
+    $('.btn-up').removeAttr('style');
+  }
 });
 
 function openPopup(element) {
@@ -80,3 +85,33 @@ $('#back-to-ea, #popup-compare-back').click(function(e) {
     }
   }
 });
+
+
+//exit popup
+function exitpopup() {
+  const popup = document.getElementById('popup-exit-s');
+  const popupForm = $('#popup-exit-s-form');
+
+  ouibounce(popup, {
+    aggressive: true,
+
+    callback: function() {
+      
+      $.magnificPopup.open({
+        items: {
+          src: '#popup-exit-s'
+        },
+        type: 'inline',
+        showCloseBtn: false
+      }, 0);
+    }
+  });
+
+  popupForm.submit(function(evt) {
+    req(popupForm.get(), evt);
+  });
+  
+  $(popup).find('.popup__close').click(function() {
+    $.magnificPopup.close();
+  });
+};

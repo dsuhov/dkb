@@ -9,7 +9,7 @@ export default function postReq(form, event) {
     type: "POST",
     url: $(form).attr('action'),
     data: $(form).serialize(),
-    success: function() {
+    success: function(res) {
       
       if (formPopup) {
         if (window.currentPopup) {
@@ -26,8 +26,6 @@ export default function postReq(form, event) {
         $('.btn-up').hide();
         openPopup(popupEl);
       }
-
-      console.log("Ваше сообщение отпрвлено!");
       
     },
     error:  function() {

@@ -65,7 +65,7 @@ section.calc-form#calc-form
             .calc-form__select-block
               .calc-form__select-field.dkb-select__select-field.fadeOutUp
                 label(for="taxation-system" class="dkb-select__label") Система налогообложения
-                select#taxation-system(name="taxation_system[]")
+                select#taxation-system(name="taxation_system")
                   option(value="ОСН (НДС)") ОСН (НДС)
                   option(value="УСН 6% (доход)") УСН 6% (доход)
                   option(value="УСН 15% (доход/расход)") УСН 15% (доход/расход)
@@ -73,7 +73,7 @@ section.calc-form#calc-form
                   option(value="Другое") Другое
               .calc-form__select-field.dkb-select__select-field.fadeOutUp
                 label(for="field_of_activity" class="dkb-select__label") Сфера деятельности
-                select#field_of_activity(name="field_of_activity[]")
+                select#field_of_activity(name="field_of_activity")
                   option
                   option(value="Производство") Производство
                   option(value="Торговля") Торговля

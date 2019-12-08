@@ -1,13 +1,12 @@
-modules.define('s-contacts', ['i-bem-dom'], function(provide, bemDom) {
+import $ from "jquery";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
+$('.s-contacts__title-link').click(function(evt) {
+    evt.preventDefault();
+    const scroll_el = $($(this).attr('href'));
+    
+    if ($(scroll_el).length != 0) {
+        $('html, body').animate({
+            scrollTop: $(scroll_el).offset().top
+        }, 500);
     }
-}));
-
 });

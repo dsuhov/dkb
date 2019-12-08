@@ -11,6 +11,7 @@ export default function() {
   }, 800);
   });
 
+
   sectionsIds.forEach(el => {
     const correspondingNavLink = $('.header__nav-list').find(`a[href="${el}"]`)
 
@@ -22,8 +23,6 @@ export default function() {
           $('html, body').animate({
               scrollTop: $(scroll_el).offset().top
           }, 800);
-
-          // Сделать закрытие сайд-навигации
       }
     });
     

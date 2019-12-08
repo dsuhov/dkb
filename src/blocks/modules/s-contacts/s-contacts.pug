@@ -3,7 +3,7 @@ include ../../components/soc-links-top/soc-links-top
 
 section.s-contacts
   .container
-    p.s-contacts__last-title Приезжайте к нам в офис, чтобы обсудить <br>условия бухгалтерского сопровождения <br>и <a href="#" class="s-contacts__title-link">получить личную консультацию</a> <br>Юлии Рагузиной
+    p.s-contacts__last-title Приезжайте к нам в офис, чтобы обсудить <br>условия бухгалтерского сопровождения <br>и <a href="#s-form-2" class="s-contacts__title-link">получить личную консультацию</a> <br>Юлии Рагузиной
     .s-contacts__contacts-block
       .s-contacts__little-about
         .s-contacts__logo
@@ -28,8 +28,6 @@ section.s-contacts
               +soc-links-top('whatsapp', 'https://wa.me/79099134897')
             .s-contacts__cos-link
               +soc-links-top('telegram', 'https://tlgg.ru/9099134897')
-            .s-contacts__cos-link
-              +soc-links-top('mail', 'mailto:dkbprof@mail.ru')
         .s-contacts__worktime
           .s-contacts__bold-title Режим работы
           .mb-contacts__wtime-block
@@ -41,3 +39,17 @@ section.s-contacts
               span 9:00 — 18:00
               span 9:00 — 17:00
               span выходной
+    .s-contacts__socs.socs
+      ul.socs__line
+        li.socs__item
+          a(href="https://www.facebook.com/pg/dkbprof" title="Facebook").socs__link.socs__link--fb
+            +icon('fb')
+        li.socs__item
+          a(href="https://vk.com/dkbprof" title="Vkontakte").socs__link.socs__link--vk
+            +icon('vk')
+        li.socs__item  
+          a(href="https://www.instagram.com/julia.raguzina/" title="Instagram").socs__link.socs__link--inst
+            +icon('instagram')
+        li.socs__item  
+          a(href="https://www.youtube.com/channel/UCdorfKKF83xLv25T9PreilA" title="Youtube").socs__link.socs__link--youtube
+            +icon('youtube')

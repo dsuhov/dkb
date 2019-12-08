@@ -18,11 +18,11 @@ const argv = yargs.argv,
 gulp.task("images", () => {
     return gulp.src(paths.images.src)
         .pipe(gulpif(production, imagemin([
-            imageminGiflossy({
-                optimizationLevel: 3,
-                optimize: 3,
-                lossy: 2
-            }),
+            // imageminGiflossy({
+            //     optimizationLevel: 3,
+            //     optimize: 3,
+            //     lossy: 2
+            // }),
             imageminPngquant({
                 speed: 5,
                 quality: [0.6, 0.8]

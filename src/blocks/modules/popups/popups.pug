@@ -25,7 +25,7 @@ include ../../components/soc-links-bottom/soc-links-bottom
     },
     {
       extraClass: 'popup',
-      name: 'text',
+      name: 'time',
       placeholder: 'Например, 1 сентября в 14:00',
       label: ''
     },
@@ -128,7 +128,7 @@ section.popup.popup-call#popup-call
             label(class="input-base__label") Выберите время для звонка
             .popup__form-line  
               .input-slide-wrap
-                input(type="checkbox" value="none" id="input-slide" name="check" checked)
+                input(type="checkbox" id="input-slide" name="check" checked)
                 .input-slide__now
                   p Сейчас 
                 .input-slide
@@ -137,7 +137,7 @@ section.popup.popup-call#popup-call
                   p Ко времени
                   .input-base.popup__input-base
                     .input-base__input-field
-                      input#popup-text.input-base__input(type='text', name='text', placeholder='Например, 1 сентября в 14:00', required='')
+                      input#popup-text.input-base__input(type='text', name='time', placeholder='Например, 1 сентября в 14:00', required='')
                       .input-base__info-icon
                         svg.icon-valid.input-base__valid
                           use(xlink:href='img/sprites/symbol/sprite.svg#valid')
@@ -263,7 +263,7 @@ section.popup.popup-call.popup03#popup03
                   p Ко времени
                   .input-base.popup__input-base
                     .input-base__input-field
-                      input#popup-text.input-base__input(type='text', name='text', placeholder='Например, 1 сентября в 14:00', required='')
+                      input#popup-text.input-base__input(type='text', name='time', placeholder='Например, 1 сентября в 14:00', required='')
                       .input-base__info-icon
                         svg.icon-valid.input-base__valid
                           use(xlink:href='img/sprites/symbol/sprite.svg#valid')
@@ -342,9 +342,9 @@ section.popup.popup-feedback.popup-feedback01#feedbackprice
         br
         | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
       .popup-social
-        +soc-links-bottom('fb', '')
-        +soc-links-bottom('vk', '')
-        +soc-links-bottom('instagram', '')
+        +soc-links-bottom('fb', 'https://www.facebook.com/pg/dkbprof')
+        +soc-links-bottom('vk', 'https://vk.com/dkbprof')
+        +soc-links-bottom('instagram', 'https://www.instagram.com/julia.raguzina/')
 //- feedback02
 section.popup.popup-feedback.popup-feedback01#popup-feedback01
   .popup__close
@@ -371,9 +371,9 @@ section.popup.popup-feedback.popup-feedback01#popup-feedback01
         br
         | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
       .popup-social
-        +soc-links-bottom('fb', '')
-        +soc-links-bottom('vk', '')
-        +soc-links-bottom('instagram', '')
+        +soc-links-bottom('fb', 'https://www.facebook.com/pg/dkbprof')
+        +soc-links-bottom('vk', 'https://vk.com/dkbprof')
+        +soc-links-bottom('instagram', 'https://www.instagram.com/julia.raguzina/')
 //- Feedback_expressanaliz
 section.popup.popup-feedback.popup-feedback01#feebback_expressanaliz
   .popup__close
@@ -402,9 +402,9 @@ section.popup.popup-feedback.popup-feedback01#feebback_expressanaliz
         br
         | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
       .popup-social
-        +soc-links-bottom('fb', '')
-        +soc-links-bottom('vk', '')
-        +soc-links-bottom('instagram', '')
+        +soc-links-bottom('fb', 'https://www.facebook.com/pg/dkbprof')
+        +soc-links-bottom('vk', 'https://vk.com/dkbprof')
+        +soc-links-bottom('instagram', 'https://www.instagram.com/julia.raguzina/')
 //- Feedback03
 section.popup.popup-feedback.popup-feedback01.popup-feedback03
   .popup__close
@@ -423,9 +423,9 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03
         br
         | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
       .popup-social
-        +soc-links-bottom('fb', '')
-        +soc-links-bottom('vk', '')
-        +soc-links-bottom('instagram', '')
+        +soc-links-bottom('fb', 'https://www.facebook.com/pg/dkbprof')
+        +soc-links-bottom('vk', 'https://vk.com/dkbprof')
+        +soc-links-bottom('instagram', 'https://www.instagram.com/julia.raguzina/')
 //- Feedback03-2
 section.popup.popup-feedback.popup-feedback01.popup-feedback03#popup-feedback03
   .popup__close
@@ -444,9 +444,9 @@ section.popup.popup-feedback.popup-feedback01.popup-feedback03#popup-feedback03
         br
         | чтобы регулярно получать полезные рекомендации по бухгалтерским, налоговым и кадровым вопросам 
       .popup-social
-        +soc-links-bottom('fb', '')
-        +soc-links-bottom('vk', '')
-        +soc-links-bottom('instagram', '')
+        +soc-links-bottom('fb', 'https://www.facebook.com/pg/dkbprof')
+        +soc-links-bottom('vk', 'https://vk.com/dkbprof')
+        +soc-links-bottom('instagram', 'https://www.instagram.com/julia.raguzina/')
 //- Pop-up_expressanaliz
 section.popup.popup-feedback.popup-feedback01.popup-expressanaliz#popup-express-analitycs
   .popup__close
@@ -508,7 +508,7 @@ section.popup.popup-feedback.popup-feedback01.popup-julia#popup-julia
       .popup-julia__img
         img(src="img/popups/popup_cert.jpg", data-src=`img/popups/popup_cert.jpg` alt="raguzina")
 //- exit
-section.popup.popup-exit
+section.popup.popup-exit#popup-exit-s
   .popup__close
   .container
     .popup__content
@@ -528,11 +528,11 @@ section.popup.popup-exit
             | из-за которых собственник теряет деньги
       .popup__schedule Получить чек-листы на почту
       .popup__form
-        form(action="sendmail/send.php" id="popup-exit" method="post" autocomplete="off").popup__form-content
+        form(action="sendmail/send.php" id="popup-exit-s-form" method="post" autocomplete="off").popup__form-content
           .input-base.popup__input-base
             .input-base__input-field
               input(class="input-base__input" type="email" id="popup-email" name="email" placeholder="hello@gmai.com" required="")
-              .popup-exit__arrow
+              button(type="submit" name="submit" value="exit=popup" style="cursor: pointer").popup-exit__arrow
                 svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 36 14', fill='none')
                   g(opacity='0.6')
                     path(d='M1 7H33', stroke='#0461FD', stroke-width='2')

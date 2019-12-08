@@ -69,6 +69,7 @@
         "jquery": "^3.4.1",
         "jquery-validation": "^1.19.1",
         "magnific-popup": "^1.1.0",
+        "ouibounce": "^0.0.12",
         "scrollmagic": "^2.0.7",
         "slick-carousel": "^1.8.1",
         "smart-grid": "^2.1.2",

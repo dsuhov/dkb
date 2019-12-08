@@ -2,7 +2,7 @@
   font-family: "Noto Sans", sans-serif;
   color: #000;
   padding-top: 140px;
-  padding-bottom: 130px;
+  padding-bottom: 60px;
 
   @media (max-width: 765px) {
     padding-top: 44px;
@@ -244,3 +244,5 @@
     padding-top: 10px;
   }
 }
+
+@import "socs";

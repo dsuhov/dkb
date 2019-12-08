@@ -62,20 +62,58 @@
       }
   }
 
+  &__little-pic {
+    display: none;
+
+    @include breakpoint(contSize) {
+      display: block;
+      background: url('../img/general/Untitled-1.jpg') no-repeat;
+      background-size: contain;
+      width: 335px;
+      height: 370px;
+    }
+
+    @media (max-width: 765px) {
+      display: none;
+    }
+  }
+
   &__aside-pic {
     
     position: absolute;
     bottom: 0;
     bottom: -4px;
-    right: -80px;
+    right: -30%;
 
     @include breakpoint(contSize) {
       display: none;
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 687px;
+      height: 832px;
+      background: url('../img/general/white-egg.jpg') no-repeat;
+      background-size: 100%;
+      top: 0;
+      right: -60px;
+      z-index: 10;
+
+      @include breakpoint(contSize) {
+        display: none;
+      }
+    }
   }
 
   &__img-block {
+    position: relative;
+    z-index: 15;
     width: 464px;
+
+    @include breakpoint(contSize) {
+      display: none;
+    }
 
     picture {
       padding-top: 194.18103448275863%;
@@ -85,6 +123,10 @@
   &__main-block {
     padding-top: 170px;
     padding-bottom: 138px;
+
+    @include breakpoint(contSize) {
+      padding-top: 130px;
+    }
   }
 
   &__subtitle {

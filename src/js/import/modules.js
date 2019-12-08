@@ -1,4 +1,5 @@
 import "%modules%/header/header";
+import "%modules%/mob-menu/mob-menu";
 import "%modules%/footer/footer";
 import "%modules%/popups/popups";
 import "%modules%/top-screen/top-screen";
@@ -18,3 +19,4 @@ import "%modules%/calc-form/calc-form";
 import "%modules%/btn-up/btn-up";
 import "%modules%/personal-data/personal-data";
 import "%modules%/calc-form/side-hint";
+import "%modules%/s-contacts/s-contacts";
