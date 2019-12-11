@@ -201,6 +201,10 @@
       }
     }
 
+    @include breakpoint(contSize) {
+      margin-bottom: 40px;
+    }
+
     @media (max-width: 765px) {
       margin: 0;
     }
@@ -212,6 +216,12 @@
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.04em;
+
+    @include breakpoint(contSize) {
+      .mb-contacts__wtime-block {
+        margin: 0;
+      }
+    }
 
     @media (max-width: 765px) {
       padding-top: 37px;

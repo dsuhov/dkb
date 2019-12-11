@@ -20,3 +20,4 @@ import "%modules%/btn-up/btn-up";
 import "%modules%/personal-data/personal-data";
 import "%modules%/calc-form/side-hint";
 import "%modules%/s-contacts/s-contacts";
+import "%modules%/s-videos/s-videos";

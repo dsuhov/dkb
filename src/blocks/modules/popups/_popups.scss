@@ -1,10 +1,48 @@
+.popup__colored {
+    padding-top: 60px !important;
+}
+
+.popup__close {
+    z-index: 100;
+}
+
+.popup__img {
+    @media (max-width: 765px) {
+         box-sizing: border-box;
+         width: 270px;
+         margin: 0 auto;
+     }
+ }
+
 .popup {
+
+    &__hide375 {
+        @media (max-width: 765px) {
+            display: none;
+        }
+    }
+
+    input {
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    .popup__btn {
+        @media (max-width: 765px) {
+            box-sizing: border-box;
+            width: 270px;
+            margin: 0 auto;
+        }
+    }
+
+    
+
     display: none;
     font-family: "Noto Sans", sans-serif;
     position: relative;
     box-sizing: border-box;
     background-color: #fff;
-
+    
     &__title {
         text-align: center;
         max-width: 640px;
@@ -17,7 +55,7 @@
                 font-size: 40px;
                 line-height: 1.28;
             }
-        
+            
             @media (max-width: 765px) {
                 font-size: 26px;
                 line-height: 1.28;
@@ -76,7 +114,7 @@
         }
         &:hover {
             &:before {
-            transform: rotate(135deg);
+                transform: rotate(135deg);
             }
             &:after {
                 transform: rotate(225deg);
@@ -217,7 +255,7 @@
         margin-bottom: 61px;
         text-decoration: none;
         @media (
-            max-width: 765px) {
+        max-width: 765px) {
             margin-bottom: 42px;
         }
         span {
@@ -348,7 +386,7 @@
                 max-width: 300px;
                 margin: 0 auto;
             }
-
+            
         }
         &__form {
             @media (max-width: 765px) {
@@ -373,7 +411,7 @@
             @media (max-width: 765px) {
                 width: 300px;
             }
-
+            
         }
         &__label {
             @include breakpoint(contSize) {
@@ -385,12 +423,12 @@
 }
 .popup01 {
     width: 1440px;
-
+    
     @media (max-width: 375px) {
         width:auto;
         max-width: 375px;
     }
-
+    
     .popup__btn {
         max-width: 409px;
     }
@@ -404,7 +442,7 @@
 .popup02 {
     
     .popup {
-    
+        
         &__subtitle {
             max-width: 601px;
         }
@@ -541,14 +579,14 @@
         &__subtitle {
             margin-bottom: 10px;
         }
-
+        
     }
 }
 .popup-expressanaliz {
     background-color: #fff;
     padding: 20px 80px;
     .popup {
-
+        
         &__list {
             margin-bottom: 30px;
         }
@@ -685,7 +723,7 @@
             border-radius: 50px;
             transition: all 0.4s ease;
             background: #0461FD;
-
+            
         }
         &-wrap {
             display: flex;
@@ -712,7 +750,7 @@
                     }
                     
                     
-
+                    
                 }
             } 
             @include breakpoint(contSize) {
@@ -773,7 +811,7 @@
             margin-bottom: 10px;
         }
     }
-
+    
 }
 
 .soc-links-bottom {
@@ -781,13 +819,13 @@
     width: 64px;
     height: 64px;
     background-color: #fff;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     border-radius: 50%;
-
+    
     &:not(:last-child) {
         margin-right: 50px;
     }
@@ -816,7 +854,7 @@
 
 #popup-feedback1 {
     padding: 50px 0;
-
+    
     .popup__input-base {
         margin-right: 0;
         min-width: 100%;
@@ -838,5 +876,69 @@
 #popup-compare {
     .popup__content {
         padding: 0 20px;
+    }
+}
+
+
+
+
+.popup-call {
+
+    .popup__content {
+        z-index: 50;
+        position: relative; 
+    }
+
+    picture {
+        z-index: 15;
+        position: relative; 
+    }
+
+    .popup__img {
+        position: relative;
+        z-index: 10;
+    }
+
+    .popup__img {
+        &::after {
+            position: absolute;
+            content: "";
+            width: 737px;
+            height: 825px;
+            background: url(../img/general/spot_white.png) no-repeat;
+            background-size: 100%;
+            top: -50px;
+            right: -290px;
+            transform: rotate(-40deg);
+            z-index: 10;
+            
+            @include breakpoint(contSize) {
+                display: none;
+            }
+        }
+    }
+}
+
+#popup02 .popup__img::after {
+    display: none;
+}
+
+#popup01 .form-side__accept-conf {
+    padding-top: 20px;
+
+    .accept-conf {
+        text-align: center !important;
+    }
+    
+}
+
+.popup__form {
+    .input-slide__date {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .form-side__accept-conf {
+        padding-top: 20px;
     }
 }

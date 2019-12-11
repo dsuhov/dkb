@@ -12,7 +12,7 @@ $(document).ready(function() {
   validate('#popup_call_01');
   validate('#popup02_form');
   validate('#popup03_form');
-  // exitpopup();
+  exitpopup();
 });
 
 window.currentPopup = null;

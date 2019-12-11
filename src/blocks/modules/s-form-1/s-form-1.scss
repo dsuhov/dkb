@@ -22,10 +22,12 @@
 
     @include breakpoint(contSize) {
       padding: 0 123px;
+      height: 1470px;
     }
   
     @media (max-width: 765px) {
       padding: 0 20px;
+      height: 1380px;
     }
   }
 
@@ -71,10 +73,11 @@
       background-size: contain;
       width: 335px;
       height: 370px;
+      margin-left: 80px;
     }
 
     @media (max-width: 765px) {
-      display: none;
+      margin: 0 auto;
     }
   }
 
@@ -82,8 +85,8 @@
     
     position: absolute;
     bottom: 0;
-    bottom: -4px;
-    right: -30%;
+    bottom: -8px;
+    right: -82px;
 
     @include breakpoint(contSize) {
       display: none;
@@ -92,12 +95,13 @@
     &::after {
       position: absolute;
       content: "";
-      width: 687px;
-      height: 832px;
-      background: url('../img/general/white-egg.jpg') no-repeat;
+      width: 737px;
+      height: 825px;
+      background: url('../img/general/spot_white.png') no-repeat;
       background-size: 100%;
-      top: 0;
-      right: -60px;
+      top: -50px;
+      right: -170px;
+      transform: rotate(-40deg);
       z-index: 10;
 
       @include breakpoint(contSize) {
@@ -126,6 +130,10 @@
 
     @include breakpoint(contSize) {
       padding-top: 130px;
+    }
+
+    @media (max-width: 765px) {
+      padding-top: 100px;
     }
   }
 
@@ -254,5 +262,15 @@
         text-align: center;
       }
     }
+  }
+}
+
+#s-form-2 {
+  .s-form-1__content {
+
+    @media (max-width: 765px) {
+      height: 1280px;
+    }
+    
   }
 }

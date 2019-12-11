@@ -1,0 +1,21 @@
+include ../../components/nav-arrow/nav-arrow
+
+.s-videos
+  .container
+    .s-videos__wrapper
+      .s-videos__slider
+        .s-videos__slide
+          .s-videos__video-wrap
+            iframe(src="" data-src="https://www.youtube.com/embed/VopeY9JkaAA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).s-videos__video
+        .s-videos__slide
+          .s-videos__video-wrap
+            iframe(src="" data-src="https://www.youtube.com/embed/iyOCKpnzrgU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).s-videos__video
+        .s-videos__slide
+          .s-videos__video-wrap
+            iframe(src="" data-src="https://www.youtube.com/embed/5agQJiiv6w0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).s-videos__video
+        .s-videos__slide
+          .s-videos__video-wrap
+            iframe(src="" data-src="https://www.youtube.com/embed/3l1Ifik828s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen).s-videos__video
+      .s-videos__nav-btns
+        +nav-arrow-prev('s-videos')
+        +nav-arrow('s-videos')

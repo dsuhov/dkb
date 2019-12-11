@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  
   z-index: 1048;
 
 
@@ -104,7 +104,8 @@
 
   &.header--scrolling {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-
+    background-color: #fff;
+    
     .header__line {
       min-height: 80px;
 

@@ -7,6 +7,9 @@ include ../../components/typography/subtitle-section
       .s-team__title
         +title-section-40-51('Команда')
       .s-team__subtitle
+        .s-team__aside
+          .s-team__aside-text <span class="s-team__aside-text-smaller">от</span>3840&nbsp;₽<span class="s-team__aside-text-smaller">в&nbsp;месяц</span>
+          include ../../components/boring-circle/boring-circle
         +subtitle-section('квалифицированных специалистов <br>по цене ниже зарплаты <br class="s-team__br">1 штатного  бухгалтера')
     .s-team__slider-block
       include team-slider/team-slider

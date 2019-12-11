@@ -1,0 +1,51 @@
+.s-videos {
+  background: #f8f8f8;
+  padding-bottom: 70px;
+
+  @include breakpoint(contSize) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 765px) {
+    padding-bottom: 30px;
+  }
+
+  &__video-wrap {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__slider {
+    margin-bottom: 61px;
+
+    @include breakpoint(contSize) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+  }
+
+  &__nav-btns {
+    display: flex;
+    margin-left: 68px;
+
+    @media (max-width: 765px) {
+      margin-left: 45px;
+    }
+  }
+
+  &__nav-arrow.nav-arrow--prev {
+    margin-right: 12px;
+  }
+  
+}

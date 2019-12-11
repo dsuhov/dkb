@@ -5,4 +5,5 @@ mixin sp-tab-content(prop)
         +icon('check', 'sp-tab-content__tick')
     if prop.aside.length !== 0
       .sp-tab-content__aside
+        include ../../components/boring-circle/boring-circle
         span.sp-tab-content__aside-text!= prop.aside

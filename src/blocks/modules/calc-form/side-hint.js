@@ -33,7 +33,7 @@ $(document).ready(function() {
     shScene.destroy();
   });
 
-  sideHint.click(function() {
+  $('.side-hint__body').click(function() {
     sideHint.removeClass('side-hint--active');
     // shScene.destroy();
     if (window.currentPopup) {

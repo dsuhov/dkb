@@ -73,7 +73,8 @@
     }
 
     @media (max-width: 765px) {
-      width: calc(50% - 3px);
+      min-height: 0;
+      width: 100%;
       margin-bottom: 3px;
       line-height: 20px;
       padding: 36px 20px 30px;
