@@ -1,9 +1,47 @@
 .popup__colored {
+    box-sizing: border-box;
     padding-top: 60px !important;
+    height: 100%;
+    padding-bottom: 30px !important;
+    overflow: hidden !important;
+
+    @media (max-height: 900px) {
+        overflow-y: auto !important;
+    }
+
+    @include breakpoint(contSize) {
+      overflow-y: auto !important;
+    }
+
+    svg {
+        fill: $blue-ribbon;
+    }
+}
+
+@include breakpoint(contSize) {
+    body {
+        // overflow: auto !important;
+    }
+}
+
+.popup03 {
+    background-color: $blue-ribbon !important;
+    pointer-events: initial;
+    
+    .form-side__accept-conf {
+        @include breakpoint(contSize) {
+            padding-bottom: 20px;
+        }
+    }
 }
 
 .popup__close {
     z-index: 100;
+
+    @include breakpoint(contSize) {
+        top: 20px;
+        right: 20px;
+    }
 }
 
 .popup__img {
@@ -15,15 +53,17 @@
  }
 
 .popup {
+    box-sizing: border-box;
+    overflow-y: auto;
 
     &__hide375 {
-        @media (max-width: 765px) {
+        @include breakpoint(contSize) {
             display: none;
         }
     }
 
     input {
-        box-sizing: border-box;
+        box-sizing: border-box !important;
         width: 100% !important;
     }
 
@@ -126,7 +166,7 @@
         padding-top: 114px;
         padding-bottom: 110px;
         color: #ffffff;
-        overflow: hidden;
+
         @media (max-width: 765px) {
             padding-bottom: 75px;
         }
@@ -421,11 +461,19 @@
         }
     }
 }
+
+.mob-hide {
+    @include breakpoint(contSize) {
+        display: none;
+    }
+}
+
 .popup01 {
     width: 1440px;
-    
+    background-color: $blue-ribbon;
+
     @media (max-width: 375px) {
-        width:auto;
+        width: auto;
         max-width: 375px;
     }
     
@@ -438,8 +486,95 @@
             text-align: left;
         }
     }
+
+    .popup__img {
+        @include breakpoint(contSize) {
+            display: none;
+        }
+    }
+
+    &__mob-title {
+        display: none;
+        font-family: "Noto Serif";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 42x;
+
+        @include breakpoint(contSize) {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 765px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    &__desk-title {
+
+        @include breakpoint(contSize) {
+            display: none;
+        }
+    }
+
+    &__desk-subtitle {
+        display: none;
+
+        @include breakpoint(contSize) {
+            display: block;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 34px;
+        }
+
+        @media (max-width: 765px) {
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
 }
 .popup02 {
+    background-color: $blue-ribbon !important;
+
+    &__mob-title {
+        display: none;
+        font-family: "Noto Serif";
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 42x;
+        margin-bottom: 40px;
+
+        @include breakpoint(contSize) {
+            max-width: 375px;
+            display: block;
+        }
+
+        @media (max-width: 765px) {
+            font-size: 18px;
+            line-height: 27px;
+            br {display: none;}
+        }
+    }
+
+    &__mob-subtitle {
+        display: none;
+
+        @include breakpoint(contSize) {
+            max-width: 375px;
+            display: block;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 34px;
+        }
+
+        @media (max-width: 765px) {
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
     
     .popup {
         
@@ -585,6 +720,7 @@
 .popup-expressanaliz {
     background-color: #fff;
     padding: 20px 80px;
+    
     .popup {
         
         &__list {
@@ -597,6 +733,14 @@
         &__notice {
             text-align: left;
         }
+    }
+
+    @media (max-width: 765px) {
+        padding: 20px !important;
+    }
+
+    @media (max-width: 360px) {
+        padding: 20px;
     }
 }
 .popup__consult {
@@ -623,6 +767,8 @@
     padding: 51px;
     max-width: 720px;
     margin: auto;
+    overflow: hidden;
+
     .container {
         max-width: 600px;
         margin: 0 auto;
@@ -853,7 +999,7 @@
 }
 
 #popup-feedback1 {
-    padding: 50px 0;
+    padding: 50px 0 0;
     
     .popup__input-base {
         margin-right: 0;
@@ -880,9 +1026,20 @@
 }
 
 
-
+.popup__form-line {
+    justify-content: flex-start;
+}
 
 .popup-call {
+
+    .input-slide {
+        flex: 0 0 auto;
+        margin-right: 48px;
+    }
+
+    input {
+        width: 300px;
+    }
 
     .popup__content {
         z-index: 50;
@@ -897,6 +1054,7 @@
     .popup__img {
         position: relative;
         z-index: 10;
+        bottom: -10px;
     }
 
     .popup__img {
@@ -941,4 +1099,8 @@
     .form-side__accept-conf {
         padding-top: 20px;
     }
+}
+
+.popup__img-descr {
+    z-index: 20;
 }

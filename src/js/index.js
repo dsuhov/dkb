@@ -20,4 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
       mask: '+{7} (000) 000-00-00'
     })
   });
+
+  var ua = navigator.userAgent.toLowerCase(); 
+  if (ua.indexOf('safari') != -1) { 
+    if (ua.indexOf('chrome') > -1) {
+      console.log('chrome');
+      
+    } else {
+      $('.boring-circle__box2').css('filter', 'none');
+    }
+  }
 });

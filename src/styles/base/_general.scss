@@ -16,6 +16,8 @@ body {
 
 .wrapper {
   padding-top: 128px;
+  width: 100%;
+  overflow: hidden;
   
   @media (max-width: 765px) {
     padding-top: 80px;

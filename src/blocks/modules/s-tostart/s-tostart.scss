@@ -67,6 +67,10 @@
     @media (max-width: 765px) {
       padding-bottom: 40px;
     }
+
+    @media (max-width: 360px) {
+      padding-bottom: 0;
+    }
   }
 
   &__voskl {
@@ -179,6 +183,7 @@
   @media (max-width: 765px) {
     width: 100%;
   }
+  
 
   &__content {
     min-height: 269px;
@@ -245,6 +250,11 @@
       padding-top: 56px;
       margin-bottom: 140px;
     }
+
+    @media (max-width: 360px) {
+      padding-top: 40px;
+      margin-bottom: 78px;
+    }
   }
 
   &__rside {
@@ -262,6 +272,10 @@
     @media (max-width: 765px) {
       width: auto;
       max-width: 267px;
+    }
+
+    @media (max-width: 360px) {
+      max-width: 236px;
     }
   }
 }

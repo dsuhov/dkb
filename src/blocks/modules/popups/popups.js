@@ -25,7 +25,8 @@ const styles = {
   display: 'block',
   width: '100vw',
   height: '100vh',
-  overflow: 'auto'
+  overflow: 'hidden',
+  overflowY: 'auto'
 };
 
 $('#popup-feedback01 .popup__notice').click(function() {

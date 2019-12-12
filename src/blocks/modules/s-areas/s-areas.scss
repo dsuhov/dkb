@@ -5,6 +5,10 @@
   background-color: #fff;
   z-index: 100;
 
+  @media (max-width: 360px) {
+    padding-top: 60px;
+  }
+
   &__inner {
     
     @include breakpoint(contSize) {

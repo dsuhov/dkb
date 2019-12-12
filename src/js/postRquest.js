@@ -30,6 +30,22 @@ export default function postReq(form, event) {
     },
     error:  function() {
       alert('Возникла ошибка');
+
+      if (formPopup) {
+        if (window.currentPopup) {
+          window.currentPopup.removeAttr('style');
+          window.currentPopup = null;
+          $('body').css('overflow', 'auto');
+          $('.btn-up').removeAttr('style');
+        }
+
+        const popupEl = $(formPopup);
+        window.currentPopup = popupEl;
+      
+        $('body').css('overflow', 'hidden');
+        $('.btn-up').hide();
+        openPopup(popupEl);
+      }
     }
   });
 }

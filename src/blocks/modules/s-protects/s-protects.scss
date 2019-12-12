@@ -48,6 +48,10 @@
       padding: 30px 33px 15px;
       overflow: hidden;
     }
+
+    @media (max-width: 360px) {
+      padding: 30px 15px 15px;
+    }
   }
 
   &__tabs-btns {
@@ -174,6 +178,10 @@
     padding-left: 0;
   }
 
+  @media (max-width: 360px) {
+    min-height: 0;
+  }
+
   &__tick {
     position: absolute;
     left: 0;
@@ -274,6 +282,11 @@
       @media (max-width: 765px) {
         top: 370px;
         left: 60px;
+      }
+
+      @media (max-width: 360px) {
+        left: 20px;
+        top: 300px;
       }
     }
   }

@@ -174,9 +174,11 @@ section.popup.popup-call.popup01#popup01
     .container.popup__body
       .popup__content
         .popup__subtitle
-          .NSerif-28-42-reg Оставьте свои контакты, чтобы узнать точную стоимость бухгалтерского обслуживания для вашей компании
-        .popup__descr Вместе с расчетом стоимости вы получите:
-        ul.popup__list
+          .NSerif-28-42-reg.popup01__desk-title Оставьте свои контакты, чтобы узнать точную стоимость бухгалтерского обслуживания для вашей компании
+          .popup01__mob-title Узнать стоимость бухгалтерского обслуживания
+          .popup01__desk-subtitle Вместе с расчетом стоимости вы получите  договор, регламент оказания услуг и презентацию компании ДКБ
+        .popup__descr.mob-hide Вместе с расчетом стоимости вы получите:
+        ul.popup__list.mob-hide
           li.popup__list-item Индивидуальное коммерческое предложение с возможностью сэкономить от 10 до 50% на бухгалтерском обслуживании 
           li.popup__list-item Пакет документов для принятия решения о внедрении аутсорсинга бухгалтерии — договор, регламент оказания услуг, презентацию
         .popup__form
@@ -214,12 +216,14 @@ section.popup.popup-call.popup02#popup02
     .popup__close
     .container.popup__body
       .popup__content
-        .popup__subtitle
+        .popup02__mob-title Получить <br>коммерческое <br>предложение 
+        .popup02__mob-subtitle Вместе с КП вы получите точный рассчет стоимости обслуживания, договор, регламент оказания услуг и презентацию компании ДКБ
+        .popup__subtitle.mob-hide
           .NSerif-28-42-reg Собираете коммерческие предложения по бухгалтерскому обслуживанию для своего руководителя?
-        .popup__descr 
+        .popup__descr.mob-hide
           span Оставьте свои контакты и получите полный комплект документов, 
           | необходимых руководителю для принятия решения: 
-        ul.popup__list
+        ul.popup__list.mob-hide
           li.popup__list-item Индивидуальное коммерческое предложение с возможностью сэкономить от 10 до 50% на аутсорсинге бухгалтерии 
           li.popup__list-item Точный расчет стоимости бухгалтерского сопровождения 
           li.popup__list-item Краткую презентацию компании 
@@ -234,7 +238,7 @@ section.popup.popup-call.popup02#popup02
               +btn-default-submit('получить комлект документов')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
-      .popup__img
+      .popup__img.mob-hide
         img(src="img/popups/popup_docs.png", data-src=`img/popups/popup_docs.png` alt="docs")
 section.popup.popup-call.popup03#popup03
   .popup__colored
@@ -242,10 +246,12 @@ section.popup.popup-call.popup03#popup03
     .container.popup__body
       .popup__content
         .popup__subtitle
-          .NSerif-28-42-reg Бухгалтер бросил вас перед проверкой или в разгар отчетности? Или просто исчез вместе с бухгалтерской базой?
-        .popup__descr
+          .NSerif-28-42-reg Бухгалтер бросил вас перед проверкой или в разгар отчетности? <span class="mob-hide">Или просто исчез вместе с бухгалтерской базой?</span>
+        .popup__descr.mob-hide
           span Мы быстро разберемся в ситуации и решим проблемы с вашей бухгалтерией и налогами
           | Укажите контактные данные и удобное время для звонка. Я позвоню вам, и мы обсудим решение вашей проблемы
+        //- .popup01__mob-title Обратный звонок
+        .popup01__desk-subtitle Укажите контактные данные и мы с вами обсудим решение проблемы
         .popup__form
           form(action="sendmail/send.php" id="popup03_form" method="post" autocomplete="off" data-afterpopup="#popup-feedback03")
             .popup__form-line
@@ -273,7 +279,7 @@ section.popup.popup-call.popup03#popup03
               +btn-default-submit('позвоните мне')
             .form-side__accept-conf
               include ../../components/accept-conf/accept-conf
-      .popup__img
+      .popup__img.mob-hide
         picture
           source(
             srcset="img/popups/popup_girl.png"

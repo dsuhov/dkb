@@ -38,6 +38,10 @@
     @media (max-width: 765px) {
       width: 102px;
     }
+
+    @media (max-width: 360px) {
+      width: 85px;
+    }
   }
 
   &__nav-arrow.nav-arrow--prev {

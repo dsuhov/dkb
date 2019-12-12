@@ -41,7 +41,12 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #000;
-    // vertical-align: middle;
+    
+    @media (max-width: 360px) {
+      svg {
+        display: none;
+      }
+    }
   }
 
   &__link-row {

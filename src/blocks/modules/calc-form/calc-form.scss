@@ -42,6 +42,10 @@
       padding-right: 20px;
       padding-top: 150px;
     }
+
+    @media (max-width: 360px) {
+      padding-bottom: 54px;
+    }
   }
 
   &__main-block {
@@ -95,16 +99,27 @@
   &__select-block {
     margin-bottom: 33px;
     
+    @media (max-width: 360px) {
+      width: 100%;
+    }
   }
 
   &__organizational-form {
     width: 355px;
     
     margin-bottom: 42px;
+
+    @media (max-width: 360px) {
+      width: 100%;
+    }
   }
 
   &__select-field {
     width: 330px;
+
+    @media (max-width: 360px) {
+      width: 100%;
+    }
   }
 
   &__inputs {
@@ -122,10 +137,21 @@
     }
 
     margin-bottom: 41px;
+
+    @media (max-width: 360px) {
+      width: 100%;
+      align-items: flex-end;
+    }
   }
 
   &__input-base {
     width: 155px;
+
+    @media (max-width: 360px) {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
   }
 
   &__result {
@@ -268,13 +294,6 @@
 
 
 
-
-
-
-
-
-
-
 @import "dkb-select";
 @import "side-hint";
 
@@ -308,6 +327,11 @@
     display: block;
     padding: 3px 22px;
     border-radius: 30px;
+
+    @media (max-width: 360px) {
+      padding: 2px 10px;
+      border-radius: 16px;
+    }
   }
 
   &__input {
